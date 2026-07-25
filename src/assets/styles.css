@@ -1,0 +1,321 @@
+/* ==========================================================================
+   evemisslab.com — the lab's front door
+
+   This page is an index. EveMissLab ships one site per thing it builds, so the
+   homepage has to take twenty entries as gracefully as eight.
+
+   The family convention across every subsite is a --paper / --ink pair on a
+   warm, muted ground: logic, felra, storyforge, amral, mmr, mmlc and mlf all
+   do it. The old homepage was the only neon-on-black page in the set, which is
+   why it never looked like it belonged to its own children. This one uses a
+   neutral parent register — lighter and less committed than any child, so the
+   children can each keep their own voice.
+
+   The one place colour is used is the index, where every entry carries the
+   accent sampled from that subsite's own stylesheet. This is the only page in
+   the family where the whole palette appears at once, and that is the point.
+   ========================================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  --paper:        #f4f3f0;
+  --paper-raised: #fbfaf8;
+  --paper-sunk:   #e7e5e0;
+  --ink:          #14161a;
+  --ink-2:        #4d5157;
+  --ink-3:        #5a5e65;
+  --rule:         #cdcac3;
+  --hair:         #e0ddd6;
+
+  /* Sampled from each subsite's own CSS custom properties. */
+  --t-mmr:        #1b5451;
+  --t-mmlc:       #3c4b62;
+  --t-mlf:        #553da0;
+  --t-logic:      #7a6234;
+  --t-amral:      #a8501f;
+  --t-felra:      #0b6a5b;
+  --t-storyforge: #b02b2f;
+  --t-aiboard:    #5a5e65;
+
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --prose: "Newsreader", Georgia, serif;
+  --mono: "Geist Mono", ui-monospace, "Cascadia Mono", Menlo, monospace;
+
+  --measure: 36rem;
+  --shell: 72rem;
+  --gap: clamp(3rem, 7vw, 5.5rem);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:        #121316;
+    --paper-raised: #1a1c20;
+    --paper-sunk:   #0c0d0f;
+    --ink:          #e8e6e2;
+    --ink-2:        #a8a6a1;
+    --ink-3:        #97958f;
+    --rule:         #34363b;
+    --hair:         #232529;
+
+    --t-mmr:        #5fb8ae;
+    --t-mmlc:       #93a6bd;
+    --t-mlf:        #a48ce8;
+    --t-logic:      #d3b276;
+    --t-amral:      #d4783f;
+    --t-felra:      #3fbfa8;
+    --t-storyforge: #ff6b6f;
+    --t-aiboard:    #9a9da3;
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:        #121316;
+  --paper-raised: #1a1c20;
+  --paper-sunk:   #0c0d0f;
+  --ink:          #e8e6e2;
+  --ink-2:        #a8a6a1;
+  --ink-3:        #97958f;
+  --rule:         #34363b;
+  --hair:         #232529;
+
+  --t-mmr:        #5fb8ae;
+  --t-mmlc:       #93a6bd;
+  --t-mlf:        #a48ce8;
+  --t-logic:      #d3b276;
+  --t-amral:      #d4783f;
+  --t-felra:      #3fbfa8;
+  --t-storyforge: #ff6b6f;
+  --t-aiboard:    #9a9da3;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--prose);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+html[lang="zh-Hant"] body {
+  font-family: "Newsreader", "Noto Serif TC", Georgia, serif;
+  line-height: 1.85;
+}
+
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+code { font-family: var(--mono); font-size: 0.86em; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  padding: 0.75rem 1rem; background: var(--ink); color: var(--paper);
+  font-family: var(--mono); font-size: 0.75rem;
+}
+.skip:focus { left: 0; }
+
+/* --- nameplate ----------------------------------------------------------- */
+
+.plate {
+  position: sticky; top: 0; z-index: 40;
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.plate-in {
+  max-width: var(--shell); margin: 0 auto; padding: 0.65rem 1.5rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.25rem;
+}
+
+.plate-mark {
+  font-family: var(--display); font-weight: 700; font-size: 0.9375rem;
+  letter-spacing: 0.02em; text-decoration: none; white-space: nowrap;
+}
+
+.plate-nav { display: flex; gap: 1rem; order: 3; flex: 1 0 100%; overflow-x: auto; scrollbar-width: none; }
+.plate-nav::-webkit-scrollbar { display: none; }
+@media (min-width: 46rem) { .plate-nav { order: 0; flex: 0 1 auto; margin-left: auto; } }
+
+.plate-link {
+  font-family: var(--mono); font-size: 0.6875rem; text-decoration: none;
+  color: var(--ink-2); white-space: nowrap;
+}
+.plate-link:hover { color: var(--ink); }
+
+.plate-tools { display: flex; gap: 0.45rem; align-items: center; flex-shrink: 0; margin-left: auto; }
+@media (min-width: 46rem) { .plate-tools { margin-left: 0; } }
+
+.plate-btn {
+  font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-2);
+  background: none; border: 1px solid var(--rule); border-radius: 2px;
+  padding: 0.25rem 0.5rem; cursor: pointer; text-decoration: none; line-height: 1.2;
+}
+.plate-btn:hover { color: var(--ink); border-color: var(--ink-2); }
+
+/* --- shell --------------------------------------------------------------- */
+
+.shell { max-width: var(--shell); margin: 0 auto; padding-inline: 1.5rem; }
+
+/* --- hero ---------------------------------------------------------------- */
+
+.hero { padding-block: clamp(2.5rem, 7vw, 4.5rem) 0; }
+
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; align-items: center; }
+@media (min-width: 58rem) {
+  .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 22rem); gap: 3.5rem; }
+}
+
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--ink-3); margin: 0 0 1.25rem;
+}
+
+.hero-display {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2rem, 5.4vw, 3.5rem);
+  line-height: 1.05; letter-spacing: -0.025em; margin: 0;
+  max-width: 16ch; text-wrap: balance;
+}
+html[lang="zh-Hant"] .hero-display {
+  font-family: "Noto Sans TC", var(--display); letter-spacing: -0.005em; line-height: 1.2; max-width: 18ch;
+}
+
+.hero-stand { max-width: var(--measure); margin: 1.5rem 0 0; font-size: 1.125rem; line-height: 1.6; color: var(--ink-2); }
+html[lang="zh-Hant"] .hero-stand { line-height: 1.85; }
+
+/* The art is saturated and dark; the family is paper and ink. Framing it as a
+   viewport lets it read as something the lab is showing rather than as a
+   background that failed. */
+.hero-fig { margin: 0; justify-self: stretch; }
+
+.hero-frame {
+  border: 1px solid var(--rule);
+  background: #05070c;
+  padding: 0.5rem;
+}
+.hero-frame img { display: block; width: 100%; height: auto; }
+
+/* Outside the dark frame on purpose: it is a caption about the image, not
+   something inside the viewport, and page ink on near-black would not clear
+   4.5:1. */
+.hero-cap {
+  font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--ink-3);
+  padding-top: 0.55rem; display: flex; justify-content: space-between; gap: 1rem;
+}
+
+/* --- the index ----------------------------------------------------------- */
+
+.index { padding-block: var(--gap); }
+
+.sec-head { border-bottom: 2px solid var(--ink); padding-bottom: 0.7rem; margin-bottom: 1.5rem; }
+
+.sec-title {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.25rem, 2.8vw, 1.625rem);
+  letter-spacing: -0.02em; margin: 0;
+}
+html[lang="zh-Hant"] .sec-title { font-family: "Noto Sans TC", var(--display); letter-spacing: 0; }
+
+.sec-note { margin: 0.6rem 0 0; font-size: 0.9375rem; color: var(--ink-2); max-width: 44rem; }
+
+.group { margin-top: 2.5rem; }
+.group:first-of-type { margin-top: 0; }
+
+.group-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.9rem;
+  padding-bottom: 0.55rem; border-bottom: 1px solid var(--rule); margin-bottom: 0.25rem;
+}
+
+.group-title {
+  font-family: var(--mono); font-size: 0.6875rem; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; margin: 0; color: var(--ink);
+}
+
+.group-note { margin: 0; font-size: 0.875rem; color: var(--ink-3); flex: 1 1 22rem; line-height: 1.5; }
+
+.cards { list-style: none; margin: 0; padding: 0; }
+
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.35rem 1.5rem;
+  padding: 1.05rem 0 1.15rem 1rem;
+  border-bottom: 1px solid var(--hair);
+  border-left: 3px solid var(--tone);
+  text-decoration: none;
+  transition: background 140ms ease, padding-left 140ms ease;
+}
+.card:hover { background: var(--paper-raised); padding-left: 1.3rem; }
+.card:last-child { border-bottom: 0; }
+
+@media (min-width: 52rem) {
+  .card { grid-template-columns: 13rem minmax(0, 1fr); align-items: baseline; }
+}
+
+.card-id { display: grid; gap: 0.25rem; }
+
+.card-name {
+  font-family: var(--display); font-weight: 700; font-size: 1.0625rem;
+  letter-spacing: -0.01em; color: var(--ink);
+}
+
+.card-host {
+  font-family: var(--mono); font-size: 0.6875rem; color: var(--tone);
+  overflow-wrap: anywhere;
+}
+
+.card-body { display: grid; gap: 0.5rem; }
+.card-what { margin: 0; font-size: 0.9375rem; line-height: 1.58; color: var(--ink-2); }
+.card:hover .card-what { color: var(--ink); }
+
+.card-meta {
+  font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+
+/* --- how ----------------------------------------------------------------- */
+
+.how { padding-block: 0 var(--gap); }
+
+.how-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; border-top: 1px solid var(--rule); }
+@media (min-width: 52rem) { .how-list { grid-template-columns: 1fr 1fr; column-gap: 3rem; } }
+
+.how-item { padding-block: 1rem; border-bottom: 1px solid var(--hair); }
+
+.how-t {
+  font-family: var(--display); font-weight: 700; font-size: 0.9375rem;
+  letter-spacing: -0.005em; margin: 0 0 0.35rem;
+}
+html[lang="zh-Hant"] .how-t { font-family: "Noto Sans TC", var(--display); }
+
+.how-d { margin: 0; font-size: 0.9375rem; line-height: 1.58; color: var(--ink-2); }
+
+/* --- contact + footer ---------------------------------------------------- */
+
+.contact { padding-block: 0 var(--gap); }
+.contact-p { margin: 0; max-width: var(--measure); font-size: 0.9375rem; color: var(--ink-2); }
+
+.foot { border-top: 1px solid var(--rule); background: var(--paper-sunk); padding-block: 2rem 2.5rem; }
+.foot-in { display: grid; gap: 0.9rem; }
+@media (min-width: 46rem) { .foot-in { grid-template-columns: minmax(0, 1fr) auto; align-items: end; } }
+
+.foot-co { font-family: var(--display); font-weight: 700; font-size: 0.875rem; margin: 0; }
+.foot-line { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); margin: 0.4rem 0 0; }
+.foot-right { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); }

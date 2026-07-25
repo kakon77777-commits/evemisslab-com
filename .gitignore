@@ -8,6 +8,13 @@ __pycache__/
 # Superseded theory PDFs from the previous site. Kept on disk, not published.
 *.pdf
 
-# Source art. Only the optimized derivatives under src/media/ are published.
-Miss.Eve*.png
-Miss.Eve*.jpg
+# The previous hand-written homepage, superseded by build.py. Kept on disk as
+# a record of what this domain used to say.
+index.html
+
+# Source art stays out of the repository; only the optimized derivatives under
+# src/media/ are committed and published. Drop new covers here, point
+# build-media at them, and commit the derivatives.
+*.png
+*.jpg
+!src/media/*
