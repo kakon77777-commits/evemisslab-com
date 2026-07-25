@@ -1,0 +1,13 @@
+dist/
+node_modules/
+.wrangler/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Superseded theory PDFs from the previous site. Kept on disk, not published.
+*.pdf
+
+# Source art. Only the optimized derivatives under src/media/ are published.
+Miss.Eve*.png
+Miss.Eve*.jpg
