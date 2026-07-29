@@ -100,6 +100,11 @@ GROUPS = {
                     "what": "A corpus-agnostic, mostly client-side search engine. Instead of replacing your page with a result list, it dims what does not match and tells you why what is left is there.",
                     "meta": "MIT · v0.1.0",
                 },
+                {
+                    "host": "ms3e", "name": "MS3E", "tone": "ms3e",
+                    "what": "A multilayer nested spectral skeleton state engine. Compiles linear media into an identity skeleton, deformation layers and a spectral decomposition, then reconstructs from a state vector instead of a timestamp. The engine itself runs on the page.",
+                    "meta": "Apache-2.0 · v1.0.1",
+                },
             ],
         },
     ],
@@ -177,6 +182,11 @@ GROUPS = {
                     "host": "drvs", "name": "DRVS", "tone": "drvs",
                     "what": "一套與語料庫無關、幾乎全在瀏覽器端執行的搜尋引擎。它不會把你的頁面換成一份結果清單，而是把不相關的內容調暗，並且說清楚留下來的為什麼會在。",
                     "meta": "MIT · v0.1.0",
+                },
+                {
+                    "host": "ms3e", "name": "MS3E", "tone": "ms3e",
+                    "what": "多層嵌套光譜骨架狀態引擎。把線性媒體編譯成身份骨架、形變層與光譜分解，然後依狀態向量而不是時間戳重建。引擎本體就在頁面上跑。",
+                    "meta": "Apache-2.0 · v1.0.1",
                 },
             ],
         },
