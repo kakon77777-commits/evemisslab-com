@@ -48,8 +48,13 @@ GROUPS = {
                 },
                 {
                     "host": "dieec", "name": "DIEEC", "tone": "dieec",
-                    "what": "A symbolic runtime for dual internalâexternal expansion computation: a frozen public API, one certificate envelope for every claim, migration for old ledgers, and a release gate that treats passing tests as necessary but not sufficient.",
-                    "meta": "Apache-2.0 Â· v1.0.1",
+                    "what": "A symbolic runtime for dual internal–external expansion computation: a frozen public API, one certificate envelope for every claim, migration for old ledgers, and a release gate that treats passing tests as necessary but not sufficient.",
+                    "meta": "Apache-2.0 · v1.0.1",
+                },
+                {
+                    "host": "anla", "name": "ANLA", "tone": "anla",
+                    "what": "A lossless archive format an AI can plan and a deterministic, model-independent decoder must restore exactly. Two reference implementations, cross-verified byte for byte.",
+                    "meta": "Apache-2.0 · v0.1.0 · 1.0 draft",
                 },
             ],
         },
@@ -90,6 +95,11 @@ GROUPS = {
                     "what": "A public machine-readable notice board for AI agents, search systems and cognitive-architecture research. It answers browsers in plain text too, because it was not built to be looked at.",
                     "meta": "Protocol · MCP",
                 },
+                {
+                    "host": "drvs", "name": "DRVS", "tone": "drvs",
+                    "what": "A corpus-agnostic, mostly client-side search engine. Instead of replacing your page with a result list, it dims what does not match and tells you why what is left is there.",
+                    "meta": "MIT · v0.1.0",
+                },
             ],
         },
     ],
@@ -116,8 +126,13 @@ GROUPS = {
                 },
                 {
                     "host": "dieec", "name": "DIEEC", "tone": "dieec",
-                    "what": "å§å¤éçå±éè¨ç®çç¬¦è Runtimeï¼åçµçå¬é APIãææå®£ç¨±å±ç¨ä¸åè­æ¸ä¿¡å°ãèå¸³æ¬å¯é·ç§»ï¼ä»¥åä¸éæãæ¸¬è©¦ééãè¦çºå¿è¦ä½ä¸ååçæ¾è¡é¸éã",
-                    "meta": "Apache-2.0 Â· v1.0.1",
+                    "what": "內外雙生展開計算的符號 Runtime：凍結的公開 API、所有宣稱共用一個證書信封、舊帳本可遷移，以及一道把「測試通過」視為必要但不充分的放行閘門。",
+                    "meta": "Apache-2.0 · v1.0.1",
+                },
+                {
+                    "host": "anla", "name": "ANLA", "tone": "anla",
+                    "what": "一種可由 AI 規劃、但必須由確定性且不依賴模型的解碼器精確還原的無損封裝格式。兩套參考實作，逐位元互相驗證。",
+                    "meta": "Apache-2.0 · v0.1.0 · 1.0 草案",
                 },
             ],
         },
@@ -157,6 +172,11 @@ GROUPS = {
                     "host": "ai-board", "name": "AI Board", "tone": "aiboard",
                     "what": "給 AI 代理、搜尋系統與認知架構研究用的公開機器可讀佈告欄。它連瀏覽器都回純文字 —— 因為它本來就不是做給人看的。",
                     "meta": "協定 · MCP",
+                },
+                {
+                    "host": "drvs", "name": "DRVS", "tone": "drvs",
+                    "what": "一套與語料庫無關、幾乎全在瀏覽器端執行的搜尋引擎。它不會把你的頁面換成一份結果清單，而是把不相關的內容調暗，並且說清楚留下來的為什麼會在。",
+                    "meta": "MIT · v0.1.0",
                 },
             ],
         },
