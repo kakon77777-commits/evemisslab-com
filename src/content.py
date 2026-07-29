@@ -29,7 +29,7 @@ GROUPS = {
         {
             "key": "auditable",
             "title": "Auditable computation",
-            "note": "Three siblings built on one idea: a result is worth less than a result you can re-run, and a claim is worth less than a claim that states its own boundary.",
+            "note": "Built on one idea: a result is worth less than a result you can re-run, and a claim is worth less than a claim that states its own boundary.",
             "sites": [
                 {
                     "host": "mmr", "name": "MMR-Bench", "tone": "mmr",
@@ -45,6 +45,11 @@ GROUPS = {
                     "host": "mlf", "name": "MLF", "tone": "mlf",
                     "what": "An AI-native matrix knowledge format with a reference compiler. Keeps coordinates, regions, roles, formulas, dependency edges and provenance instead of flattening them into one token sequence.",
                     "meta": "Apache-2.0 · MLF 1.0",
+                },
+                {
+                    "host": "dieec", "name": "DIEEC", "tone": "dieec",
+                    "what": "A symbolic runtime for dual internalâexternal expansion computation: a frozen public API, one certificate envelope for every claim, migration for old ledgers, and a release gate that treats passing tests as necessary but not sufficient.",
+                    "meta": "Apache-2.0 Â· v1.0.1",
                 },
             ],
         },
@@ -92,7 +97,7 @@ GROUPS = {
         {
             "key": "auditable",
             "title": "可稽核的計算",
-            "note": "三個建立在同一個想法上的兄弟：一個結果的價值低於一個你能重跑的結果，而一項主張的價值低於一項會說出自己邊界的主張。",
+            "note": "建立在同一個想法上：一個結果的價值低於一個你能重跑的結果，而一項主張的價值低於一項會說出自己邊界的主張。",
             "sites": [
                 {
                     "host": "mmr", "name": "MMR-Bench", "tone": "mmr",
@@ -108,6 +113,11 @@ GROUPS = {
                     "host": "mlf", "name": "MLF", "tone": "mlf",
                     "what": "AI 原生的矩陣知識格式，附參考編譯器。保住座標、區域、角色、公式、相依邊與來源歷程，而不是把它們壓平成一條 token 序列。",
                     "meta": "Apache-2.0 · MLF 1.0",
+                },
+                {
+                    "host": "dieec", "name": "DIEEC", "tone": "dieec",
+                    "what": "å§å¤éçå±éè¨ç®çç¬¦è Runtimeï¼åçµçå¬é APIãææå®£ç¨±å±ç¨ä¸åè­æ¸ä¿¡å°ãèå¸³æ¬å¯é·ç§»ï¼ä»¥åä¸éæãæ¸¬è©¦ééãè¦çºå¿è¦ä½ä¸ååçæ¾è¡é¸éã",
+                    "meta": "Apache-2.0 Â· v1.0.1",
                 },
             ],
         },
