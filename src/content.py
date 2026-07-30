@@ -56,6 +56,11 @@ GROUPS = {
                     "what": "A lossless archive format an AI can plan and a deterministic, model-independent decoder must restore exactly. Two reference implementations, cross-verified byte for byte.",
                     "meta": "Apache-2.0 · v0.1.0 · 1.0 draft",
                 },
+                {
+                    "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
+                    "what": "UTF-8 stays the verified semantic anchor while storage, search, editing and inference each get a reversible representation suited to their own costs. AI generates the strategy and is never required to decode.",
+                    "meta": "Apache-2.0 · v0.22 baseline",
+                },
             ],
         },
         {
@@ -138,6 +143,11 @@ GROUPS = {
                     "host": "anla", "name": "ANLA", "tone": "anla",
                     "what": "一種可由 AI 規劃、但必須由確定性且不依賴模型的解碼器精確還原的無損封裝格式。兩套參考實作，逐位元互相驗證。",
                     "meta": "Apache-2.0 · v0.1.0 · 1.0 草案",
+                },
+                {
+                    "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
+                    "what": "UTF-8 維持為受驗證的語義錨點，儲存、搜尋、編輯與推論各自取得符合自身成本的可逆表示。AI 生成策略，但解碼永遠不需要它。",
+                    "meta": "Apache-2.0 · v0.22 基線",
                 },
             ],
         },
