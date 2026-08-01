@@ -57,6 +57,11 @@ GROUPS = {
                     "meta": "Apache-2.0 · v0.1.0 · 1.0 draft",
                 },
                 {
+                    "host": "mmpf", "name": "MMPF", "tone": "mmpf",
+                    "what": "A route-aware factorization runtime that has to choose before it knows what the choice will cost. Performance mode takes the lowest predicted cost; assurance mode takes the lowest bound it can certify, and is slower on purpose.",
+                    "meta": "Apache-2.0 · v1.0.0rc1",
+                },
+                {
                     "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
                     "what": "UTF-8 stays the verified semantic anchor while storage, search, editing and inference each get a reversible representation suited to their own costs. AI generates the strategy and is never required to decode.",
                     "meta": "Apache-2.0 · v0.22 baseline",
@@ -143,6 +148,11 @@ GROUPS = {
                     "host": "anla", "name": "ANLA", "tone": "anla",
                     "what": "一種可由 AI 規劃、但必須由確定性且不依賴模型的解碼器精確還原的無損封裝格式。兩套參考實作，逐位元互相驗證。",
                     "meta": "Apache-2.0 · v0.1.0 · 1.0 草案",
+                },
+                {
+                    "host": "mmpf", "name": "MMPF", "tone": "mmpf",
+                    "what": "路徑感知的分解 Runtime，必須在還不知道代價之前就先選。效能模式取預測成本最低的；保證模式取它能證明的上界最低的，而且刻意比較慢。",
+                    "meta": "Apache-2.0 · v1.0.0rc1",
                 },
                 {
                     "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
