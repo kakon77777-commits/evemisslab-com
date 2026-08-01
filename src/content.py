@@ -62,6 +62,11 @@ GROUPS = {
                     "meta": "Apache-2.0 · v1.0.0rc1",
                 },
                 {
+                    "host": "mmrf", "name": "MMRF", "tone": "mmrf",
+                    "what": "A public prime dataset defined as much by what it refuses as by what it answers. The query surface is aggregate-only, and the guard that refuses a target-conditioned request runs before any shard is read.",
+                    "meta": "Apache-2.0 · v1.0",
+                },
+                {
                     "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
                     "what": "UTF-8 stays the verified semantic anchor while storage, search, editing and inference each get a reversible representation suited to their own costs. AI generates the strategy and is never required to decode.",
                     "meta": "Apache-2.0 · v0.22 baseline",
@@ -153,6 +158,11 @@ GROUPS = {
                     "host": "mmpf", "name": "MMPF", "tone": "mmpf",
                     "what": "路徑感知的分解 Runtime，必須在還不知道代價之前就先選。效能模式取預測成本最低的；保證模式取它能證明的上界最低的，而且刻意比較慢。",
                     "meta": "Apache-2.0 · v1.0.0rc1",
+                },
+                {
+                    "host": "mmrf", "name": "MMRF", "tone": "mmrf",
+                    "what": "一個公開的質數資料集，它被「拒絕什麼」定義的程度，跟被「回答什麼」定義的一樣多。查詢面只有聚合，而拒絕以目標為條件之請求的守衛，跑在任何分片被讀取之前。",
+                    "meta": "Apache-2.0 · v1.0",
                 },
                 {
                     "host": "utf-8x", "name": "UTF-8X", "tone": "utf8x",
