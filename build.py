@@ -226,6 +226,67 @@ def render_page(lang: str) -> str:
 """
 
 
+def render_404() -> str:
+    """The page Cloudflare Pages serves, with a 404 status, for any path that
+    is not a file in dist/.
+
+    Without this file in the output, Pages answers every unknown path with the
+    homepage and a 200. That is how /index.php became the single most-crawled
+    path on this domain: a static site with no PHP anywhere was returning a
+    successful page for it, so the crawlers kept asking. /wp-login.php,
+    /admin.php and every other probe answered the same way.
+
+    English only. This site is two pages and the 404 is not one of them — it
+    should not appear in the sitemap or in the language switcher.
+    """
+    ch = C.CHROME["en"]
+    fonts = FONTS_BASE + "&display=swap"
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Not found &middot; EveMissLab</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="{fonts}">
+<link rel="stylesheet" href="/assets/styles.css">
+{THEME_BOOT}
+</head>
+<body>
+<header class="plate">
+  <div class="plate-in">
+    <a class="plate-mark" href="/">EVEMISSLAB</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="shell hero">
+    <div>
+      <p class="hero-eyebrow">404</p>
+      <h1 class="hero-display">No page exists at this address.</h1>
+      <p class="hero-stand">This is a static site &mdash; there is no application
+        here to log into and no path that takes a query. Start from the
+        <a href="/">index</a>, which lists every site the lab runs.</p>
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="shell foot-in">
+    <div>
+      <p class="foot-co">{C.SITE['company_en']} &nbsp;|&nbsp; {C.SITE['company_zh']}</p>
+      <p class="foot-line">&copy; {C.SITE['year']} EVEMISSLAB &middot; {html.escape(ch['footer_rights'])}</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+"""
+
+
 def render_sitemap() -> str:
     urls = []
     for lang in ("en", "zh"):
@@ -264,6 +325,7 @@ def main() -> int:
             shutil.copyfile(f, media / f.name)
 
     (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
+    (DIST / "404.html").write_text(render_404(), encoding="utf-8")
     (DIST / "sitemap.xml").write_text(render_sitemap(), encoding="utf-8")
     (DIST / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {C.SITE['origin']}/sitemap.xml\n",
