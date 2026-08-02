@@ -17,8 +17,10 @@ Writes two pages (English at the root, Traditional Chinese under `/zh/`) plus
 ## Deploy
 
 ```bash
-npx wrangler pages deploy dist --project-name evemisslab
+bash deploy.sh
 ```
+
+Runs `python build.py`, `npx wrangler pages deploy dist --project-name evemisslab`, a smoke test against the live domain (`/`, `/zh/`), then notifies the Continuous Discovery Beacon (beacon.evemiss.com) — only after that smoke test confirms the deploy is actually live. Set `BEACON_SUBMIT_TOKEN_EVEMISSLAB` locally to enable that last step; it's silently skipped otherwise.
 
 **Pages, not a Worker.** This domain is served by the existing Cloudflare Pages
 project `evemisslab`, which already owns the `evemisslab.com` custom domain.
