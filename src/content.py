@@ -79,7 +79,7 @@ GROUPS = {
             "note": "Corpora meant to be read by machines as readily as by people.",
             "sites": [
                 {
-                    "host": "logic", "name": "Logic Matrix", "tone": "logic",
+                    "host": "unboundedaxiom.org", "name": "Logic Matrix", "tone": "logic",
                     "what": "An AI-readable theoretical corpus, with live research programmes running inside it.",
                     "meta": "Corpus",
                 },
@@ -177,7 +177,7 @@ GROUPS = {
             "note": "設計成讓機器讀起來跟人一樣順的語料庫。",
             "sites": [
                 {
-                    "host": "logic", "name": "Logic Matrix", "tone": "logic",
+                    "host": "unboundedaxiom.org", "name": "Logic Matrix", "tone": "logic",
                     "what": "一個 AI 可讀的理論語料庫，裡面跑著實際運行中的研究計畫。",
                     "meta": "語料庫",
                 },

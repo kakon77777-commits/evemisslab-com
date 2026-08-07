@@ -63,7 +63,10 @@ def render_index(lang: str) -> str:
     for g in C.GROUPS[lang]:
         cards = []
         for s in g["sites"]:
-            host = f'{s["host"]}.evemisslab.com'
+            # a host containing a dot is already fully qualified: Logic Matrix moved to
+            # unboundedaxiom.org on 2026-08-07 and is no longer under this apex, so the
+            # entry names its own host.
+            host = s["host"] if "." in s["host"] else f'{s["host"]}.evemisslab.com'
             cards.append(
                 f'<li><a class="card" style="--tone: var(--t-{s["tone"]})" '
                 f'href="https://{host}/">'
@@ -118,7 +121,7 @@ def render_page(lang: str) -> str:
         "description": ch["standfirst"],
         "subOrganization": [
             {"@type": "WebSite", "name": s["name"],
-             "url": f'https://{s["host"]}.evemisslab.com/'}
+             "url": f'https://{s["host"] if "." in s["host"] else s["host"] + ".evemisslab.com"}/'}
             for g in C.GROUPS[lang] for s in g["sites"]
         ],
     }
