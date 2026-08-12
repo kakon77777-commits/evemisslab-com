@@ -32,6 +32,11 @@ GROUPS = {
             "note": "Built on one idea: a result is worth less than a result you can re-run, and a claim is worth less than a claim that states its own boundary.",
             "sites": [
                 {
+                    "host": "sssp", "name": "SSSP", "tone": "sssp",
+                    "what": "An AI-native scholarly authoring protocol that separates discussion and rendered views from canonical source, then guards typed mutations with revisions, checksums and validation.",
+                    "meta": "Research MVP · MCP v0.2",
+                },
+                {
                     "host": "mmr", "name": "MMR-Bench", "tone": "mmr",
                     "what": "Three independent readings of every formula cell, signed Ed25519 computation certificates, and exact replay. Engine disagreement never authorizes a formula rewrite.",
                     "meta": "Apache-2.0 · v1.0",
@@ -129,6 +134,11 @@ GROUPS = {
             "title": "可稽核的計算",
             "note": "建立在同一個想法上：一個結果的價值低於一個你能重跑的結果，而一項主張的價值低於一項會說出自己邊界的主張。",
             "sites": [
+                {
+                    "host": "sssp", "name": "SSSP", "tone": "sssp",
+                    "what": "一套 AI 原生的學術寫作協定：把討論與渲染視圖和 canonical source 分開，再以 revision、checksum 與 validation 保護具型別 mutation。",
+                    "meta": "研究型 MVP · MCP v0.2",
+                },
                 {
                     "host": "mmr", "name": "MMR-Bench", "tone": "mmr",
                     "what": "對每個公式儲存格取三份獨立讀數、簽署 Ed25519 計算憑證、可完全重播。引擎意見不一致，永遠不構成改寫公式的授權。",
@@ -235,7 +245,7 @@ CHROME = {
         "display": "One lab. One site per thing it builds.",
         "standfirst": "EveMissLab is a research and engineering lab. Everything it finishes gets published as its own site, under its own domain, with its own source repository — so each piece can be read, checked and used without going through the others.",
         "index_title": "The index",
-        "index_note": "Eight sites live today. The list is built to keep growing.",
+        "index_note": "Each finished project gets its own address. The list is built to keep growing.",
         "image_caption": "Miss Eve",
         "how_title": "How this works",
         "how": [
@@ -259,7 +269,7 @@ CHROME = {
         "display": "一個實驗室。做完一件事，就給它一個站。",
         "standfirst": "EveMissLab 是一個研究與工程實驗室。每一件做完的東西都會以獨立的網站、獨立的網域、獨立的原始碼倉庫發布 —— 讓每一塊都能被單獨閱讀、檢查與使用，不必先經過其他塊。",
         "index_title": "索引",
-        "index_note": "目前八個站在線上。這份清單是為了持續增加而設計的。",
+        "index_note": "每個完成的專案都有自己的地址；這份清單是為了持續增加而設計的。",
         "image_caption": "Miss Eve",
         "how_title": "運作方式",
         "how": [

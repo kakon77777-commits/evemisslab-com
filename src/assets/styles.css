@@ -44,6 +44,7 @@
   --t-felra:      #0b6a5b;
   --t-storyforge: #b02b2f;
   --t-aiboard:    #5a5e65;
+  --t-sssp:       #4938a8;
 
   --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --prose: "Newsreader", Georgia, serif;
@@ -81,6 +82,7 @@
     --t-felra:      #3fbfa8;
     --t-storyforge: #ff6b6f;
     --t-aiboard:    #9a9da3;
+    --t-sssp:       #aaa1ff;
   }
 }
 
@@ -108,6 +110,7 @@
   --t-felra:      #3fbfa8;
   --t-storyforge: #ff6b6f;
   --t-aiboard:    #9a9da3;
+  --t-sssp:       #aaa1ff;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
