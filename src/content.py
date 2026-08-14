@@ -58,8 +58,8 @@ GROUPS = {
                 },
                 {
                     "host": "anla", "name": "ANLA", "tone": "anla",
-                    "what": "A lossless archive format an AI can plan and a deterministic, model-independent decoder must restore exactly. Two reference implementations, cross-verified byte for byte.",
-                    "meta": "Apache-2.0 · v0.1.0 · 1.0 draft",
+                    "what": "A lossless archive format an AI can plan and a deterministic, model-independent decoder must restore exactly. The 1.0 draft set itself a rule — nothing frozen until two independent implementations produce byte-identical archives and a differential fuzzer finds no disagreement — and a Python writer and a Rust writer now meet both halves of it.",
+                    "meta": "Apache-2.0 · v0.1.0 · 1.0 draft, freeze rule met",
                 },
                 {
                     "host": "mmpf", "name": "MMPF", "tone": "mmpf",
@@ -161,8 +161,8 @@ GROUPS = {
                 },
                 {
                     "host": "anla", "name": "ANLA", "tone": "anla",
-                    "what": "一種可由 AI 規劃、但必須由確定性且不依賴模型的解碼器精確還原的無損封裝格式。兩套參考實作，逐位元互相驗證。",
-                    "meta": "Apache-2.0 · v0.1.0 · 1.0 草案",
+                    "what": "一種可由 AI 規劃、但必須由確定性且不依賴模型的解碼器精確還原的無損封裝格式。1.0 草案給自己訂下一條規則——兩套獨立實作產生逐位元相同的封裝、且 differential fuzzer 找不到分歧之前，不凍結任何部分——而一個 Python writer 跟一個 Rust writer 現在同時滿足了它的兩個半部。",
+                    "meta": "Apache-2.0 · v0.1.0 · 1.0 草案，凍結規則已達成",
                 },
                 {
                     "host": "mmpf", "name": "MMPF", "tone": "mmpf",
