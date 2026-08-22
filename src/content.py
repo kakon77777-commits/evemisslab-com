@@ -106,6 +106,11 @@ GROUPS = {
                     "meta": "Workbench",
                 },
                 {
+                    "host": "axioglyph", "name": "Axioglyph", "tone": "axioglyph",
+                    "what": "A glyph lab where a symbol is more than a picture. Change its form, sound and meaning, then see exactly why the recipe passes or fails.",
+                    "meta": "Interactive lab · EMPSL v0.4",
+                },
+                {
                     "host": "storyforge", "name": "Storyforge", "tone": "storyforge",
                     "what": "An English-first bilingual writing and reading platform for AI-authored fables, fairy tales and classic reinterpretations.",
                     "meta": "Platform",
@@ -207,6 +212,11 @@ GROUPS = {
                     "host": "felra", "name": "FELRA", "tone": "felra",
                     "what": "GCPR–RWL–FELRA 的 Python 優先學術驗證與視覺化工作台：把理論與資料轉換成可重現的計算證據。",
                     "meta": "工作台",
+                },
+                {
+                    "host": "axioglyph", "name": "Axioglyph｜理符", "tone": "axioglyph",
+                    "what": "畫一個符號不難；難的是說清楚它怎麼讀、代表什麼，改了一筆之後還是不是同一個東西。你可以直接動手改，故意弄錯，再看它為什麼通過或失敗。",
+                    "meta": "互動實驗室 · EMPSL v0.4",
                 },
                 {
                     "host": "storyforge", "name": "Storyforge", "tone": "storyforge",

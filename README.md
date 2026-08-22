@@ -4,6 +4,10 @@ The EveMissLab front page. Its job is to be an index: the lab publishes one
 site per thing it builds, and the set keeps growing, so this page is designed
 to take twenty entries as gracefully as it takes eight.
 
+The index includes `Axioglyph｜理符` at `https://axioglyph.evemisslab.com/`.
+The child is an assets-only Worker; this apex remains on the existing Pages
+project.
+
 ## Build
 
 ```bash
