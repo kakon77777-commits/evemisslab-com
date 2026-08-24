@@ -36,7 +36,7 @@ class AxioglyphIndexTests(unittest.TestCase):
         for relative in ("dist/index.html", "dist/zh/index.html"):
             html = (ROOT / relative).read_text(encoding="utf-8")
             self.assertIn("https://axioglyph.evemisslab.com/", html)
-            self.assertIn("17 sites", html)
+            self.assertIn("18 sites", html)
 
     def test_parent_styles_define_the_child_tone(self):
         css = (ROOT / "src/assets/styles.css").read_text(encoding="utf-8")

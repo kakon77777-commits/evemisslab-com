@@ -106,6 +106,11 @@ GROUPS = {
                     "meta": "Workbench",
                 },
                 {
+                    "host": "apr", "name": "APR", "tone": "apr",
+                    "what": "A runtime for deciding when an agent should observe, what it should read, how deeply it should read, when it must reobserve, and when fresh evidence means it should stop reading.",
+                    "meta": "Research MVP · v0.10",
+                },
+                {
                     "host": "axioglyph", "name": "Axioglyph", "tone": "axioglyph",
                     "what": "A glyph lab where a symbol is more than a picture. Change its form, sound and meaning, then see exactly why the recipe passes or fails.",
                     "meta": "Interactive lab · EMPSL v0.4",
@@ -212,6 +217,11 @@ GROUPS = {
                     "host": "felra", "name": "FELRA", "tone": "felra",
                     "what": "GCPR–RWL–FELRA 的 Python 優先學術驗證與視覺化工作台：把理論與資料轉換成可重現的計算證據。",
                     "meta": "工作台",
+                },
+                {
+                    "host": "apr", "name": "APR", "tone": "apr",
+                    "what": "一套決定代理何時應觀察、該讀什麼、讀多深、何時必須重看，以及何時因證據仍新鮮而停止閱讀的 Runtime。",
+                    "meta": "研究型 MVP · v0.10",
                 },
                 {
                     "host": "axioglyph", "name": "Axioglyph｜理符", "tone": "axioglyph",
