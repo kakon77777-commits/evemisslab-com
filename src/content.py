@@ -130,6 +130,11 @@ GROUPS = {
                     "what": "A multilayer nested spectral skeleton state engine. Compiles linear media into an identity skeleton, deformation layers and a spectral decomposition, then reconstructs from a state vector instead of a timestamp. The engine itself runs on the page.",
                     "meta": "Apache-2.0 · v1.0.1",
                 },
+                {
+                    "host": "commoninstant.org", "name": "CTCL", "tone": "ctcl",
+                    "what": "A verified reference instant plus heterogeneous time transformation for agents, simulators and persistent AI — over REST or a stateless Remote MCP Gateway. Its Ed25519-signed instants now also serve as an independent, third-party witness for CTCL-ITR's temporal ledger anchors, and back the local-first Temporal Port desktop app.",
+                    "meta": "Apache-2.0 · v0.1 · ctcl-app · ctcl-itr",
+                },
             ],
         },
     ],
@@ -237,6 +242,11 @@ GROUPS = {
                     "host": "ms3e", "name": "MS3E", "tone": "ms3e",
                     "what": "多層嵌套光譜骨架狀態引擎。把線性媒體編譯成身份骨架、形變層與光譜分解，然後依狀態向量而不是時間戳重建。引擎本體就在頁面上跑。",
                     "meta": "Apache-2.0 · v1.0.1",
+                },
+                {
+                    "host": "commoninstant.org", "name": "CTCL", "tone": "ctcl",
+                    "what": "給異質 agent、模擬器與持續存在的 AI 用的驗證過共同參考瞬間，加上異質時空轉換 —— 可走 REST，也可走無狀態的 Remote MCP Gateway。它 Ed25519 簽章過的瞬間，現在也是 CTCL-ITR 時間帳本 anchor 的獨立第三方見證，同時支撐著 local-first 的 Temporal Port 桌面 App。",
+                    "meta": "Apache-2.0 · v0.1 · ctcl-app · ctcl-itr",
                 },
             ],
         },
