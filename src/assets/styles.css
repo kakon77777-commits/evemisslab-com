@@ -47,6 +47,7 @@
   --t-sssp:       #4938a8;
   --t-axioglyph:  #8e4d23;
   --t-ctcl:       #8c6c1c;
+  --t-apr:        #006b80;
 
   --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --prose: "Newsreader", Georgia, serif;
@@ -87,6 +88,7 @@
     --t-sssp:       #aaa1ff;
     --t-axioglyph:  #e8aa6d;
     --t-ctcl:       #cda24f;
+    --t-apr:        #67d7e7;
   }
 }
 
@@ -117,6 +119,7 @@
   --t-sssp:       #aaa1ff;
   --t-axioglyph:  #e8aa6d;
   --t-ctcl:       #cda24f;
+  --t-apr:        #67d7e7;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
