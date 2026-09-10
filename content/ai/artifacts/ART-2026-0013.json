@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0013",
+  "kind": "artifact",
+  "label": "Adaptive Epistemic AI Runtime technical whitepaper v0.1 — source package (whitepaper, schemas, pseudocode, roadmap)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "source-package",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/Adaptive_Epistemic_AI_Runtime_v0.1_Technical_Whitepaper_Source_Package.zip",
+    "eml_artifact_sha256": "401bf009788846a6752a48b7bca0dc392ec81f7eb3224ab8529e4c71ec58bb3a",
+    "eml_artifact_size": 20022,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

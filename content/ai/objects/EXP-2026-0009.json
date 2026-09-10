@@ -1,0 +1,101 @@
+{
+  "id": "EXP-2026-0009",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.2 — third family (N3) and adversarial evidence geometry",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0009/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Adds N3 constraint competition, a nonlinear constraint-field family, plus an adversarial geometry chosen to break additive/log-odds mappings, keeping every v0.1 threshold. N3 reaches Level 3 in all three geometries; N2 keeps agreement 0.8546 and small update/intervention error but its held-out representation JS 0.053327 crosses the 0.05 gate under adversarial geometry, so it is classified behavioural convergence only. Independent families under the linear diagnostic: {N0, N1}, {N2}, {N3}; robust across all three geometries: two.",
+    "eml_summary_zh": "加入非線性約束場家族 N3 約束競爭，以及專門用來破壞加性／log-odds 映射的對抗性幾何，所有 v0.1 門檻不變。N3 在三種幾何下都達 Level 3；N2 在對抗幾何下一致度 0.8546、更新／干預誤差仍小，但 held-out 表徵 JS 0.053327 越過 0.05 門檻，歸為僅行為收斂。線性診斷下的獨立家族：{N0, N1}、{N2}、{N3}；三種幾何下都穩健的：兩個。",
+    "eml_label_zh": "PACC-Lab v0.2——第三個家族（N3）與對抗性證據幾何",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "A structurally distinct third family also converges, and convergence survives an evidence geometry designed against additive mappings.",
+    "eml_metrics": {
+      "verdict": "THIRD INDEPENDENT FAMILY CONVERGES; ROBUST PACC-A GATE REMAINS OPEN",
+      "adversarial": {
+        "N0": {
+          "agreement": 0.90818,
+          "heldout_js": 0.023921,
+          "level": 3
+        },
+        "N2": {
+          "agreement": 0.85455,
+          "heldout_js": 0.053327,
+          "level": 1
+        },
+        "N3": {
+          "agreement": 0.90162,
+          "heldout_js": 0.014454,
+          "level": 3
+        }
+      },
+      "five_seed_adversarial_level3_rate": {
+        "N0": 1.0,
+        "N1": 1.0,
+        "N2": 0.6,
+        "N3": 1.0
+      },
+      "independent_convergent_families": 2,
+      "pacc_a": false
+    },
+    "eml_interpretation": "Probability-like convergence has a nontrivial basin, not a demonstrated universal attractor: the N3 result weakens the 'disguised additive accumulator' explanation, and N2 shows convergence is not guaranteed for every architecture under every geometry.",
+    "eml_limitations": [
+      "Independence is supported under the preregistered linear diagnostic only, not proof of deep nonlinear nonequivalence.",
+      "N2's boundary is adversarial sensitivity around the threshold, not a universal phase boundary."
+    ],
+    "eml_random_seeds": [
+      "20260908",
+      "8 secondary seeds (smaller scale)",
+      "5 adversarial seeds near primary scale"
+    ],
+    "eml_run_count": 3,
+    "eml_result_type": "MIXED",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

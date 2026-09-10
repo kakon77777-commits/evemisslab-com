@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0011",
+  "kind": "paper",
+  "label": "Paper 11 — If it is really stronger, I was wrong; if not, what did we find? The final experimental verdict",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0011/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Fixes the verdict map before the runtime exists — Distinct Advantage, Operational Convergence, Behavioral Equivalence Only, Inconclusive, Architecture Worse — with fidelity gates, ablation, equivalence testing and the rule that if every outcome confirms, nothing was explained.",
+    "eml_summary_zh": "在 runtime 存在之前就固定判決表——Distinct Advantage、Operational Convergence、Behavioral Equivalence Only、Inconclusive、Architecture Worse——附 fidelity gate、消融、等價檢驗，以及「若每種結果都算確認，就什麼都沒解釋」的規則。",
+    "eml_label_zh": "如果它真的更強，我錯了；如果沒有，我們又發現了什麼？——自適應認識系統的最終實驗判決與可證偽收束",
+    "eml_primary_domain": "AI Architecture",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_11_Final_Experimental_Verdict_v0.1.md",
+    "eml_checksums": {
+      "sha256": "fbd6ec4a0292ce78daa297ec2df3d209639875a7532ea77abcadaed294e4f012"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 11/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

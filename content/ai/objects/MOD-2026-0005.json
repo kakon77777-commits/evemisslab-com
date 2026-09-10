@@ -1,0 +1,39 @@
+{
+  "id": "MOD-2026-0005",
+  "kind": "model",
+  "label": "Bayesian reference (exact posterior / Beta-Bernoulli / joint common-cause / HMM)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/models/MOD-2026-0005/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The probabilistic side of every comparison: exact posteriors with numerical reliabilities, Beta-Bernoulli source-quality learning, the joint-likelihood common-cause model for correlated clusters (and its naive-independence negative control), and a Bayesian HMM for regime switches.",
+    "eml_summary_zh": "每次比較的概率端：帶數值可靠度的精確後驗、Beta-Bernoulli 來源品質學習、相關叢集的聯合概似共同因模型（及其天真獨立負控制），以及 regime 切換用的 Bayesian HMM。",
+    "eml_label_zh": "Bayesian 參考（精確後驗／Beta-Bernoulli／聯合共同因／HMM）",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_provider": "EveMissLab (PACC-Lab)",
+    "eml_access_type": "source inside the PACC-Lab FINAL bundles",
+    "eml_known_behavior_notes": [
+      "Reference, not a competitor; hazard and decay are not exhaustively tuned, so no superiority claim in either direction."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

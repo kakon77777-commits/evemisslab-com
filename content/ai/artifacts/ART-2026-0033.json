@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0033",
+  "kind": "artifact",
+  "label": "PACC-Lab v0.13 Residual Field FINAL",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC-Lab_v0.13_Residual_Field_FINAL.zip",
+    "eml_artifact_sha256": "ab038f4375684146eecadaf7d3ef5e94d248cdd628bee93851efb712a08ffda4",
+    "eml_artifact_size": 540116,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

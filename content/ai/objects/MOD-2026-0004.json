@@ -1,0 +1,39 @@
+{
+  "id": "MOD-2026-0004",
+  "kind": "model",
+  "label": "N3 — constraint competition",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/models/MOD-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A nonlinear constraint-field system added in v0.2 as the third structurally distinct family; converges bidirectionally across geometries (v0.7) and shares the wider N0/N1 basin (v0.8).",
+    "eml_summary_zh": "v0.2 加入的非線性約束場系統，作為第三個結構相異的家族；跨幾何雙向收斂（v0.7），與 N0/N1 共享較寬的吸引域（v0.8）。",
+    "eml_label_zh": "N3——約束競爭",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_provider": "EveMissLab (PACC-Lab)",
+    "eml_access_type": "source inside the PACC-Lab FINAL bundles",
+    "eml_known_behavior_notes": [
+      "Independent family under the preregistered linear diagnostic (R² < 0.995 against N0)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

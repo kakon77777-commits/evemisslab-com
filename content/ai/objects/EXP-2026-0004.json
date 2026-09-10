@@ -1,0 +1,92 @@
+{
+  "id": "EXP-2026-0004",
+  "kind": "experiment",
+  "label": "R3 — epistemic commit transaction vs scattered and centralized application gates",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "All canonical writes in AER-0 were migrated to an Epistemic Commit Transaction (claim, evidence, provenance, valid/observed time, expected version, operator, verification policy, authority, dependencies, refresh policy); direct candidate commit became a negative path. Three systems ran the same governance witnesses: an application whose policy is scattered across callers, an application with one centralized mandatory gate, and AER-ECT. The centralized application gate matched AER-ECT on every tested property; computational uniqueness is not supported. 48 tests.",
+    "eml_summary_zh": "AER-0 所有 canonical 寫入遷移到 Epistemic Commit Transaction（claim、evidence、provenance、有效／觀察時間、expected version、算子、驗證政策、權限、依賴、refresh policy）；直接 candidate commit 變成負向路徑。三套系統跑同一組治理見證：政策分散在各 caller 的應用、有單一集中強制 gate 的應用、AER-ECT。集中式應用 gate 在每個測試性質上都追平 AER-ECT；不支持計算獨特性。48 個測試。",
+    "eml_label_zh": "R3——認識論 commit 交易 vs 分散式與集中式應用 gate",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Binding evidence, provenance, verification, authority, expected version, temporal validity, dependencies and refresh policy into one mandatory canonical-mutation boundary is a new computational capability — or only an architectural elevation of existing mechanisms.",
+    "eml_metrics": {
+      "verdict": "ArchitecturalElevation SUPPORTED; ComputationalUniqueness NOT SUPPORTED",
+      "tests_passed": 48,
+      "table": {
+        "unprovenanced_write_blocked": {
+          "scattered": "FAIL",
+          "central_gate": "PASS",
+          "aer_ect": "PASS"
+        },
+        "stale_write_conflict_caught": {
+          "scattered": "FAIL",
+          "central_gate": "PASS",
+          "aer_ect": "PASS"
+        },
+        "automatic_audit": {
+          "scattered": "FAIL on mutated path",
+          "central_gate": "PASS",
+          "aer_ect": "PASS"
+        },
+        "single_governance_site": {
+          "scattered": "NO",
+          "central_gate": "YES",
+          "aer_ect": "YES"
+        },
+        "canonical_node_links_transaction": {
+          "scattered": "N/A",
+          "central_gate": "optional",
+          "aer_ect": "PASS"
+        }
+      },
+      "novelty": {
+        "primitive": "WEAK",
+        "transaction": "WEAK",
+        "provenance": "NONE claimed",
+        "versioning": "NONE claimed",
+        "belief_revision": "NONE claimed",
+        "temporal": "NONE claimed",
+        "compositional": "PLAUSIBLE / NOT PROVEN"
+      }
+    },
+    "eml_interpretation": "Prior art (truth maintenance, transaction logic, agent knowledge-base transactions, W3C PROV, bitemporal data, PDP/PEP, age-of-information scheduling) covers every part. The value is 'there is only one legal write path' instead of 'remember to enforce policy everywhere' — an epistemically governed runtime, not a new computational species. A fair application that centralizes the same rules converges to the same form, which is itself an attractor witness.",
+    "eml_limitations": [
+      "General performance, security advantage and real LangGraph executable equivalence NOT MEASURED.",
+      "Not an exhaustive novelty search; establishes no patent or publication novelty."
+    ],
+    "eml_controls": [
+      "APP_CENTRALIZED_GATE is the fair strong opponent; APP_SCATTERED_POLICY is a mutation witness, not a claim about all applications."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

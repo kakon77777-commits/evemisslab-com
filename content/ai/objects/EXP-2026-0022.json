@@ -1,0 +1,58 @@
+{
+  "id": "EXP-2026-0022",
+  "kind": "experiment",
+  "label": "PACC-Hybrid v0.2 — real-language-model A/B/C harness (not yet executed)",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0022/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Sixteen hand-authored natural-language tasks across the preregistered families; A/B/C share one candidate ledger and equal accounted budgets; C receives no gold constraint or supersession metadata; the gold rubric is visible only to a condition-blind judge; literal machine checks are independent of the judge; identical answers reuse one judge cache key; the system fails closed without OPENAI_API_KEY; a frozen-cache replay provider allows exact replay after a live run. 25 tests pass. The execution runtime had no API key, so no real model output exists; the bundled mock smoke file is marked MOCK_ONLY_NOT_REAL_MODEL.",
+    "eml_summary_zh": "16 個橫跨預登記家族的手寫自然語言任務；A/B/C 共用一本候選帳本與相同計費預算；C 拿不到 gold 約束或 supersession metadata；gold rubric 只有對條件盲的評審看得到；字面機器檢查獨立於評審；相同答案重用同一個評審快取鍵；沒有 OPENAI_API_KEY 時 fail-closed；凍結快取重播提供者讓 live run 後可精確重播。25 個測試通過。執行環境沒有 API key，因此不存在任何真實模型輸出；隨附的 mock smoke 檔標為 MOCK_ONLY_NOT_REAL_MODEL。",
+    "eml_label_zh": "PACC-Hybrid v0.2——真實語言模型 A/B/C harness（尚未執行）",
+    "eml_primary_domain": "Reasoning",
+    "eml_domains": [
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "A real language model under the PACC runtime shows the coherence / valid-novelty gains and recoverable breadth loss seen in the synthetic witness.",
+    "eml_metrics": {
+      "verdict": "REAL_LLM_HARNESS_VALIDATED_BUT_REAL_MODEL_NOT_EXECUTED",
+      "execution_status": "NOT_EXECUTED_REAL_MODEL",
+      "tests_passed": 25,
+      "tasks": 16,
+      "real_llm_calls": 0
+    },
+    "eml_interpretation": "Closes the harness, not the scientific question. Next action: a small real smoke (6 tasks × 2 repetitions × 3 candidates), freeze the cache, inspect blind-evaluator consistency, then the full 16-task primary without changing prompts or metrics.",
+    "eml_limitations": [
+      "No claim about real-model reasoning, intent understanding, imagination, human-rated usefulness, cross-model transfer or hallucination is permitted before a real-model result exists.",
+      "A single-model judge is not human evaluation even after a live run."
+    ],
+    "eml_random_seeds": [],
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_software_environment": "Python; OpenAI API provider (fails closed without key); deterministic fake provider for protocol tests only.",
+    "eml_reproduction_instructions": "Extract PACC-Hybrid-Lab_v0.2_REAL_LLM_HARNESS_FINAL.zip; python -m pytest -q (25 tests); set OPENAI_API_KEY and run the smoke per docs/REPRODUCIBILITY_v0.2.md.",
+    "eml_data_basis": "NOT RUN",
+    "eml_benchmark_ids": [
+      "BEN-2026-0003"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0005",
+  "kind": "paper",
+  "label": "Paper 05 — Memory, algorithm libraries and reusable solution paths",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0005/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Algorithms, tools, contracts, costs and outcome history become capability nodes; Reuse ≻ Adapt ≻ Create.",
+    "eml_summary_zh": "算法、工具、契約、成本與成敗歷史成為能力節點；Reuse ≻ Adapt ≻ Create。",
+    "eml_label_zh": "記憶、算法庫與可重用問題求解路徑——從世界模型到能力模型的累積式智能架構",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_05_Memory_Algorithms_and_Reusable_Solution_Paths_v0.1.md",
+    "eml_checksums": {
+      "sha256": "e54a04fb440fef6a2835017bf92338d1f85b7e3188252c2bd5b2ed213b8d52cd"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 5/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

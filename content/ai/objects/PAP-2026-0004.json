@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0004",
+  "kind": "paper",
+  "label": "Paper 04 — World-knowledge expansion and the adaptive representation space",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Effective structured information, not node count, measures capability growth; split/merge/delete/abstract/bridge keep the representation space adaptive.",
+    "eml_summary_zh": "以有效結構化資訊而非節點數量衡量能力增長；split／merge／delete／abstract／bridge 讓表示空間持續可重構。",
+    "eml_label_zh": "世界知識擴張與自適應表示空間——從節點數量增長到有效結構化資訊的能力擴張",
+    "eml_primary_domain": "AI Architecture",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-07",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_04_Adaptive_Representation_Space_v0.1.md",
+    "eml_checksums": {
+      "sha256": "b31686e9acd0f52091ec46bbce801e1ccf9d28661f7b4cda6e1c86a8e946fe71"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 4/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

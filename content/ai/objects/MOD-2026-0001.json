@@ -1,0 +1,39 @@
+{
+  "id": "MOD-2026-0001",
+  "kind": "model",
+  "label": "N0 — signed support",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/models/MOD-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Additive signed evidence support per hypothesis; under uniform reliability it is closely related to rescaled log-evidence accumulation, which is why the heterogeneous and adversarial stresses exist.",
+    "eml_summary_zh": "每個假設的加性帶號證據支持；在均勻可靠度下它與重縮放的 log-evidence 累積關係密切——這正是異質與對抗壓力測試存在的原因。",
+    "eml_label_zh": "N0——帶號支持",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_provider": "EveMissLab (PACC-Lab)",
+    "eml_access_type": "source inside the PACC-Lab FINAL bundles",
+    "eml_known_behavior_notes": [
+      "Exact reparameterization of N1 (agreement 1.000, R² 1.000): counted as one family with N1."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

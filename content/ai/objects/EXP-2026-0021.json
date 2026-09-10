@@ -1,0 +1,114 @@
+{
+  "id": "EXP-2026-0021",
+  "kind": "experiment",
+  "label": "PACC-Hybrid v0.1 — synthetic A/B/C architecture witness",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0021/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Over 1,568 identical candidate pools, generator-only (A), hard verifier (B) and PACC runtime (C) are scored on hard adherence, derived coherence, soft-intent satisfaction, long-horizon retention, novelty and pattern entropy. B already saturates literal hard adherence (1.0); C adds derived coherence +0.2085, long-horizon retention +0.0142 and valid novelty +0.1964 over B, loses 0.0076 soft-intent satisfaction, and in the pure-creative control raises pointwise novelty (0.9864 vs 0.8889) while collapsing pattern entropy (0.2284 vs 0.7199). A post-hoc 'elastic' exploration policy (D) restores entropy to 0.7638 with derived coherence still 1.0. Zero real LLM calls; eight seeds sign-stable.",
+    "eml_summary_zh": "在 1,568 個完全相同的候選池上，純生成器（A）、硬驗證器（B）、PACC runtime（C）以硬約束遵守、衍生一致性、軟意圖滿足、長程保持、新穎度與 pattern entropy 計分。B 已經把字面硬約束遵守飽和到 1.0；C 相對 B 衍生一致性 +0.2085、長程保持 +0.0142、有效新穎度 +0.1964、軟意圖滿足 −0.0076，並在純創意控制組中提高逐點新穎度（0.9864 vs 0.8889）卻讓 pattern entropy 塌縮（0.2284 vs 0.7199）。事後的「elastic」探索策略（D）在衍生一致性仍為 1.0 下把 entropy 恢復到 0.7638。零次真實 LLM 呼叫；八個 seed 符號穩定。",
+    "eml_label_zh": "PACC-Hybrid v0.1——合成 A/B/C 架構見證",
+    "eml_primary_domain": "Reasoning",
+    "eml_domains": [
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "A PACC-style commit space changes selection quality beyond what a hard verifier achieves, and any creative-breadth loss is separable from the commit constraints.",
+    "eml_metrics": {
+      "verdict": "SYNTHETIC_PARETO_WITNESS_REASONING_UP_BREADTH_COLLAPSE_MITIGATABLE",
+      "scale": "7 categories × 28 tasks × 8 pools × 112 candidates; 1568 pool instances; 0 LLM calls",
+      "overall": {
+        "A": {
+          "hard": 0.9936,
+          "derived": 0.7902,
+          "soft": 0.7878,
+          "long_horizon": 0.9648,
+          "valid_novelty": 0.5487
+        },
+        "B": {
+          "hard": 1.0,
+          "derived": 0.7915,
+          "soft": 0.7859,
+          "long_horizon": 0.9676,
+          "valid_novelty": 0.551
+        },
+        "C": {
+          "hard": 1.0,
+          "derived": 1.0,
+          "soft": 0.7783,
+          "long_horizon": 0.9818,
+          "valid_novelty": 0.7474
+        }
+      },
+      "pure_creative": {
+        "A": {
+          "raw_novelty": 0.8889,
+          "pattern_entropy": 0.7199
+        },
+        "C": {
+          "raw_novelty": 0.9864,
+          "pattern_entropy": 0.2284
+        },
+        "D_elastic_posthoc": {
+          "raw_novelty": 0.9225,
+          "pattern_entropy": 0.7638
+        }
+      },
+      "eight_seed_deltas": {
+        "C_minus_B_derived": {
+          "mean": 0.1865,
+          "sign": "8/8 positive"
+        },
+        "C_minus_A_pattern_entropy": {
+          "mean": -0.3894,
+          "sign": "8/8 negative"
+        }
+      },
+      "B_literal_fallback_rate": 0.286
+    },
+    "eml_interpretation": "Not a simple reasoning-up / imagination-down trade-off: coherence and valid novelty rise, soft-preference fit dips slightly, and the breadth tax is a selection-policy effect that separating exploration from commitment recovers. The elastic diagnostic is post-hoc and not part of the primary result.",
+    "eml_limitations": [
+      "Controlled synthetic witness only; does not demonstrate that a frontier LLM shows the same effect."
+    ],
+    "eml_controls": [
+      "identical candidate pools for A/B/C",
+      "pure-creative negative control",
+      "post-hoc elastic diagnostic labelled as such"
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "8 fixed secondary seeds"
+    ],
+    "eml_run_count": 9,
+    "eml_result_type": "MIXED",
+    "eml_software_environment": "Python; synthetic generators and scorers; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract PACC-Hybrid-Lab_v0.1_SYNTHETIC_FINAL.zip; python -m pytest -q; results in results/*.json and docs/PACC_HYBRID_v0.1_RESULTS.md.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_dataset_ids": [
+      "DAT-2026-0002"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0003"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

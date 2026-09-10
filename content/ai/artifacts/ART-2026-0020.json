@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0020",
+  "kind": "artifact",
+  "label": "AER-0 MVP v0.1 Architecture Comparison R6 External Trust Anchor",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/AER-0_MVP_v0.1_Architecture_Comparison_R6_External_Trust_Anchor.zip",
+    "eml_artifact_sha256": "a74de8ad0cbc6b2a6e6ac69f2d7fe41e3dabf27cf92bbb7760c597615044bfbd",
+    "eml_artifact_size": 141749,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

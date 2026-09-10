@@ -1,0 +1,63 @@
+{
+  "id": "BEN-2026-0001",
+  "kind": "benchmark",
+  "label": "PACC micro-lab protocol v0.1 (frozen gates)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/benchmarks/BEN-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The preregistered decision rule reused unchanged from v0.1 to v0.13: E0 purity, held-out representation distance D_R = E[JS(Φ(S_N), S_P)] ≤ 0.05, update commutation D_U ≤ 0.05, off-manifold intervention D_I ≤ 0.08, action agreement ≥ 0.85, a shuffled-target negative control the real map must beat, a design-independence rule (agreement ≥ 0.999 and R² ≥ 0.995 collapse two designs into one family), verdict levels 0–3, and a strong PACC-A gate of at least three independent convergent families.",
+    "eml_summary_zh": "從 v0.1 到 v0.13 原封重用的預登記判決規則：E0 純度、held-out 表徵距離 D_R = E[JS(Φ(S_N), S_P)] ≤ 0.05、更新交換 D_U ≤ 0.05、離流形干預 D_I ≤ 0.08、行動一致度 ≥ 0.85、真實映射必須勝過的 shuffled-target 負控制、設計獨立規則（一致度 ≥ 0.999 且 R² ≥ 0.995 即視為同一家族）、判決等級 0–3，以及至少三個獨立收斂家族的強 PACC-A 門檻。",
+    "eml_label_zh": "PACC 微型實驗室協定 v0.1（凍結門檻）",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Model Representation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_purpose": "Make 'similar' and 'probability-like' non-negotiable after the data are seen.",
+    "eml_tasks": [
+      "Sequential evidence integration over 4 hidden hypotheses × 6 binary prototypes (uniform reliability 0.80; heterogeneous 0.60–0.95 with only ordinal strengths 1–3 given to non-probabilistic systems; adversarial geometry from v0.2).",
+      "Learned source reliability without an oracle (v0.3).",
+      "Correlated source clusters with latent shared inversion, q swept 0.06–0.42 (v0.4–v0.13).",
+      "Dynamic-world regime switches (E4, descriptive only)."
+    ],
+    "eml_metrics": [
+      "action agreement",
+      "held-out JS D_R",
+      "update-commutation JS D_U",
+      "intervention JS D_I",
+      "shuffled/constant/broken-composition control JS",
+      "cross-family R²",
+      "basin coverage, transition JS, cocycle path JS, reverse fidelity"
+    ],
+    "eml_evaluation_protocol": "Mapper fit on training episodes/worlds only; every gate frozen before the run; secondary multi-seed stresses are labelled post-hoc and never modify the primary decision rule.",
+    "eml_baseline_models": [
+      "Exact Bayesian posterior",
+      "Beta-Bernoulli source-quality reference",
+      "joint-likelihood common-cause reference",
+      "Bayesian HMM (dynamic world)"
+    ],
+    "eml_limitations": [
+      "Does not measure LLM equivalence, resource efficiency, hidden-cluster learning, or whether probability is an observer projection; E4 dynamic-world numbers make no superiority claim.",
+      "Synthetic data and theoretical reasoning throughout: theoretically possible is not actually possible."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

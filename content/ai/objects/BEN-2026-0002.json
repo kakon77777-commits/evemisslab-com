@@ -1,0 +1,52 @@
+{
+  "id": "BEN-2026-0002",
+  "kind": "benchmark",
+  "label": "AER-0 architecture-comparison suite (R1–R6)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/benchmarks/BEN-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Deterministic, executable comparisons that grow round by round: R1 — two facts (one stable, one changing at hours 8 and 16), eight queries over 17 simulated hours, baselines B1 stateless / B2 fixed 6-hour TTL / B3 memory + tools / B4 evented compound agent; R3 — scattered policy vs centralized application gate vs AER-ECT on provenance, stale-write, audit and dependency binding; R4 — policy-topology scaling over N ∈ {1, 4, 16, 64} callers × 6 rules; R5 — ten bypass scenarios across five threat layers; R6 — coherent full-DB forgery, anchor mutation, prefix truncation with/without a trusted head, fail-closed anchor, orphan anchor, adapter conformance.",
+    "eml_summary_zh": "逐輪成長的決定性可執行比較：R1——兩個事實（一穩定、一在第 8 與 16 小時改變）、17 個模擬小時內 8 次查詢，基線 B1 無狀態／B2 固定 6 小時 TTL／B3 記憶 + 工具／B4 事件驅動複合 agent；R3——分散政策 vs 集中式應用 gate vs AER-ECT，比 provenance、stale write、audit 與依賴綁定；R4——N ∈ {1, 4, 16, 64} 個 caller × 6 條規則的政策拓撲縮放；R5——五個威脅層上的十種繞過情境；R6——連貫的整庫偽造、anchor 竄改、有／無可信 head 的前綴截斷、fail-closed anchor、孤兒 anchor、adapter 一致性。",
+    "eml_label_zh": "AER-0 架構比較套件（R1–R6）",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "AI Architecture",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_purpose": "Ask a narrower question each round: what remains distinct once the baseline is allowed to be as good as AER?",
+    "eml_metrics": [
+      "stale answers",
+      "recomputations",
+      "stable/volatile refreshes",
+      "workflow reuse",
+      "provenance/version-conflict witnesses",
+      "policy sites, rule placements, blast radius, migration edits",
+      "PREVENTED / OPEN_DETECTED / OPEN_UNDETECTED per scenario",
+      "test counts"
+    ],
+    "eml_evaluation_protocol": "Baselines are strengthened deliberately (B4 in R1, centralized gate in R3) so ordinary mechanisms are not attributed to AER; every round states supported and not-measured claims separately.",
+    "eml_limitations": [
+      "Not a general-intelligence benchmark; no performance, cost, security-certification or production claim; the LangGraph round is source-grounded, not executed."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

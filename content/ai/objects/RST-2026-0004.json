@@ -1,0 +1,45 @@
+{
+  "id": "RST-2026-0004",
+  "kind": "result",
+  "label": "R5 ten-scenario tally",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "5 PREVENTED / 3 OPEN_DETECTED / 1 OPEN_UNDETECTED / 1 SERIALIZED_TO_SEMANTIC_CONFLICT; the undetected case is the coherent full-database forgery.",
+    "eml_summary_zh": "5 PREVENTED／3 OPEN_DETECTED／1 OPEN_UNDETECTED／1 SERIALIZED_TO_SEMANTIC_CONFLICT；未偵測的那一例是連貫的整庫偽造。",
+    "eml_label_zh": "R5 十情境統計",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "prevented": 5,
+      "open_detected": 3,
+      "open_undetected": 1,
+      "serialized": 1
+    },
+    "eml_interpretation": "No external trust anchor ⇒ no full-DB tamperproof claim — a structural result that defines R6.",
+    "eml_limitations": [
+      "Retained negative witnesses are part of the verdict, not implementation accidents."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

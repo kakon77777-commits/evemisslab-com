@@ -1,0 +1,40 @@
+{
+  "id": "RST-2026-0010",
+  "kind": "result",
+  "label": "v0.8 basin map",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0010/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Frozen chart fitted at q* = 0.20: N0/N1/N3 pass on {0.06 … 0.33}, N2 on {0.06 … 0.30}; first failing gate at the edge is negative-control discrimination (ratio ≈ 0.858 at q = 0.36 for N0/N1); local refit 9/9.",
+    "eml_summary_zh": "在 q* = 0.20 擬合的凍結 chart：N0/N1/N3 在 {0.06 … 0.33} 通過、N2 在 {0.06 … 0.30}；邊緣最先失敗的門檻是負控制判別（N0/N1 在 q = 0.36 比值 ≈ 0.858）；本地重擬合 9/9。",
+    "eml_label_zh": "v0.8 吸引域圖",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "N0_N1_N3_first_fail_q": 0.36,
+      "N2_first_fail_q": 0.33
+    },
+    "eml_interpretation": "Shared composed coordinate + family-specific finite basins.",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

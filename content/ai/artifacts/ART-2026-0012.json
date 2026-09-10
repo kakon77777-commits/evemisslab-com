@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0012",
+  "kind": "artifact",
+  "label": "PACC conjecture paper v0.1 (UTF-8 Markdown)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "canonical-source",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC_Probability_Appearance_Convergence_Conjecture_v0.1_2026-09-08.md",
+    "eml_artifact_sha256": "7812b9635c2039785c7b03eb7bc726b0b67cea8b7462dfd04eb00bfffcc86bec",
+    "eml_artifact_size": 24506,
+    "eml_artifact_media_type": "text/markdown; charset=utf-8",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

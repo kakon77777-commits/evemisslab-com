@@ -1,0 +1,54 @@
+{
+  "id": "RES-2026-0003",
+  "kind": "research",
+  "label": "Does epistemic governance survive implementation? The AER-0 architecture comparison",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Six rounds compare the AER-0 runtime with progressively stronger baselines — a stateless recomputer, fixed-TTL state, memory + tools, an evented compound agent, LangGraph 1.2.11 (source-grounded), and finally a centralized application-level gate that is allowed to be as good as AER. Each round narrows the claim: from 'AER is distinct' to 'AER promotes epistemic governance from application convention to a runtime-level canonical-write boundary', with bounded mediation and an external signed authenticity witness, and explicitly no claim of unique computational capability.",
+    "eml_summary_zh": "六輪把 AER-0 runtime 與越來越強的基線比較——無狀態重算、固定 TTL、記憶 + 工具、事件驅動複合 agent、LangGraph 1.2.11（僅 source-grounded）、最後是一個允許做得跟 AER 一樣好的集中式應用層 gate。每一輪都把主張收窄：從「AER 不一樣」收到「AER 把認識論治理從應用慣例提升為 runtime 層的 canonical-write 邊界」，附有界中介與外部簽章真實性見證，並明確不主張獨特的計算能力。",
+    "eml_label_zh": "認識論治理能不能活過實作？AER-0 架構比較",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Agent Systems",
+      "Evaluation",
+      "AI Infrastructure"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_research_questions": [
+      "When a baseline is given persistent memory, workflow reuse, event invalidation and versioning, how much of AER remains distinct?",
+      "Is a mandatory epistemic commit transaction a new computational capability, or the elevation of convergent mechanisms into a runtime primitive?",
+      "Can canonical epistemic mutation be completely mediated, and can authenticity be anchored outside the writable database?"
+    ],
+    "eml_claims": [
+      "R1: AER-0 is distinct on tested mutation semantics (provenance gate, optimistic version conflict) but not dominant — the evented baseline needs fewer recomputations.",
+      "R3: AER-ECT ≈ centralized application gate on tested governance semantics; computational uniqueness NOT SUPPORTED; architectural elevation supported.",
+      "R4: centralization reduces policy scattering (O(NR)→O(R)) and migration surface, at the price of a larger blast radius per shared defect.",
+      "R5–R6: bounded complete mediation without tamperproofness; an Ed25519-signed external anchor converts a coherent full-DB forgery from undetected to detectable, given a trusted key and latest-head witness."
+    ],
+    "eml_limitations": [
+      "No executable cross-runtime comparison: LangGraph could not be installed (PyPI DNS unavailable) in the R2 environment.",
+      "No performance, cost, security-certification or general-intelligence claim; hostile same-process code and a compromised signer remain outside the trusted boundary."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

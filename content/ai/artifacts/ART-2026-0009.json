@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0009",
+  "kind": "artifact",
+  "label": "Adaptive Epistemic Systems Series — Paper 09 (UTF-8 Markdown)",
+  "created_at": "2026-09-10",
+  "updated_at": "2026-09-10",
+  "values": {
+    "eml_artifact_type": "canonical-source",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/Adaptive_Epistemic_Systems_Series_Paper_09_Probability_Is_Not_Bayesian_v0.1.md",
+    "eml_artifact_sha256": "3565602d4854c98d76ced7e46f250164f2ae4c7d51b868de5dd12fecc137425f",
+    "eml_artifact_size": 31983,
+    "eml_artifact_media_type": "text/markdown; charset=utf-8",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

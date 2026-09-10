@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0003",
+  "kind": "paper",
+  "label": "Paper 03 — From dynamic graph to executable symbolic system: language as rendering, not canonical state",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Four layers (world state, canonical symbols, executable operations, rendering); natural language is parsed into canonical state and rendered back out, never used as the state itself.",
+    "eml_summary_zh": "四層結構（世界狀態、canonical 符號、可執行操作、rendering）；自然語言被解析進 canonical state 再 render 出來，永遠不直接當狀態本身。",
+    "eml_label_zh": "從動態圖到可執行符號系統——自然語言作為世界狀態的 Rendering，而非 Canonical State",
+    "eml_primary_domain": "AI Architecture",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-07",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_03_Executable_Symbolic_State_and_Rendering_v0.1.md",
+    "eml_checksums": {
+      "sha256": "1423707d3ca3e8074142103188633d25f9b94d409c27d5c2ea87a40153a34cf2"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 3/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

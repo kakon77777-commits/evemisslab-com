@@ -1,0 +1,56 @@
+{
+  "id": "THY-2026-0001",
+  "kind": "theory",
+  "label": "Asymmetric spacetime tension: temporally heterogeneous world knowledge",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Asymmetry is lifted from edge direction or weight to the effective time scale of nodes and relations. Each node carries stability, information-decay rate, update tension, system impact and local valid time; refresh is triggered by tension, external disturbance, information age, change velocity and event relevance rather than by one global clock, so stable knowledge sleeps, volatile knowledge refreshes often, and a rarely changing high-impact node triggers wide dependency recomputation when it does change.",
+    "eml_summary_zh": "把非對稱性從邊的方向或權重，提升到節點與關係的有效時間尺度。每個節點帶有穩定性、資訊衰減率、更新張力、系統影響度與局部有效時間；刷新由張力、外部擾動、資訊年齡、變化速度與事件相關性觸發，而不是一個全域時鐘——穩定知識沉睡、快變知識高頻更新、低頻高影響的基礎節點一旦改變就觸發大範圍依賴重算。",
+    "eml_label_zh": "非對稱時空張力：時間異質的世界知識",
+    "eml_primary_domain": "Context & Memory",
+    "eml_domains": [
+      "Computation",
+      "AI Architecture"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_assumptions": [
+      "Knowledge stability is highly non-uniform across formal, physical, social and real-time domains.",
+      "Update cost is not free; over-refresh and under-refresh are both failures."
+    ],
+    "eml_claims": [
+      "World knowledge is temporally heterogeneous.",
+      "Freshness is not a timestamp: it is decided jointly by world change rate, source reliability, dependency structure, task risk and system impact (Paper 02)."
+    ],
+    "eml_predictions": [
+      "Architecture contribution AC(λ=0) ≈ 0 in a static world, while AC(λ_heterogeneous) > 0; a fixed synchronous-refresh baseline should be worse in highly heterogeneous time-scale environments (Paper 11 §80–82)."
+    ],
+    "eml_falsification_conditions": [
+      "No measurable staleness/recomputation advantage over fixed-TTL and event-driven refresh under heterogeneous dynamics.",
+      "The tension field is only an LLM guess with no runtime enforcement — then the theory has not been tested (Paper 11 §29)."
+    ],
+    "eml_known_limitations": [
+      "R1 found that in an event-rich deterministic world, pure event invalidation is cheaper than tension scheduling (AER 3 recomputations vs 2)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0006",
+  "kind": "artifact",
+  "label": "Adaptive Epistemic Systems Series — Paper 06 (UTF-8 Markdown)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "canonical-source",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/Adaptive_Epistemic_Systems_Series_Paper_06_Substrate_Neutral_Computational_Containers_v0.1.md",
+    "eml_artifact_sha256": "dca4838b1274db5f51668e3dde0babdaaf27fd7e6f1ce9d2a2a82c1b978b3d33",
+    "eml_artifact_size": 26803,
+    "eml_artifact_media_type": "text/markdown; charset=utf-8",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "RST-2026-0011",
+  "kind": "result",
+  "label": "v0.10 cocycle: path disagreement ≈ 10⁻⁵ vs control ≈ 10⁻¹",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0011/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Direct-vs-composed latent JS 3.5×10⁻⁵ (N0/N1), 4.0×10⁻⁵ (N2), 2.7×10⁻⁵ (N3); real/shuffled ratio ≈ 3×10⁻⁴; both paths accurate to chart C.",
+    "eml_summary_zh": "直接 vs 組合的潛在 JS：3.5×10⁻⁵（N0/N1）、4.0×10⁻⁵（N2）、2.7×10⁻⁵（N3）；真實／shuffled 比 ≈ 3×10⁻⁴；兩條路徑對 chart C 都準確。",
+    "eml_label_zh": "v0.10 cocycle：路徑分歧 ≈ 10⁻⁵ vs 控制 ≈ 10⁻¹",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "POSITIVE",
+    "eml_metrics": {
+      "families_pass": "4/4",
+      "secondary_pass_rate": 1.0
+    },
+    "eml_interpretation": "Forward cocycle coherence is robust where three charts overlap.",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "BEN-2026-0003",
+  "kind": "benchmark",
+  "label": "PACC-LLM Hybrid A/B/C benchmark",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/benchmarks/BEN-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Three conditions over identical candidate pools: A generator-only, B hard verifier, C PACC runtime (plus post-hoc D 'elastic'). v0.1: 7 categories × 28 tasks × 8 pools × 112 candidates (1,568 shared pool instances). Metrics: explicit hard adherence, derived coherence, soft-intent satisfaction, long-horizon retention, raw and valid novelty, pattern entropy. v0.2: 16 hand-authored natural-language tasks, equal accounted budgets, gold rubric visible only to a condition-blind judge.",
+    "eml_summary_zh": "三種條件跑在完全相同的候選池上：A 純生成器、B 硬驗證器、C PACC runtime（另有事後的 D「elastic」）。v0.1：7 類 × 28 題 × 8 池 × 112 候選（1,568 個共享池實例）。指標：明示硬約束遵守、衍生一致性、軟意圖滿足、長程保持、原始與有效新穎度、pattern entropy。v0.2：16 個手寫自然語言任務、相同計費預算、只有對條件盲的評審看得到 gold rubric。",
+    "eml_label_zh": "PACC-LLM 混合 A/B/C benchmark",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Reasoning"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_purpose": "Separate 'more rejection' from genuine gains in derived dependency coherence, intent handling and constraint-satisfying novelty.",
+    "eml_metrics": [
+      "explicit hard adherence",
+      "derived coherence",
+      "soft-intent satisfaction",
+      "long-horizon retention",
+      "raw novelty",
+      "valid novelty",
+      "pattern entropy"
+    ],
+    "eml_limitations": [
+      "A single-model judge is not human evaluation; nothing about real models is measured until a live run exists."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

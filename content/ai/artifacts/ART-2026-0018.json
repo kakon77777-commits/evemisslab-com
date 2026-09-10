@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0018",
+  "kind": "artifact",
+  "label": "AER-0 MVP v0.1 Architecture Comparison R4 Policy Mutation",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/AER-0_MVP_v0.1_Architecture_Comparison_R4_Policy_Mutation.zip",
+    "eml_artifact_sha256": "cf7ada5979a2384d67e83a7f00b51d297ae029157454231490b489411e0e5299",
+    "eml_artifact_size": 101261,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

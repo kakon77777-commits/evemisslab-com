@@ -1,0 +1,49 @@
+{
+  "id": "RES-2026-0004",
+  "kind": "research",
+  "label": "A PACC-style runtime on language models: reasoning, intent and creative breadth",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Does wrapping candidate selection in a canonical hard/derived-constraint commit space change what a generator produces? A synthetic A/B/C witness (generator only / hard verifier / PACC runtime) shows derived coherence and constraint-satisfying novelty up, soft-preference fit slightly down, and a creative-breadth collapse that a post-hoc 'elastic' exploration policy recovers. The real-language-model version of the benchmark has a validated, fail-closed harness but has not been executed.",
+    "eml_summary_zh": "把候選選擇包進 canonical 硬約束／衍生約束的 commit 空間，會改變生成器的產出嗎？合成的 A/B/C 見證（純生成器／硬驗證器／PACC runtime）顯示衍生一致性與滿足約束的新穎度上升、軟偏好契合略降，以及一個可由事後「elastic」探索策略恢復的創造廣度塌縮。真實語言模型版本的 benchmark 已有驗證過、fail-closed 的 harness，但尚未執行。",
+    "eml_label_zh": "PACC 式 runtime 用在語言模型上：推理、意圖與創造廣度",
+    "eml_primary_domain": "Reasoning",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_research_questions": [
+      "Is there a reasoning-up / imagination-down trade-off, or is the observed breadth loss a selection-policy artefact separable from the commit constraints?",
+      "Will a frontier language model show the same effect as the synthetic witness?"
+    ],
+    "eml_claims": [
+      "Within the synthetic witness: reasoning coherence ↑, valid novelty ↑, soft-preference fit slightly ↓, creative breadth ↓ under naive selection and recoverable with exploration separated from commitment (8/8 seeds sign-stable)."
+    ],
+    "eml_limitations": [
+      "Zero real LLM calls so far; no claim about real-model reasoning, intent understanding, imagination, hallucination or human-rated usefulness is permitted before a real-model result exists.",
+      "The v0.1 numbers are synthetic data and theoretical reasoning; until a real hybrid model exists, an inference is only an inference — theoretically possible is not actually possible."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

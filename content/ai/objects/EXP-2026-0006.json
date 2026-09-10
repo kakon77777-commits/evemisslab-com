@@ -1,0 +1,63 @@
+{
+  "id": "EXP-2026-0006",
+  "kind": "experiment",
+  "label": "R5 — complete mediation and bypass resistance",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0006/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "An adversarial boundary test across five threat layers, after adding a SQLite authorizer on managed connections, trigger guards on the five protected tables, verifier-only verification-state recording, BEGIN IMMEDIATE commit serialization, and reference-monitor / canonical-integrity audits. Ten scenarios: five PREVENTED (managed direct write, foreign raw write with intact schema, post-verification tamper, fabricated verdict, managed guard drop), three OPEN_DETECTED (foreign guard drop, post-guard-removal node forge, hostile same-process disable), one OPEN_UNDETECTED (full-DB writer forging node and backing candidate consistently), one same-base two-process race SERIALIZED_TO_SEMANTIC_CONFLICT.",
+    "eml_summary_zh": "橫跨五個威脅層的對抗性邊界測試，前提是加入受管連線的 SQLite authorizer、五張受保護表的 trigger guard、只有 verifier 能寫的驗證狀態、BEGIN IMMEDIATE 的 commit 序列化，以及 reference-monitor／canonical-integrity 稽核。十種情境：五種 PREVENTED（受管直接寫、schema 完整的外部原始寫、驗證後竄改、偽造 verdict、受管移除 guard）、三種 OPEN_DETECTED（外部移除 guard、移除 guard 後偽造節點、同程序敵意停用）、一種 OPEN_UNDETECTED（整庫寫入者一致地偽造節點與其 backing candidate）、一種同基底雙程序競賽 SERIALIZED_TO_SEMANTIC_CONFLICT。",
+    "eml_label_zh": "R5——完全中介與繞過抗性",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Canonical epistemic mutation can be completely mediated when callers try to bypass ECT — for a bounded trust boundary.",
+    "eml_metrics": {
+      "verdict": "BOUNDED_COMPLETE_MEDIATION_WITHOUT_TAMPERPROOFNESS",
+      "scenarios": {
+        "PREVENTED": 5,
+        "OPEN_DETECTED": 3,
+        "OPEN_UNDETECTED": 1,
+        "SERIALIZED_TO_SEMANTIC_CONFLICT": 1
+      },
+      "reference_monitor": {
+        "complete_mediation": "SUPPORTED IN BOUNDED SCOPE",
+        "tamperproof": "NOT SUPPORTED",
+        "small_analyzable": "PARTIAL"
+      }
+    },
+    "eml_interpretation": "Internal consistency ≠ tamper evidence against a full DB writer: an attacker who removes the triggers and rewrites node, candidate and audit records consistently passes an audit whose entire trust base lives in the same writable database. Hostile same-process Python code is outside the trusted boundary. Stronger than a voluntary ECT API, far weaker than a security kernel.",
+    "eml_limitations": [
+      "Python's sqlite3.create_function() cannot tag the trigger-invoked authorization function DIRECTONLY/INNOCUOUS; no hardened-schema safety claimed.",
+      "Alternate storage adapters, OS privilege isolation and general performance NOT MEASURED."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

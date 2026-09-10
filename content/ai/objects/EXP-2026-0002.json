@@ -1,0 +1,107 @@
+{
+  "id": "EXP-2026-0002",
+  "kind": "experiment",
+  "label": "R1 — deterministic semantics comparison against four baselines",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Two facts (one stable, one changing at hours 8 and 16), eight queries over 17 simulated hours. B1 stateless recomputes every query; B2 fixed 6-hour TTL; B3 adds workflow memory; B4 an evented compound agent with event-driven invalidation. AER-0 matches B4 on zero stale answers, zero stable refreshes and workflow reuse, needs one more recomputation (3 vs 2) because its tension policy refreshes proactively, and is alone in blocking a no-provenance fact and catching a conflicting write.",
+    "eml_summary_zh": "兩個事實（一穩定、一在第 8 與 16 小時改變），17 個模擬小時內 8 次查詢。B1 無狀態每次重算；B2 固定 6 小時 TTL；B3 加 workflow 記憶；B4 是帶事件驅動失效的複合 agent。AER-0 在零過期回答、零穩定節點刷新與 workflow 重用上與 B4 打平，因為張力政策主動刷新而多一次重算（3 vs 2），但只有它擋下無 provenance 的事實並抓到衝突寫入。",
+    "eml_label_zh": "R1——對四個基線的決定性語義比較",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "AER's different ownership and update semantics survive into observable runtime behaviour when compared with progressively stronger baselines.",
+    "eml_metrics": {
+      "verdict": "AER_DISTINCT_ON_TESTED_SEMANTICS",
+      "table": {
+        "B1_stateless": {
+          "stale": 0,
+          "recomputation": 8,
+          "stable_refresh": 0,
+          "volatile_refresh": 0,
+          "workflow_reuse": 0,
+          "model_swap_preserves_state": false,
+          "blocks_no_provenance": false,
+          "catches_conflict": false
+        },
+        "B2_fixed_ttl": {
+          "stale": 2,
+          "recomputation": 4,
+          "stable_refresh": 2,
+          "volatile_refresh": 2,
+          "workflow_reuse": 0,
+          "model_swap_preserves_state": true,
+          "blocks_no_provenance": false,
+          "catches_conflict": false
+        },
+        "B3_memory_tools": {
+          "stale": 2,
+          "recomputation": 4,
+          "stable_refresh": 2,
+          "volatile_refresh": 2,
+          "workflow_reuse": 6,
+          "model_swap_preserves_state": true,
+          "blocks_no_provenance": false,
+          "catches_conflict": false
+        },
+        "B4_evented_agent": {
+          "stale": 0,
+          "recomputation": 2,
+          "stable_refresh": 0,
+          "volatile_refresh": 2,
+          "workflow_reuse": 6,
+          "model_swap_preserves_state": true,
+          "blocks_no_provenance": false,
+          "catches_conflict": false
+        },
+        "AER-0": {
+          "stale": 0,
+          "recomputation": 3,
+          "stable_refresh": 0,
+          "volatile_refresh": 3,
+          "workflow_reuse": 6,
+          "model_swap_preserves_state": true,
+          "blocks_no_provenance": true,
+          "catches_conflict": true
+        }
+      }
+    },
+    "eml_interpretation": "Not a dominance result. Persistent memory across model swap, workflow reuse and selective event-driven refresh are not unique to AER once the baseline is strengthened; the measured difference collapses to state-mutation semantics (provenance gate, optimistic version conflict, candidate/verify/commit authority).",
+    "eml_limitations": [
+      "B4 is a reference implementation of event-driven behaviour, not a real production framework (structural closure PARTIAL).",
+      "Says nothing about intelligence, speed, cost in other environments, or whether an attractor exists."
+    ],
+    "eml_controls": [
+      "B4 deliberately stronger than B3 so ordinary event invalidation and external memory are not attributed to AER."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

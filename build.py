@@ -4,7 +4,8 @@ Builds evemisslab.com into dist/.
 
     python build.py
 
-English at the root, Traditional Chinese under /zh/.
+English at the root, Traditional Chinese under /zh/. The AI Research
+Laboratory lives under /ai/ (and /zh/ai/); see src/ai_research.py.
 
 Deployment note: this domain is served by the existing Cloudflare **Pages**
 project `evemisslab`, not by a Worker. Deploy with
@@ -18,7 +19,6 @@ Worker custom domain for the same hostname would collide with it.
 from __future__ import annotations
 
 import html
-import json
 import shutil
 import sys
 from pathlib import Path
@@ -26,23 +26,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src"))
 
+import ai_research as A  # noqa: E402
 import content as C  # noqa: E402
+import shell as S  # noqa: E402
 
 DIST = ROOT / "dist"
-
-FONTS_BASE = (
-    "https://fonts.googleapis.com/css2"
-    "?family=Schibsted+Grotesk:wght@400;600;700"
-    "&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400"
-    "&family=Geist+Mono:wght@400;500;600"
-)
-FONTS_ZH = "&family=Noto+Sans+TC:wght@500;700&family=Noto+Serif+TC:wght@400;500"
-
-THEME_BOOT = (
-    "<script>(function(){try{var t=localStorage.getItem('eml-theme');"
-    "if(t==='light'||t==='dark'){document.documentElement.setAttribute('data-theme',t);}}"
-    "catch(e){}})();</script>"
-)
+CONTENT = ROOT / "content"
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 <rect width="32" height="32" fill="#14161a"/>
@@ -53,9 +42,18 @@ FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
 </svg>
 """
 
+# The parent spec names the archive cell "Archives" and routes it to
+# /ai/archives/; the site spec's route map says /ai/archive/. The site spec
+# wins, and the other spelling redirects so neither document's link breaks.
+REDIRECTS = """/ai/archives/ /ai/archive/ 301
+/ai/archives/* /ai/archive/:splat 301
+/zh/ai/archives/ /zh/ai/archive/ 301
+/zh/ai/archives/* /zh/ai/archive/:splat 301
+"""
+
 
 def url_path(lang: str) -> str:
-    return "/" if lang == "en" else "/zh/"
+    return S.url_path(lang)
 
 
 def render_index(lang: str) -> str:
@@ -99,17 +97,26 @@ def render_how(lang: str) -> str:
     return f'<ul class="how-list">{items}</ul>'
 
 
-def render_page(lang: str) -> str:
-    ch = C.CHROME[lang]
-    other = "zh" if lang == "en" else "en"
-    here = C.SITE["origin"] + url_path(lang)
-
-    nav = "".join(
-        f'<a class="plate-link" href="{h}">{html.escape(l)}</a>' for h, l in ch["nav"]
+def render_matrix(lang: str) -> str:
+    """The AI Research Matrix: twelve text links into /ai/, in the hero's left
+    column where the statement used to be."""
+    ai = C.AI[lang]
+    base = url_path(lang) + "ai/"
+    cells = "".join(
+        f'<li><a class="matrix-cell" href="{base}{slug}/"><span>{html.escape(label)}</span>'
+        f'<span class="matrix-arrow" aria-hidden="true">&#8599;</span></a></li>'
+        for slug, label in ai["matrix"]
+    )
+    return (
+        f'<div class="matrix-wrap"><p class="hero-eyebrow">{html.escape(ai["matrix_eyebrow"])}</p>'
+        f'<nav aria-label="{html.escape(ai["name"])}"><ul class="matrix">{cells}</ul></nav>'
+        f'<p class="matrix-foot"><a href="{base}">{html.escape(ai["matrix_home"])} &rarr;</a></p></div>'
     )
 
-    fonts = FONTS_BASE + (FONTS_ZH if lang == "zh" else "") + "&display=swap"
 
+def render_page(lang: str) -> str:
+    ch = C.CHROME[lang]
+    path = url_path(lang)
     total = sum(len(g["sites"]) for g in C.GROUPS[lang])
 
     jsonld = {
@@ -120,63 +127,19 @@ def render_page(lang: str) -> str:
         "url": C.SITE["origin"],
         "description": ch["standfirst"],
         "subOrganization": [
+            {"@type": "ResearchOrganization", "name": C.AI["en"]["full_name"],
+             "url": C.SITE["origin"] + "/ai/"},
+        ] + [
             {"@type": "WebSite", "name": s["name"],
              "url": f'https://{s["host"] if "." in s["host"] else s["host"] + ".evemisslab.com"}/'}
             for g in C.GROUPS[lang] for s in g["sites"]
         ],
     }
 
-    return f"""<!doctype html>
-<html lang="{ch['lang']}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EveMissLab — {html.escape(ch['display'])}</title>
-<meta name="description" content="{html.escape(ch['standfirst'])}">
-<link rel="canonical" href="{here}">
-<link rel="alternate" hreflang="en" href="{C.SITE['origin']}/">
-<link rel="alternate" hreflang="zh-Hant" href="{C.SITE['origin']}/zh/">
-<link rel="alternate" hreflang="x-default" href="{C.SITE['origin']}/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="EveMissLab">
-<meta property="og:title" content="EveMissLab">
-<meta property="og:description" content="{html.escape(ch['standfirst'])}">
-<meta property="og:url" content="{here}">
-<meta property="og:image" content="{C.SITE['origin']}/media/og.jpg">
-<meta property="og:locale" content="{'zh_TW' if lang == 'zh' else 'en_US'}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#f4f3f0" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{fonts}">
-<link rel="stylesheet" href="/assets/styles.css">
-{THEME_BOOT}
-<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
-</head>
-<body>
-<a class="skip" href="#main">{ch['skip']}</a>
-
-<header class="plate">
-  <div class="plate-in">
-    <a class="plate-mark" href="{url_path(lang)}">EVEMISSLAB</a>
-    <nav class="plate-nav" aria-label="EveMissLab">{nav}</nav>
-    <div class="plate-tools">
-      <a class="plate-btn" href="{url_path(other)}" hreflang="{'zh-Hant' if other == 'zh' else 'en'}" title="{ch['lang_switch_title']}">{ch['lang_switch']}</a>
-      <button class="plate-btn" type="button" data-theme-toggle aria-label="{ch['theme']}">&#9681;</button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
+    body = f"""<main id="main">
   <div class="shell hero">
     <div class="hero-grid">
-      <div>
-        <p class="hero-eyebrow">{html.escape(ch['eyebrow'])}</p>
-        <h1 class="hero-display">{html.escape(ch['display'])}</h1>
-        <p class="hero-stand">{html.escape(ch['standfirst'])}</p>
-      </div>
+      {render_matrix(lang)}
       <figure class="hero-fig">
         <div class="hero-frame">
         <picture>
@@ -192,6 +155,12 @@ def render_page(lang: str) -> str:
         <figcaption class="hero-cap"><span>{html.escape(ch['image_caption'])}</span><span>evemisslab.com</span></figcaption>
       </figure>
     </div>
+  </div>
+
+  <div class="shell statement">
+    <p class="hero-eyebrow">{html.escape(ch['eyebrow'])}</p>
+    <h1 class="hero-display">{html.escape(ch['display'])}</h1>
+    <p class="hero-stand">{html.escape(ch['standfirst'])}</p>
   </div>
 
   <div class="shell index" id="index">
@@ -213,20 +182,13 @@ def render_page(lang: str) -> str:
   </div>
 </main>
 
-<footer class="foot">
-  <div class="shell foot-in">
-    <div>
-      <p class="foot-co">{C.SITE['company_en']} &nbsp;|&nbsp; {C.SITE['company_zh']}</p>
-      <p class="foot-line">&copy; {C.SITE['year']} EVEMISSLAB &middot; {html.escape(ch['footer_rights'])}</p>
-    </div>
-    <span class="foot-right">{total} sites</span>
-  </div>
-</footer>
-
-<script src="/assets/app.js" defer></script>
-</body>
-</html>
 """
+    return (
+        S.head(lang, path, f"EveMissLab — {ch['display']}", ch["standfirst"], jsonld=jsonld)
+        + S.header(lang, path)
+        + body
+        + S.footer(lang, f"{total} sites")
+    )
 
 
 def render_404() -> str:
@@ -239,11 +201,10 @@ def render_404() -> str:
     successful page for it, so the crawlers kept asking. /wp-login.php,
     /admin.php and every other probe answered the same way.
 
-    English only. This site is two pages and the 404 is not one of them — it
-    should not appear in the sitemap or in the language switcher.
+    English only. The 404 should not appear in the sitemap or in the language
+    switcher.
     """
     ch = C.CHROME["en"]
-    fonts = FONTS_BASE + "&display=swap"
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -254,9 +215,9 @@ def render_404() -> str:
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{fonts}">
+<link rel="stylesheet" href="{S.fonts('en')}">
 <link rel="stylesheet" href="/assets/styles.css">
-{THEME_BOOT}
+{S.THEME_BOOT}
 </head>
 <body>
 <header class="plate">
@@ -272,7 +233,8 @@ def render_404() -> str:
       <h1 class="hero-display">No page exists at this address.</h1>
       <p class="hero-stand">This is a static site &mdash; there is no application
         here to log into and no path that takes a query. Start from the
-        <a href="/">index</a>, which lists every site the lab runs.</p>
+        <a href="/">index</a>, which lists every site the lab runs, or from the
+        <a href="/ai/">AI Research Laboratory</a>.</p>
     </div>
   </div>
 </main>
@@ -290,15 +252,18 @@ def render_404() -> str:
 """
 
 
-def render_sitemap() -> str:
+def render_sitemap(en_paths: list[str]) -> str:
+    origin = C.SITE["origin"]
     urls = []
-    for lang in ("en", "zh"):
-        loc = C.SITE["origin"] + url_path(lang)
-        alts = "".join(
-            f'<xhtml:link rel="alternate" hreflang="{h}" href="{C.SITE["origin"]}{url_path(l)}"/>'
-            for h, l in (("en", "en"), ("zh-Hant", "zh"), ("x-default", "en"))
+    for en in en_paths:
+        zh = S.path_in(en, "zh")
+        alts = (
+            f'<xhtml:link rel="alternate" hreflang="en" href="{origin}{en}"/>'
+            f'<xhtml:link rel="alternate" hreflang="zh-Hant" href="{origin}{zh}"/>'
+            f'<xhtml:link rel="alternate" hreflang="x-default" href="{origin}{en}"/>'
         )
-        urls.append(f"<url><loc>{loc}</loc>{alts}</url>")
+        for loc in (origin + en, origin + zh):
+            urls.append(f"<url><loc>{loc}</loc>{alts}</url>")
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
@@ -327,9 +292,13 @@ def main() -> int:
         if f.is_file():
             shutil.copyfile(f, media / f.name)
 
+    ai = A.build(CONTENT / "ai", DIST)
+    pages = ["/"] + ai["pages"]
+
     (DIST / "favicon.svg").write_text(FAVICON, encoding="utf-8")
     (DIST / "404.html").write_text(render_404(), encoding="utf-8")
-    (DIST / "sitemap.xml").write_text(render_sitemap(), encoding="utf-8")
+    (DIST / "sitemap.xml").write_text(render_sitemap(pages), encoding="utf-8")
+    (DIST / "_redirects").write_text(REDIRECTS, encoding="utf-8", newline="\n")
     (DIST / "robots.txt").write_text(
         f"User-agent: *\nAllow: /\nSitemap: {C.SITE['origin']}/sitemap.xml\n",
         encoding="utf-8",
@@ -337,7 +306,12 @@ def main() -> int:
 
     total = sum(len(g["sites"]) for g in C.GROUPS["en"])
     assert total == sum(len(g["sites"]) for g in C.GROUPS["zh"]), "index differs by language"
-    print(f"built 2 pages, {total} indexed sites, into {DIST}")
+    snap = ai["snapshot"]
+    print(
+        f"built {2 * len(pages)} pages, {total} indexed sites, "
+        f"{snap['object_count']} public research objects and {snap['relation_count']} relations "
+        f"({snap['snapshot_id']}), into {DIST}"
+    )
     return 0
 
 

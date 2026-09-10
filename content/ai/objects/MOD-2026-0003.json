@@ -1,0 +1,39 @@
+{
+  "id": "MOD-2026-0003",
+  "kind": "model",
+  "label": "N2 — signed graph",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/models/MOD-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Signed relation graph over hypotheses with graph dynamics; the basin-boundary family — fails the representation threshold under adversarial geometry (v0.2), is less stable under high correlation (v0.4), and has the narrowest, seed-sensitive transfer basin (v0.8).",
+    "eml_summary_zh": "假設之間的帶號關係圖與圖動力學；吸引域邊界家族——在對抗幾何下未達表徵門檻（v0.2）、高相關下較不穩定（v0.4）、轉移吸引域最窄且對 seed 敏感（v0.8）。",
+    "eml_label_zh": "N2——帶號圖",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_provider": "EveMissLab (PACC-Lab)",
+    "eml_access_type": "source inside the PACC-Lab FINAL bundles",
+    "eml_known_behavior_notes": [
+      "Independent family under the preregistered linear diagnostic."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

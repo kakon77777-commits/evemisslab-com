@@ -1,0 +1,87 @@
+{
+  "id": "EXP-2026-0019",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.12 — bounded quadratic transition",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0019/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Transition capacity rises in one preregistered step from 20 affine to 60 fixed degree-2 coefficients with charts, support, split, controls and thresholds unchanged. No family is rescued: reverse fidelity 0.0111 (N0/N1), 0.0139 (N2), 0.0141 (N3) versus the 0.01 gate, 0/4 secondary and 0/3 at larger scale; forward cocycle and inverse consistency survive the quadratic class. The lab stops here rather than escalating to cubic, quartic or neural transitions after seeing the result.",
+    "eml_summary_zh": "轉換容量以一個預登記的步驟從 20 個仿射係數升到 60 個固定二次係數，chart、支撐、切分、控制與門檻不變。沒有家族被救回：反向保真度 0.0111（N0/N1）、0.0139（N2）、0.0141（N3），門檻 0.01，次要 0/4、較大規模 0/3；正向 cocycle 與反向一致性在二次類下存活。實驗室在此停止，而不是看到結果後升級到三次、四次或神經轉換。",
+    "eml_label_zh": "PACC-Lab v0.12——有界二次轉換",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "The reverse destination bias is an artefact of the 4-D affine transition class.",
+    "eml_metrics": {
+      "verdict": "REVERSE BIAS PERSISTS UNDER BOUNDED QUADRATIC",
+      "quadratic_reverse_fidelity": {
+        "N0": 0.01108,
+        "N2": 0.01392,
+        "N3": 0.0141
+      },
+      "gate": 0.01,
+      "quadratic_reverse_pass": "0/4 and 0/3",
+      "forward_cocycle": "PASS",
+      "inverse_pairs": "PASS (N2 2/3 at scale)"
+    },
+    "eml_interpretation": "Rejects the affine-limitation explanation and strengthens a persistent directional/base-point mismatch as the next hypothesis. A sufficiently flexible approximator could fit any finite sample, which is exactly why capacity was bounded in advance.",
+    "eml_limitations": [
+      "Does not prove that no nonlinear transition can remove the bias."
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "3",
+      "5",
+      "7",
+      "11",
+      "3 primary-scale-ish seeds"
+    ],
+    "eml_run_count": 6,
+    "eml_result_type": "NEGATIVE",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

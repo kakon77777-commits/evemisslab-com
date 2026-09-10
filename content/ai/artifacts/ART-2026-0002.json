@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0002",
+  "kind": "artifact",
+  "label": "Adaptive Epistemic Systems Series — Paper 02 (UTF-8 Markdown)",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_artifact_type": "canonical-source",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/Adaptive_Epistemic_Systems_Series_Paper_02_Freshness_Decay_Update_Tension_v0.1.md",
+    "eml_artifact_sha256": "7014b766ad178cbe19d1772f62dcd39c9e925b822913e552a8d494925389cf2f",
+    "eml_artifact_size": 22839,
+    "eml_artifact_media_type": "text/markdown; charset=utf-8",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "EXP-2026-0012",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.5 — does a richer relation state rescue the latent coordinate?",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0012/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A rich relation graph keeps far more source/pair/pattern information than the compact v0.4 bundle while leaving task actions identical. It does not rescue the frozen direct affine-sigmoid map to the common-cause coordinate: compact 0 and rich 0 robust passes, real/control ratios ≈ 0.96–1.02, and no system rescued in four secondary seeds. Counterfactual source-flip probes often pass alone, showing partial local directional alignment without a globally discriminative coordinate.",
+    "eml_summary_zh": "豐富的關係圖比 v0.4 的精簡 bundle 保留多得多的來源／成對／模式資訊，且任務行動完全相同。它救不回凍結的 direct affine-sigmoid 到共同因座標的映射：精簡 0、豐富 0 次穩健通過，真實／控制比 ≈ 0.96–1.02，四個次要 seed 也沒有任何系統被救回。反事實來源翻轉探針常單獨通過，顯示局部方向對齊部分存在，但沒有全域可判別的座標。",
+    "eml_label_zh": "PACC-Lab v0.5——更豐富的關係狀態能救回潛在座標嗎？",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "The v0.4 failure was information loss in the compact state; a richer non-probabilistic relation state admits the direct low-complexity latent coordinate.",
+    "eml_metrics": {
+      "verdict": "RICH_STATE_DOES_NOT_RESCUE_LATENT_DEPENDENCE_COORDINATE",
+      "compact_robust_pass": 0,
+      "rich_robust_pass": 0,
+      "task_action_invariance": true,
+      "moderate_N0": {
+        "compact_dependence_js": 0.0605,
+        "rich_dependence_js": 0.06146,
+        "real_over_control": 0.999
+      }
+    },
+    "eml_interpretation": "Richer raw relation state is insufficient for the tested direct low-complexity latent coordinate — not that the coordinate is information-theoretically unrecoverable. Points to a coordinate-composition problem (v0.6).",
+    "eml_limitations": [
+      "A direct affine-sigmoid observer may be too restrictive even when the raw state is informative."
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "4 secondary seeds"
+    ],
+    "eml_run_count": 2,
+    "eml_result_type": "NEGATIVE",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

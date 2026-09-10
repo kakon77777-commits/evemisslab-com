@@ -1,0 +1,86 @@
+{
+  "id": "EXP-2026-0018",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.11 — bidirectional cocycle and inverse consistency",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0018/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Separates three properties: forward cocycle composition (survives, all families), round-trip inverse consistency (all pairwise round trips pass on the primary run, recover 3/3 at larger scale, but are sample-sensitive at small scale, weakest on the widest pair AC), and reverse transport fidelity to the destination chart (fails for every family: direct C → A latent fidelity 0.0116–0.0148 > 0.01 while direct and composed reverse paths agree to ≈ 10⁻⁵).",
+    "eml_summary_zh": "區分三個性質：正向 cocycle 組合（所有家族都存活）、往返反向一致性（主要 run 所有成對往返都通過，在較大規模 3/3 恢復，但小規模下對樣本敏感，最寬的 AC 對最弱），以及反向傳輸對目的 chart 的保真度（所有家族都失敗：直接 C → A 潛在保真度 0.0116–0.0148 > 0.01，而直接與組合反向路徑彼此一致到 ≈ 10⁻⁵）。",
+    "eml_label_zh": "PACC-Lab v0.11——雙向 cocycle 與反向一致性",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "The local transitions form a groupoid: forward cocycle, inverse consistency and reverse destination fidelity all hold.",
+    "eml_metrics": {
+      "verdict": "PARTIAL BIDIRECTIONAL COHERENCE WITH REVERSE DESTINATION BIAS",
+      "forward_cocycle": "PASS all families",
+      "inverse_pairs_primary": "PASS all",
+      "inverse_pairs_large_scale": "3/3",
+      "reverse_fidelity": {
+        "N0": 0.01162,
+        "N2": 0.01476,
+        "N3": 0.01355,
+        "gate": 0.01
+      },
+      "reverse_direct_vs_composed_latent_js": "7e-05 to 1e-04",
+      "reverse_pass_rate": "0/4 and 0/3"
+    },
+    "eml_interpretation": "RoundTripInvertibility ⇏ DestinationChartFidelity and PathCoherence ⇏ GroupoidClosure: a directionally coherent calibration structure with a persistent reverse latent bias, not a closed local groupoid under the affine transition class.",
+    "eml_limitations": [
+      "Does not establish nonlinear-transition impossibility, manifold structure or full atlas coverage."
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "4 secondary seeds",
+      "3 primary-scale-ish seeds"
+    ],
+    "eml_run_count": 3,
+    "eml_result_type": "MIXED",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

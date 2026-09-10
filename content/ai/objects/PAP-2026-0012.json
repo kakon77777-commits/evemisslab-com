@@ -1,0 +1,41 @@
+{
+  "id": "PAP-2026-0012",
+  "kind": "paper",
+  "label": "The Probabilistic Appearance Convergence Conjecture (PACC)",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0012/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Proposition paper: a system that does not take probability as a first-level primitive may, under finite information, competing candidates, resource limits, repeated update and forced choice, converge to forms that a probability model maps with low complexity. Distinguishes behavioural, representational, dynamical and attractor equivalence, and pre-registers the experiments' falsification conditions.",
+    "eml_summary_zh": "命題論文：不以概率為第一級 primitive 的系統，在有限資訊、多候選競爭、資源約束、動態更新與必須選擇的條件下，可能收斂到概率模型能以低複雜度映射的形式。區分行為、表徵、動力學與吸引子四種等價，並預先登記實驗的否證條件。",
+    "eml_label_zh": "概率表象收斂猜想——非概率式智能計算是否會在有限決策約束下收斂至概率型 AI？",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "proposition / conjecture paper",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "PACC_Probability_Appearance_Convergence_Conjecture_v0.1_2026-09-08.md",
+    "eml_tags": [
+      "zh-TW",
+      "pre-experimental conjecture"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

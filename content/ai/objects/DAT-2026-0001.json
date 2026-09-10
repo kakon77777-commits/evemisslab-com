@@ -1,0 +1,40 @@
+{
+  "id": "DAT-2026-0001",
+  "kind": "dataset",
+  "label": "PACC synthetic evidence worlds",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/data/DAT-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Deterministically generated micro-environments: 4 hidden hypotheses × 6 binary prototypes with per-feature reliabilities; source-quality worlds for learned reliability (20 worlds / 280 episodes / 28 observations at primary scale); correlated-cluster worlds with latent shared inversion at q ∈ {0.06 … 0.42}; and regime-switching dynamic worlds. Primary seeds 20260908 (v0.1) and 20260909 (v0.3+); secondary seeds are labelled post-hoc.",
+    "eml_summary_zh": "決定性生成的微型環境：4 個隱藏假設 × 6 個二元原型與逐特徵可靠度；學習可靠度用的來源品質世界（主要規模 20 個世界／280 回合／28 次觀察）；q ∈ {0.06 … 0.42} 帶潛在共同反轉的相關來源叢集世界；以及 regime 切換的動態世界。主要 seed 20260908（v0.1）與 20260909（v0.3 起）；次要 seed 標為事後。",
+    "eml_label_zh": "PACC 合成證據世界",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_description": "Generators and result JSON live inside each PACC-Lab FINAL bundle; environments are regenerated from seed, not stored as static tables.",
+    "eml_generation_method": "Seeded synthetic generation with preregistered structural checks (e.g. joint-vs-naive Bayes log-loss gap = 0 in independent geometry, > 0 in correlated geometry).",
+    "eml_format": "Python generators + JSON result files",
+    "eml_known_bias": [
+      "Fully observable and synthetic by design; no natural data."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

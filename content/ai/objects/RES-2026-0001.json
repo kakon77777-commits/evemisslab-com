@@ -1,0 +1,53 @@
+{
+  "id": "RES-2026-0001",
+  "kind": "research",
+  "label": "Blind derivation of an adaptive epistemic architecture",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Starting only from first principles — temporally heterogeneous world knowledge, canonical symbolic state, adaptive representation space, capability memory, substrate-neutral compute — the eleven-paper series derives a candidate architecture and then asks the uncomfortable question the derivation raised: why does it look so much like modern compound AI, and does any of the difference survive into a runtime?",
+    "eml_summary_zh": "只從第一原理出發——時間異質的世界知識、canonical 符號狀態、自適應表示空間、能力記憶、載體中立計算——十一篇系列推導出一個候選架構，再面對推導本身冒出的不舒服問題：它為什麼越來越像現代複合 AI？差異有沒有任何一部分能活到 runtime 裡？",
+    "eml_label_zh": "自適應認識系統的盲推導",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Context & Memory",
+      "Agent Systems",
+      "AI-native Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_research_questions": [
+      "What does an intelligent system look like when derived from world-state, freshness, memory and reuse requirements rather than from existing AI paradigms?",
+      "Which of its architectural semantics — canonical state ownership, candidate→verify→commit, mandatory provenance, tension-scheduled refresh — survive comparison with progressively stronger baselines?",
+      "If the differences do not survive, is the convergence itself the phenomenon to explain (an intelligent architecture attractor)?"
+    ],
+    "eml_claims": [
+      "World knowledge is temporally heterogeneous; a single global refresh clock is either wasteful or stale.",
+      "Natural language should be an interface to canonical state, not the canonical state.",
+      "After removing what strong baselines already do, the candidate AER core is: epistemic world-state semantics + candidate/verify/commit authority + mandatory fact provenance + node-local tension refresh + capability/container separation + explicit epistemic-operator routing (R2)."
+    ],
+    "eml_limitations": [
+      "No performance, cost or long-horizon comparison against a production agent framework has been run; R2's LangGraph comparison is source-grounded only.",
+      "One implementation and one substrate cannot speak for all implementations, benchmarks, model families or substrates (Paper 11 §114)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

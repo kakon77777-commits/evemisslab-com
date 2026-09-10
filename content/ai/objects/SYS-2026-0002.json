@@ -1,0 +1,53 @@
+{
+  "id": "SYS-2026-0002",
+  "kind": "system",
+  "label": "PACC-Lab — micro-lab harness for the convergence conjecture",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/systems/SYS-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Fully observable evidence-integration environments, four primitive-level non-probabilistic families (N0–N3), exact Bayesian references, train-only low-complexity mappers, shuffled/constant/broken-composition controls, a design-redundancy diagnostic and frozen preregistered thresholds carried unchanged from v0.1 through v0.13. Each release is a sealed FINAL bundle with its protocol, results and next-experiment preregistration.",
+    "eml_summary_zh": "可完全觀察的證據整合環境、四個 primitive 層非概率家族（N0–N3）、精確 Bayesian 參考、只在訓練集擬合的低複雜度映射器、shuffled／constant／broken-composition 控制組、設計冗餘診斷，以及從 v0.1 到 v0.13 原封不動的預登記門檻。每個版本都是密封的 FINAL 套件，含協定、結果與下一步實驗的預登記。",
+    "eml_label_zh": "PACC-Lab——收斂猜想的微型實驗室",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_purpose": "Test PACC-B/R/D/A with preregistered gates, negative controls and an explicit family-independence rule.",
+    "eml_release": [
+      "PACC-Lab_v0.1_E0-E4_FINAL.zip",
+      "PACC-Lab_v0.2_N3_Adversarial_FINAL.zip",
+      "PACC-Lab_v0.3_Learned_Reliability_FINAL.zip",
+      "PACC-Lab_v0.4_Correlated_Sources_FINAL.zip",
+      "PACC-Lab_v0.5_Representation_Sufficiency_FINAL.zip",
+      "PACC-Lab_v0.6_Composed_Coordinate_FINAL.zip",
+      "PACC-Lab_v0.7_Cross_Geometry_Transfer_FINAL.zip",
+      "PACC-Lab_v0.8_Transfer_Basin_FINAL.zip",
+      "PACC-Lab_v0.9_Coordinate_Atlas_FINAL.zip",
+      "PACC-Lab_v0.10_Cocycle_Coherence_FINAL.zip",
+      "PACC-Lab_v0.11_Bidirectional_Groupoid_FINAL.zip",
+      "PACC-Lab_v0.12_Bounded_Nonlinear_Transition_FINAL.zip",
+      "PACC-Lab_v0.13_Residual_Field_FINAL.zip"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

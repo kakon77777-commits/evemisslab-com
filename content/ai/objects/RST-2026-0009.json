@@ -1,0 +1,40 @@
+{
+  "id": "RST-2026-0009",
+  "kind": "result",
+  "label": "v0.6: composed coordinate 4/4, direct 0/4",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0009/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Composed latent JS ≪ shuffled/constant and ≪ broken composition for every family and geometry (e.g. 0.003603 vs 0.061508 vs 0.058196, moderate N0).",
+    "eml_summary_zh": "每個家族與幾何下組合潛在 JS 都 ≪ shuffled／constant 且 ≪ 弄壞的組合（例如中相關 N0：0.003603 vs 0.061508 vs 0.058196）。",
+    "eml_label_zh": "v0.6：組合座標 4/4、直接映射 0/4",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "POSITIVE",
+    "eml_metrics": {
+      "composed_pass": "4/4",
+      "direct_pass": "0/4"
+    },
+    "eml_interpretation": "The latent probability coordinate is hierarchical/compositional relative to these non-probabilistic states rather than directly affine in the raw canonical state.",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

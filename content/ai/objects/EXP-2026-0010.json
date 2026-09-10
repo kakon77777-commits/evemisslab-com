@@ -1,0 +1,87 @@
+{
+  "id": "EXP-2026-0010",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.3 — learned source reliability without an oracle",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0010/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Both sides lose the source-quality oracle: the Bayesian reference learns Beta-Bernoulli source quality; the non-probabilistic systems learn a qualitative reputation (trust, friction, streak, familiarity). Fitted on training worlds and evaluated on unseen source-quality permutations, the reputation state maps to the Beta-Bernoulli state with JS ≈ 0.00714 versus 0.017–0.018 for shuffled/constant controls, and feedback-update commutation ≈ 0.00130 — stable 6/6 across seeds. Task-state convergence is architecture- and seed-sensitive: at exact primary scale N0/N1 4/4, N2 3/4, N3 2/4.",
+    "eml_summary_zh": "雙方都失去來源品質 oracle：Bayesian 參考學 Beta-Bernoulli 來源品質；非概率系統學定性聲譽（信任、摩擦、連勝、熟悉度）。在訓練世界上擬合、在未見過的來源品質排列上評估，聲譽狀態映射到 Beta-Bernoulli 狀態的 JS ≈ 0.00714，shuffled／constant 控制組為 0.017–0.018，回饋更新交換 ≈ 0.00130——跨 seed 穩定 6/6。任務狀態收斂則依架構與 seed 而異：在主要規模下 N0/N1 4/4、N2 3/4、N3 2/4。",
+    "eml_label_zh": "PACC-Lab v0.3——無 oracle 的來源可靠度學習",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Convergence survives when source reliability must be learned from delayed feedback rather than given.",
+    "eml_metrics": {
+      "verdict": "RELIABILITY-STATE CONVERGENCE ROBUST; TASK CONVERGENCE PARTIAL / BASIN-SENSITIVE",
+      "primary_scale": "20 worlds / 280 episodes / 28 observations",
+      "reliability_mapping_js": 0.007136,
+      "control_js": "0.017–0.018",
+      "feedback_commutation_js": 0.001298,
+      "reliability_independent_families": 1,
+      "task_pass_at_primary_scale": {
+        "N0": "4/4",
+        "N1": "4/4",
+        "N2": "3/4",
+        "N3": "2/4"
+      }
+    },
+    "eml_interpretation": "Calibration-state convergence can be robust while task-state convergence has architecture-dependent basins. A first fixed-quality diagnostic was rejected because Beta means became near-constant and shuffled targets fit almost as well — that redesign is part of the evidence.",
+    "eml_limitations": [
+      "All four wrappers share one NonProbReputationLedger, so reliability convergence counts as one family, not four.",
+      "Does not prove Beta-Bernoulli learning and qualitative reputation universally equivalent."
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "6 secondary seeds (smaller)",
+      "4 seeds at exact primary scale"
+    ],
+    "eml_run_count": 3,
+    "eml_result_type": "MIXED",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "THY-2026-0007",
+  "kind": "theory",
+  "label": "Capability memory and substrate-neutral compute: Reuse ≻ Adapt ≻ Create",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0007/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Beyond facts, the system keeps the algorithms, tools, execution contracts, costs, versions, applicability conditions and success/failure history it has used, and prefers reusing a known solution path over adapting one over creating one. Algorithms and compute containers are different layers: any environment that accepts representable input, performs a valid state transition and returns readable output is a container with its own cost, latency, error and availability model, so algorithm/container pairs are selected jointly.",
+    "eml_summary_zh": "除了事實之外，系統也保存用過的算法、工具、執行契約、成本、版本、適用條件與成敗歷史，並且偏好重用已知求解路徑，勝過調整，再勝過重造。算法與計算容器是不同層：任何能接受可表示輸入、執行有效狀態轉換並回傳可讀輸出的環境都是一個容器，各有自己的成本、延遲、誤差與可用性模型，因此算法／容器成對聯合選擇。",
+    "eml_label_zh": "能力記憶與載體中立計算：Reuse ≻ Adapt ≻ Create",
+    "eml_primary_domain": "Computation",
+    "eml_domains": [
+      "AI Architecture",
+      "AI Infrastructure"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_claims": [
+      "Reuse ≻ Adapt ≻ Create.",
+      "Algorithm ≠ container; a capability/container pair is the unit of selection and of execution trace."
+    ],
+    "eml_predictions": [
+      "Planning cost falls with repeated related tasks; ReuseGain grows with task similarity within the applicability range, and constraint mismatch produces measurable false reuse (Paper 11 §83–84)."
+    ],
+    "eml_falsification_conditions": [
+      "No planning-cost reduction with experience; negative transfer dominates."
+    ],
+    "eml_known_limitations": [
+      "R1/R2: persistent workflow memory outside the model is not unique to AER; the capability/container separation was 'AER default distinct' only because no core LangGraph primitive was found, not because it cannot be built there."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

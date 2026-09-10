@@ -1,0 +1,39 @@
+{
+  "id": "MOD-2026-0002",
+  "kind": "model",
+  "label": "N1 — ordinal tournament",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/models/MOD-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Pairwise ordinal competition between hypotheses; behaviourally and linearly identical to N0 on every tested trajectory.",
+    "eml_summary_zh": "假設之間的成對序數競爭；在所有測過的軌跡上，行為與線性關係都與 N0 相同。",
+    "eml_label_zh": "N1——序數錦標賽",
+    "eml_primary_domain": "Model Representation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_provider": "EveMissLab (PACC-Lab)",
+    "eml_access_type": "source inside the PACC-Lab FINAL bundles",
+    "eml_known_behavior_notes": [
+      "Exact reparameterization of N0: never counted as an independent confirmation."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

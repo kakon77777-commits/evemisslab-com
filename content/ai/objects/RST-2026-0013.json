@@ -1,0 +1,46 @@
+{
+  "id": "RST-2026-0013",
+  "kind": "result",
+  "label": "Hybrid v0.1 A/B/C deltas",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0013/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "C − B: derived coherence +0.2085, long-horizon retention +0.0142, valid novelty +0.1964, soft-intent −0.0076; C − A pattern entropy −0.4915 (pure creative), recovered to 0.7638 by post-hoc elastic selection.",
+    "eml_summary_zh": "C − B：衍生一致性 +0.2085、長程保持 +0.0142、有效新穎度 +0.1964、軟意圖 −0.0076；C − A pattern entropy −0.4915（純創意），事後 elastic 選擇恢復到 0.7638。",
+    "eml_label_zh": "Hybrid v0.1 A/B/C 差值",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "derived_delta_C_B": 0.2085,
+      "valid_novelty_delta_C_B": 0.1964,
+      "soft_delta_C_B": -0.0076,
+      "entropy_delta_C_A": -0.4915,
+      "elastic_entropy": 0.7638
+    },
+    "eml_interpretation": "Gains come from derived dependency coherence and constraint-satisfying novelty, not from more rejection; the breadth cost is mitigable without relaxing commit constraints.",
+    "eml_limitations": [
+      "Synthetic scoring; a real-model result is required before any claim about language models."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

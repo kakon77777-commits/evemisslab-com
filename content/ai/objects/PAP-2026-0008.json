@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0008",
+  "kind": "paper",
+  "label": "Paper 08 — Intelligent architecture attractors: at which level does difference live?",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0008/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Six levels of architectural difference, architecture equivalence classes and attractor basins; the executed architecture is the architecture.",
+    "eml_summary_zh": "六個架構差異層級、架構等價類與吸引域；被執行的架構才是架構。",
+    "eml_label_zh": "智能架構吸引子——差異究竟存在於哪一層？",
+    "eml_primary_domain": "AI Architecture",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_08_Intelligent_Architecture_Attractors_v0.1.md",
+    "eml_checksums": {
+      "sha256": "779cec6ab5f3bf7f99e8fe2d118adeba88d565e43b5898459b190f4054b3a76e"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 8/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

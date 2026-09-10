@@ -1,0 +1,53 @@
+{
+  "id": "THY-2026-0002",
+  "kind": "theory",
+  "label": "Canonical symbolic state and candidate → verify → commit authority",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Natural language is input and output, never the canonical state. Text is parsed, normalized, semantically bound and source-tagged into comparable, verifiable symbolic structure; output is rendered from that state. Model and tool outputs are candidate evidence, and only a committer, after a passing verifier and an expected-version check, may mutate canonical state.",
+    "eml_summary_zh": "自然語言是輸入與輸出，永遠不是 canonical state。文字經解析、正規化、語義綁定與來源標記，轉成可比較、可驗證的符號結構；輸出從該狀態 render 出來。模型與工具的輸出是候選證據，只有 committer 在 verifier 通過與 expected-version 檢查後才能改動 canonical state。",
+    "eml_label_zh": "Canonical 符號狀態與 candidate → verify → commit 權限",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "AI-native Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_assumptions": [
+      "Ambiguity, synonymy, context dependence and self-contamination make language a poor sole carrier of state."
+    ],
+    "eml_claims": [
+      "Text, tables, code, graphs, numbers and actions are different output projections of one canonical state.",
+      "Inference/tool output → Candidate → Verify → Commit, never direct state mutation."
+    ],
+    "eml_predictions": [
+      "A no-provenance fact candidate is rejected before commit; two valid candidates on the same base version yield exactly one commit and one VersionConflict."
+    ],
+    "eml_falsification_conditions": [
+      "A strengthened baseline with direct mutable memory reproduces the same state-integrity outcomes at lower cost."
+    ],
+    "eml_known_limitations": [
+      "A centralized application-level gate reproduces the tested semantics (R3); the remaining difference is where the obligation lives, not what can be computed."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "THY-2026-0006",
+  "kind": "theory",
+  "label": "AER-ECT: a mandatory epistemic commit transaction boundary",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0006/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Every canonical knowledge mutation must pass one mandatory epistemic transaction boundary binding claim, evidence, provenance, valid and observed time, expected version, epistemic operator, verification policy, authority, dependencies and refresh policy: Propose → Verify → Authorize → CompareAndCommit → BindDependencies → Audit. Its parts are not new (truth maintenance, transaction logic, PROV, bitemporal state, PDP/PEP); the hypothesis is that the tuple is mandatory at the canonical write boundary — an epistemic reference-monitor-like boundary, not a proven tamperproof monitor.",
+    "eml_summary_zh": "每一次 canonical knowledge 的改動都必須通過一個強制的認識論交易邊界，綁定 claim、evidence、provenance、有效時間與觀察時間、expected version、認識論算子、驗證政策、權限、依賴與 refresh policy：Propose → Verify → Authorize → CompareAndCommit → BindDependencies → Audit。零件都不新（truth maintenance、transaction logic、PROV、bitemporal state、PDP/PEP）；假說是這個 tuple 在 canonical write 邊界上是強制的——一個類 reference-monitor 的認識論邊界，而非已證明 tamperproof 的 monitor。",
+    "eml_label_zh": "AER-ECT：強制的認識論 commit 交易邊界",
+    "eml_primary_domain": "AI Infrastructure",
+    "eml_domains": [
+      "AI Architecture",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_claims": [
+      "Architectural elevation = same semantic capability + smaller policy-scattering surface + mandatory canonical boundary; not computational uniqueness.",
+      "When accepted knowledge has operational consequences, epistemic governance may deserve the architectural status that transaction boundaries have in databases."
+    ],
+    "eml_predictions": [
+      "Policy sites and rule placements scale O(NR) when scattered versus O(R) under one gate; a new caller does not require new policy placement.",
+      "Internal consistency ≠ authenticity: without an external trust anchor a coherent full-DB forgery passes internal audit."
+    ],
+    "eml_falsification_conditions": [
+      "Bypass is easy under accidental or adversarial pressure — then ECT is merely a convenient API.",
+      "Hostile same-process code or a full DB writer defeats local controls (accepted: tamperproofness is not claimed)."
+    ],
+    "eml_known_limitations": [
+      "Primitive, transaction, provenance, versioning, belief-revision and temporal novelty are weak or not claimed (R3 novelty verdict); OS privilege isolation, signer compromise and cross-resource ACID are not measured (R6)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

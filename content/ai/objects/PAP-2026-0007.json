@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0007",
+  "kind": "paper",
+  "label": "Paper 07 — Blind-derived AI: do different first principles converge on one engineering form?",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0007/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Treats the first six papers as a blind-derivation experiment and proposes a protocol and five levels of similarity for comparing the result with modern AI.",
+    "eml_summary_zh": "把前六篇視為一次盲推導實驗，提出比較協定與五種相似性層級，用來對照現代 AI。",
+    "eml_label_zh": "盲推導 AI——不同第一原理是否收斂到同一工程形態？",
+    "eml_primary_domain": "AI Architecture",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_07_Blind_Derivation_and_AI_Architecture_Convergence_v0.1.md",
+    "eml_checksums": {
+      "sha256": "2a0626405e60d8e57ec1b960272f06283caa32d53f33837e634a026360b7c172"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 7/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

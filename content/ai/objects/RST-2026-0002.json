@@ -1,0 +1,44 @@
+{
+  "id": "RST-2026-0002",
+  "kind": "result",
+  "label": "R2 classification matrix",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Seven axes CONVERGED or partially converged (four of them LangGraph richer); six axes AER-default-distinct; graph semantics semantically distinct.",
+    "eml_summary_zh": "七個軸收斂或部分收斂（其中四個 LangGraph 更豐富）；六個軸為 AER 預設獨有；圖語義為語義上不同。",
+    "eml_label_zh": "R2 分類矩陣",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "converged_or_partial": 7,
+      "langgraph_richer": 4,
+      "aer_default_distinct": 6
+    },
+    "eml_interpretation": "Supports the attractor hypothesis for external state, persistence, graph/workflow execution, history and durable recovery; moves the remaining disagreement upward into what state means, who may mutate it and what a mutation requires.",
+    "eml_limitations": [
+      "Documentary evidence on the LangGraph side; no executable replay."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

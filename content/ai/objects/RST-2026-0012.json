@@ -1,0 +1,40 @@
+{
+  "id": "RST-2026-0012",
+  "kind": "result",
+  "label": "v0.11 reverse destination bias",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0012/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Reverse paths agree with each other (latent JS ≈ 10⁻⁵) but both land ≈ 0.011–0.015 from the true chart-A coordinate, above the 0.01 gate, for every family and at every scale tested.",
+    "eml_summary_zh": "反向路徑彼此一致（潛在 JS ≈ 10⁻⁵），但兩者都落在離真正 chart-A 座標 ≈ 0.011–0.015 處，高於 0.01 門檻，所有家族、所有測試規模皆然。",
+    "eml_label_zh": "v0.11 反向目的偏差",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "reverse_pass": "0/4 primary+secondary, 0/3 large",
+      "path_coherence": "≈1e-5"
+    },
+    "eml_interpretation": "Path coherence is not enough for atlas closure; the bias is the object v0.12–v0.13 then tried to explain.",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

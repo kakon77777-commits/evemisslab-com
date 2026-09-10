@@ -1,0 +1,55 @@
+{
+  "id": "RES-2026-0002",
+  "kind": "research",
+  "label": "PACC conjecture — do non-probabilistic primitives converge to probability-like structure?",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0002/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Systems whose canonical state and update rules never require probability distributions, Bayesian posteriors or sampling are placed in the same evidence-integration tasks as an exact Bayesian reference. The lab measures whether low-complexity train-only maps carry their states to the Bayesian state, whether the maps commute with updates and survive interventions, and whether independently designed families converge — a four-level ladder (PACC-B, -R, -D, -A) with preregistered falsification conditions.",
+    "eml_summary_zh": "把 canonical state 與更新規則都不需要概率分布、Bayesian posterior 或抽樣的系統，放進與精確 Bayesian 參考相同的證據整合任務中，量測低複雜度、只在訓練集擬合的映射能否把它們的狀態送到 Bayesian 狀態、映射是否與更新交換並在干預下存活、以及獨立設計的家族是否收斂——四層階梯（PACC-B／R／D／A）與預先登記的否證條件。",
+    "eml_label_zh": "PACC 猜想——非概率 primitive 會不會收斂到概率表象？",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Formal AI",
+      "Reasoning",
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_research_questions": [
+      "Is probability a necessary ontology of intelligence, an effective representation, an engineering convergence form, or an observer's compression of deeper competitive state?",
+      "Can a non-probabilistic state be mapped by a low-complexity map to a Bayesian state on held-out tasks, with the update diagram approximately commuting?",
+      "Do three or more independently designed non-probabilistic families converge (PACC-A)?"
+    ],
+    "eml_claims": [
+      "Supported as a controlled micro-environment witness: PACC-B, PACC-R and PACC-D for N0/N1, N2 and N3 under uniform and heterogeneous evidence quality (v0.1–v0.2), with shuffled-target controls roughly two orders of magnitude worse.",
+      "Convergence has a nontrivial basin, not a demonstrated universal attractor: N2 fails the representation threshold under adversarial geometry, and task-state convergence is architecture- and seed-sensitive once reliability must be learned (v0.2–v0.3).",
+      "Decision-level probability coordinates can converge while a latent explanatory variable (common-cause posterior) has no direct low-complexity coordinate; the latent coordinate is hierarchical/compositional (v0.4–v0.6).",
+      "Frozen composed coordinates transfer across dependence regimes over finite, family-specific basins; a three-chart atlas covers 8/9 of the sweep; forward cocycle coherence is robust on triple overlap, but reverse transport carries a persistent destination bias (v0.7–v0.13)."
+    ],
+    "eml_limitations": [
+      "PACC-A is not supported: N0 and N1 are exact reparameterizations, leaving two independent convergent families against a preregistered minimum of three.",
+      "Everything is a transparent synthetic micro-lab; nothing here shows that probability is false, that Bayesian inference is unnecessary, that LLM internals are equivalent, or that probability is an observer projection.",
+      "PACC is a conjecture. Its numbers are synthetic data and theoretical reasoning; until a real hybrid model exists, an inference is only an inference — theoretically possible is not actually possible."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

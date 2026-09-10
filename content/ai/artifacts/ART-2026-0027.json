@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0027",
+  "kind": "artifact",
+  "label": "PACC-Lab v0.7 Cross Geometry Transfer FINAL",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC-Lab_v0.7_Cross_Geometry_Transfer_FINAL.zip",
+    "eml_artifact_sha256": "dfa3de6a3ba07f2ed5bfcc7221638033019bc013e983b7707f78cd424270fcd0",
+    "eml_artifact_size": 200750,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "id": "EXP-2026-0005",
+  "kind": "experiment",
+  "label": "R4 — policy mutation surface: scattered governance vs one mandatory boundary",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0005/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "For N ∈ {1, 4, 16, 64} canonical-write callers and R = 6 governance rules, policy sites and rule placements grow as N and N·R under scattered governance versus 1 and R under either a central application gate or AER-ECT; a new rule needs N caller edits versus one; a 75 % caller-local migration leaves 16 of 64 callers on the old contract. The counterweight is explicit: one omitted local rule has blast radius 1/N, a defect in the shared gate has blast radius 1, and under an equal-p toy omission model the expected exposed-caller fraction is identical for all three systems.",
+    "eml_summary_zh": "對 N ∈ {1, 4, 16, 64} 個 canonical 寫入 caller 與 R = 6 條治理規則，政策站點與規則放置在分散治理下隨 N 與 N·R 成長，在集中式應用 gate 或 AER-ECT 下固定為 1 與 R；新規則要改 N 個 caller vs 改一處；75 % 的 caller 端遷移仍留下 64 個中的 16 個在舊合約上。反向權衡明說：漏掉一條局部規則的爆炸半徑是 1/N，共享 gate 的缺陷爆炸半徑是 1，而在等 p 的玩具遺漏模型下三套系統的預期受影響 caller 比例相同。",
+    "eml_label_zh": "R4——政策變異面：分散治理 vs 單一強制邊界",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Elevating epistemic governance into one mandatory boundary reduces policy scattering, migration surface and drift opportunity — without magically reducing expected harm.",
+    "eml_metrics": {
+      "verdict": "CENTRALIZATION_REDUCES_SCATTERING_NOT_COMPUTATIONAL_CAPABILITY",
+      "rules": 6,
+      "callers": [
+        1,
+        4,
+        16,
+        64
+      ],
+      "at_64_callers": {
+        "scattered": {
+          "policy_sites": 64,
+          "rule_placements": 384,
+          "blast_radius_one_omission": 0.015625,
+          "migration_edits": 64,
+          "vulnerable_after_75pct_migration": 16
+        },
+        "central_gate_and_aer_ect": {
+          "policy_sites": 1,
+          "rule_placements": 6,
+          "blast_radius_one_omission": 1.0,
+          "migration_edits": 1,
+          "vulnerable_after_75pct_migration": 0
+        }
+      },
+      "toy_omission_model_p_0_01": {
+        "P_any_scattered": 0.9789,
+        "P_any_central": 0.0585,
+        "expected_exposed_caller_fraction_all_systems": 0.0585
+      }
+    },
+    "eml_interpretation": "Centralization changes the distribution of failure — fewer opportunities for many small local defects, few opportunities for large shared ones — and makes new business callers free of policy replication. AER-ECT is reference-monitor-like (always invoked on the normal write path), not proven tamperproof.",
+    "eml_limitations": [
+      "A model with an explicit toy assumption, not empirical defect data; 97.89 % is not a real-world defect rate.",
+      "Distributed replica/version skew of the central gate, hostile bypass and tamperproofness not modelled."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_procedure": "Deterministic structural benchmark plus executable AER regression; CENTRAL_GATE and AER-ECT predicted and observed identical on policy topology.",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

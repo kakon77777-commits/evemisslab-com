@@ -1,0 +1,50 @@
+{
+  "id": "THY-2026-0004",
+  "kind": "theory",
+  "label": "Probability is not Bayesian; Bayes cannot self-authorize its premises",
+  "created_at": "2026-09-10",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0004/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A system can be stochastic, probabilistic or probability-shaped without performing Bayesian conditionalization, and can look Bayesian without a real prior, likelihood or posterior. A layered vocabulary (stochastic, probabilistic, Bayesian-like, exact, approximate, generalized Bayesian) and a Bayesian authenticity test check whether an update is substantively Bayesian or merely redescribed as such; and the update rule itself — prior, likelihood, hypothesis space — needs a justification that Bayes' rule does not supply (Papers 09–10).",
+    "eml_summary_zh": "一個系統可以是隨機的、概率的或概率形狀的，卻沒有做 Bayesian conditionalization；也可以看起來像 Bayesian，卻沒有真正的 prior、likelihood 或 posterior。一套分層詞彙（stochastic、probabilistic、Bayesian-like、exact、approximate、generalized Bayesian）與「Bayesian authenticity test」檢查一次更新是實質 Bayesian 還是事後被重新描述成 Bayesian；而更新規則本身——prior、likelihood、假設空間——需要一個 Bayes 公式給不出的授權（第 9–10 篇）。",
+    "eml_label_zh": "概率不等於貝葉斯；貝葉斯不能自我授權前提",
+    "eml_primary_domain": "Formal AI",
+    "eml_domains": [
+      "Reasoning"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_claims": [
+      "'This is a probabilistic system' and 'this is a Bayesian system' are not equivalent statements.",
+      "Bayesian updating is one belief-revision operator among several; the epistemic router should choose the operator explicitly and record its provenance."
+    ],
+    "eml_predictions": [
+      "An adaptive epistemic router beats AlwaysBayes, AlwaysLogic and AlwaysRobust across mixed domains only if operator choice is explicit and traced (Paper 11 §86)."
+    ],
+    "eml_falsification_conditions": [
+      "Fixed Bayesian updating dominates every mixed-domain test at equal cost."
+    ],
+    "eml_known_limitations": [
+      "Formal/conceptual so far; the AER-0 router implements four operators but no mixed-domain routing benchmark has been run."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

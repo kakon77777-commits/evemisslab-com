@@ -1,0 +1,66 @@
+{
+  "id": "EXP-2026-0007",
+  "kind": "experiment",
+  "label": "R6 — external trust anchor, process-separated writer, adapter conformance",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0007/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Every externally anchored commit binds a digest over the accepted transition into an Ed25519-signed hash chain with an optional out-of-band latest-head receipt; signing authority moves into a child writer process that never returns the private key; a behavioural conformance harness defines what any future state adapter must pass. The R5 coherent full-DB forgery stays OPEN_UNDETECTED for the internal audit and becomes OPEN_DETECTED under the external anchor audit; anchor mutation is DETECTED; valid-prefix truncation is undetected without a trusted head and detected with one; a required-anchor failure fails closed on the tested path; an orphan anchor is detected; the SQLite adapter passes the contract and a deliberately broken adapter is rejected. 79 tests.",
+    "eml_summary_zh": "每次外部錨定的 commit 都把已接受轉換的 digest 綁進 Ed25519 簽章的 hash chain，並可選帶外的最新 head 收據；簽章權限移入永不回傳私鑰的子 writer 程序；行為一致性 harness 定義未來任何 state adapter 必須通過的合約。R5 的連貫整庫偽造在內部稽核下仍是 OPEN_UNDETECTED，在外部 anchor 稽核下變成 OPEN_DETECTED；anchor 竄改 DETECTED；有效前綴截斷在無可信 head 時未偵測、有 head 時偵測；必要 anchor 失敗時在測試路徑上 fail-closed；孤兒 anchor 被偵測；SQLite adapter 通過合約，刻意弄壞的 adapter 被拒。79 個測試。",
+    "eml_label_zh": "R6——外部信任 anchor、程序分離 writer、adapter 一致性",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Canonical-state authenticity can be anchored outside the writable database, signing authority can leave the caller process, and adapters can be tested against semantic invariants rather than trusted by API shape.",
+    "eml_metrics": {
+      "verdict": "EXTERNAL_TRUST_ANCHOR_CONVERTS_FULL_DB_FORGERY_FROM_UNDETECTED_TO_DETECTABLE",
+      "tests_passed": 79,
+      "scenarios": {
+        "full_db_forgery_internal_audit": "OPEN_UNDETECTED",
+        "full_db_forgery_external_anchor_audit": "OPEN_DETECTED",
+        "signed_entry_mutation": "DETECTED",
+        "prefix_truncation_no_head": "OPEN_UNDETECTED",
+        "prefix_truncation_with_head": "OPEN_DETECTED",
+        "live_signer_extends_truncated_log": "PREVENTED_DURING_PROCESS_LIFETIME",
+        "required_anchor_unavailable": "FAIL_CLOSED",
+        "orphan_anchor": "DETECTED",
+        "writer_private_key_visible_to_parent": "PREVENTED_BY_PROCESS_TOPOLOGY",
+        "sqlite_adapter_contract": "PASS",
+        "broken_adapter": "REJECTED"
+      }
+    },
+    "eml_interpretation": "Authentic(DB) = VerifyChain(PK, L) ∧ MatchDigest(DB, L) ∧ Head(L) = H*: a signed chain is not the freshest chain without an external head witness. AER after R6 = epistemic transaction boundary + bounded mediation + external signed authenticity witness + process-separated signing authority — still governance and verifiability, not unique computational capability.",
+    "eml_limitations": [
+      "Not proven: OS-level writer isolation, signer/key compromise resistance, rollback safety without a trusted head, cross-resource ACID between SQLite and the anchor, split-view resistance, key lifecycle, PostgreSQL/D1 conformance, production security certification."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_procedure": "Repeat the R5 forgery under both audits; mutate/truncate the anchor log with and without a head receipt; inject anchor failure inside the open SQLite transaction; run the adapter conformance harness against the SQLite adapter and a broken subclass.",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "EXP-2026-0001",
+  "kind": "experiment",
+  "label": "AER-0 MVP v0.1 closure: are the invariants executable?",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The approved Python + SQLite runtime was built under mssp-tdd-apr and closed on behavioural, structural and discriminative witnesses: candidate gate, provenance validation, stale-version conflict, stable-vs-volatile scheduling, shock activation, verifier rejection, workflow reuse/adapt/create, model swap, model-free core, end-to-end verified commit. 25 tests; the refresh benchmark selected 2 nodes under fixed TTL versus 1 volatile node under tension scheduling; a clean extracted replay of the sealed archive passed before release.",
+    "eml_summary_zh": "核准的 Python + SQLite runtime 在 mssp-tdd-apr 下建成，並以行為、結構、判別三類見證收束：candidate gate、provenance 驗證、過期版本衝突、穩定 vs 易變排程、shock 觸發、verifier 拒絕、workflow reuse／adapt／create、模型替換、無模型核心、端到端已驗證 commit。25 個測試；refresh benchmark 在固定 TTL 下選了 2 個節點、在張力排程下只選 1 個易變節點；密封封存包乾淨解壓重播通過後才發布。",
+    "eml_label_zh": "AER-0 MVP v0.1 收束：不變量能不能被執行？",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "The scoped MVP invariants (canonical state ownership, candidate gating, provenance, versioned commit, selective refresh, capability/container separation, workflow reuse, model replaceability) can be implemented with positive and falsifying executable witnesses.",
+    "eml_metrics": {
+      "tests_passed": 25,
+      "refresh_benchmark": {
+        "fixed_6h_ttl_nodes_refreshed": 2,
+        "aer_tension_nodes_refreshed": 1
+      },
+      "closure": {
+        "behavioral": "PASS",
+        "structural": "PASS",
+        "discriminative": "PASS",
+        "independent_twin": "NotMeasured",
+        "production_readiness": "NotClaimed",
+        "general_ai_superiority": "NotMeasured"
+      }
+    },
+    "eml_interpretation": "A mechanism closure, not a claim of AI superiority: the declared invariants exist in code, are exercised by falsifying witnesses, and survive a fresh-process replay.",
+    "eml_limitations": [
+      "DEGRADED-TWIN: only one live execution context; no simulated independent verdict claimed.",
+      "Not measured: performance against production agent frameworks, live research accuracy, distributed semantics, security hardening, real heterogeneous backends, multi-day drift."
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "POSITIVE",
+    "eml_procedure": "TDD under mssp-tdd-apr; full suite, research-assistant demo and refresh benchmark run before packaging; checksum-verified clean extraction replayed after sealing.",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0034",
+  "kind": "artifact",
+  "label": "PACC-Hybrid-Lab v0.1 SYNTHETIC FINAL",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC-Hybrid-Lab_v0.1_SYNTHETIC_FINAL.zip",
+    "eml_artifact_sha256": "f316c4d0e0acf4c576b3bfac20bbd32ca516219cf3e3cac6be3f1a67866f18e7",
+    "eml_artifact_size": 45304,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

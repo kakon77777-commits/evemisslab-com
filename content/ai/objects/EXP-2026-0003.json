@@ -1,0 +1,69 @@
+{
+  "id": "EXP-2026-0003",
+  "kind": "experiment",
+  "label": "R2 — source-grounded structural comparison with LangGraph 1.2.11",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "LangGraph 1.2.11 (checkpoint 4.2.0, checkpoint-sqlite 3.1.1) could not be installed — outbound PyPI DNS was unavailable — so the round pins public release/source contracts and compares them with AER-0's executable invariants. Runtime-owned persistent state, checkpoint history, version tracking, long-term stores and TTL memory all converge (LangGraph is richer on resume, time travel, concurrency and delta checkpointing). What remains AER-default-distinct: candidate → verify → commit, mandatory fact provenance, node-level optimistic epistemic commit, task-conditioned tension refresh, capability/container separation, explicit epistemic-operator routing, and the graph meaning an epistemic world representation rather than control flow.",
+    "eml_summary_zh": "LangGraph 1.2.11（checkpoint 4.2.0、checkpoint-sqlite 3.1.1）裝不起來——對外 PyPI DNS 不可用——因此本輪釘住公開的 release／source 合約，與 AER-0 可執行的不變量比較。runtime 持有的持久狀態、checkpoint 歷史、版本追蹤、長期 store 與 TTL 記憶全部收斂（LangGraph 在 resume、time travel、並行控制與 delta checkpoint 上更豐富）。仍屬 AER 預設獨有的是：candidate → verify → commit、強制 fact provenance、節點層樂觀認識論 commit、任務條件化的張力刷新、capability／container 分離、明示的認識論算子路由，以及「圖」指的是認識論世界表徵而非控制流。",
+    "eml_label_zh": "R2——對 LangGraph 1.2.11 的 source-grounded 結構比較",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "Against a real stateful agent runtime, some AER semantics remain distinct beyond 'external state outside the model'.",
+    "eml_metrics": {
+      "verdict": "STRONG_CONVERGENCE_WITH_REMAINING_SEMANTIC_CORE",
+      "evidence_mode": "SOURCE_GROUNDED_STRUCTURAL",
+      "executable_langgraph": "NOT_RUN",
+      "classification": {
+        "runtime_owned_persistent_state": "CONVERGED",
+        "checkpoint_history": "CONVERGED; LangGraph richer",
+        "version_tracking": "CONVERGED, different granularity",
+        "ttl_memory": "PARTIAL_CONVERGENCE",
+        "tension_refresh": "AER_DEFAULT_DISTINCT",
+        "graph_semantics": "SEMANTICALLY_DISTINCT",
+        "candidate_verify_commit": "AER_DEFAULT_DISTINCT",
+        "mandatory_provenance": "AER_DEFAULT_DISTINCT",
+        "pending_write_resume": "LANGGRAPH_RICHER",
+        "time_travel_fork": "LANGGRAPH_RICHER",
+        "capability_container_separation": "AER_DEFAULT_DISTINCT; not a core LangGraph primitive found",
+        "epistemic_router": "AER_DEFAULT_DISTINCT"
+      }
+    },
+    "eml_interpretation": "The candidate AER core after R2 is epistemic world-state semantics + candidate/verify/commit authority + mandatory fact provenance + node-local tension refresh + capability/container separation + explicit epistemic-operator routing — a major compression of the whitepaper. Everything else is a recurring engineering form.",
+    "eml_limitations": [
+      "Cross-runtime performance, trace and operational equivalence NOT MEASURED; AER side executable, LangGraph side documentary.",
+      "AER-0 is not a 'more advanced runtime' on the available evidence."
+    ],
+    "eml_run_count": 0,
+    "eml_result_type": "MIXED",
+    "eml_procedure": "Pin LangGraph release 1.2.11 at commit 644815f (checkpoint base, PregelProtocol, BaseStore, Agent Protocol docs); classify each axis; keep AER invariants covered by the local suite.",
+    "eml_software_environment": "Python 3.11+, SQLite; no network, no external database, no LLM API required.",
+    "eml_reproduction_instructions": "Extract the round's FINAL bundle; python -m pytest -q; python -m examples.research_assistant_demo; python -m benchmarks.<round benchmark>. Checksums in SHA256SUMS.txt.",
+    "eml_completed_at": "2026-09-08",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

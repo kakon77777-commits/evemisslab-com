@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0017",
+  "kind": "artifact",
+  "label": "AER-0 MVP v0.1 Architecture Comparison R3 ECT",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_artifact_type": "release-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/AER-0_MVP_v0.1_Architecture_Comparison_R3_ECT.zip",
+    "eml_artifact_sha256": "7eff6a1ce57c691c77d92b7daeb5463af27c1589e9f7c06db4031fba3d85a1ff",
+    "eml_artifact_size": 89617,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

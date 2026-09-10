@@ -1,0 +1,59 @@
+{
+  "id": "THY-2026-0005",
+  "kind": "theory",
+  "label": "PACC conjecture — the four-level convergence ladder",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0005/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "PACC-B (behavioural: D_B ≤ ε), PACC-R (representational: a low-complexity map Φ: S_N → S_P valid on held-out tasks, K(Φ) ≤ κ), PACC-D (dynamical: Φ∘U_N ≈ U_P∘Φ) and PACC-A (architecture attractor across ≥3 independent designs). The conjecture pre-registers its own failure modes F1–F6 — behavioural divergence, no low-complexity map, update diagram fails, intervention divergence, architecture diverges under scale, probability-specific advantage persists — so that 'similar' and 'probability' cannot be redefined after the fact.",
+    "eml_summary_zh": "PACC-B（行為：D_B ≤ ε）、PACC-R（表徵：在 held-out 任務上仍有效的低複雜度映射 Φ: S_N → S_P，K(Φ) ≤ κ）、PACC-D（動力學：Φ∘U_N ≈ U_P∘Φ）與 PACC-A（≥3 個獨立設計的架構吸引子）。猜想預先登記自己的失敗模式 F1–F6——行為分歧、無低複雜度映射、更新圖失敗、干預分歧、規模下架構分歧、概率特有優勢持續——讓「相似」與「概率」不能事後重新定義。",
+    "eml_label_zh": "PACC 猜想——四層收斂階梯",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Formal AI",
+      "Reasoning"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Primitive-level non-probabilistic system: canonical state and required updates do not need distributions, Kolmogorov semantics, Bayesian posteriors, a probability-simplex container or sampling; raw weights, orders, signed relations, tensions and constraints are allowed.",
+      "Probability-like representation: a low-complexity map to the simplex that roughly preserves ranking, choice, relative strength and evidence response."
+    ],
+    "eml_assumptions": [
+      "Intelligence constraints: partial observation, competing alternatives, finite resources, repeated update, action selection, changing environment."
+    ],
+    "eml_claims": [
+      "Probability may emerge from competition without being the original semantics of competition.",
+      "AI's feasible computational forms may be far fewer than the theories that describe them."
+    ],
+    "eml_predictions": [
+      "Outcome I behavioural equivalence only → multiple realizability; II representational duality; III dynamical equivalence → alternative coordinates of a common computation; IV computational attractor."
+    ],
+    "eml_falsification_conditions": [
+      "F1 D_B ≫ ε_B; F2 no generalizing low-complexity Φ; F3 D_U large; F4 intervention divergence; F5 D_A rises with scale; F6 probability-specific advantage from the update itself."
+    ],
+    "eml_known_limitations": [
+      "PACC-A cannot pass with two independent families; the strongest current statement is a nontrivial convergence basin with an atlas of partially overlapping probability-like charts, not a universal attractor.",
+      "A conjecture, tested so far only on synthetic data with theoretical reasoning: theoretically possible is not actually possible."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

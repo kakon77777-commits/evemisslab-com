@@ -352,3 +352,208 @@ html[lang="zh-Hant"] .how-t { font-family: "Noto Sans TC", var(--display); }
 .foot-co { font-family: var(--display); font-weight: 700; font-size: 0.875rem; margin: 0; }
 .foot-line { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); margin: 0.4rem 0 0; }
 .foot-right { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); }
+
+/* ==========================================================================
+   AI Research Laboratory — the /ai/ projection and its entry matrix
+
+   Same register as the rest of the page: paper and ink, hairlines, mono
+   metadata. Research status and evidence level are text, never colour.
+   ========================================================================== */
+
+/* --- the matrix (front page hero, left column) --------------------------- */
+
+.matrix-wrap { min-width: 0; }
+
+.matrix {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--rule); border-left: 1px solid var(--hair);
+}
+@media (min-width: 40rem) { .matrix { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (min-width: 58rem) { .matrix { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+
+.matrix-cell {
+  display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem;
+  min-height: 5.5rem; padding: 0.9rem 0.8rem;
+  border-right: 1px solid var(--hair); border-bottom: 1px solid var(--hair);
+  text-decoration: none;
+  font-family: var(--display); font-weight: 600; font-size: 1rem;
+  letter-spacing: -0.01em; line-height: 1.2; color: var(--ink-2);
+  transition: color 140ms ease, background 140ms ease;
+}
+html[lang="zh-Hant"] .matrix-cell { font-family: "Noto Sans TC", var(--display); letter-spacing: 0; }
+.matrix-cell:hover, .matrix-cell:focus-visible { color: var(--ink); background: var(--paper-raised); }
+
+.matrix-arrow { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-3); flex-shrink: 0; }
+.matrix-cell:hover .matrix-arrow, .matrix-cell:focus-visible .matrix-arrow { color: var(--ink); }
+
+.matrix-foot {
+  margin: 0.9rem 0 0; font-family: var(--mono); font-size: 0.6875rem;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.matrix-foot a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.matrix-foot a:hover { color: var(--ink); border-color: var(--ink); }
+
+/* The statement moved out of the hero to sit above the index. Same type as
+   before, so it keeps its identity; it just no longer competes with the art. */
+.statement { padding-block: clamp(2.5rem, 6vw, 4rem) 0; }
+
+/* --- /ai/ chrome ---------------------------------------------------------- */
+
+.subnav { border-bottom: 1px solid var(--rule); background: var(--paper); }
+.subnav-in {
+  max-width: var(--shell); margin: 0 auto; padding: 0.55rem 1.5rem;
+  display: flex; gap: 1.1rem; overflow-x: auto; scrollbar-width: none;
+}
+.subnav-in::-webkit-scrollbar { display: none; }
+.subnav-link {
+  font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--ink-3); text-decoration: none; white-space: nowrap;
+  padding-block: 0.15rem; border-bottom: 1px solid transparent;
+}
+.subnav-link:hover { color: var(--ink); }
+.subnav-link[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+
+.ai-main { padding-bottom: var(--gap); }
+
+.ai-hero { padding-block: clamp(2.5rem, 7vw, 4.5rem) 0; }
+.ai-title {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2rem, 5.4vw, 3.5rem); line-height: 1.05; letter-spacing: -0.025em;
+  margin: 0; max-width: 18ch; text-wrap: balance;
+}
+html[lang="zh-Hant"] .ai-title { font-family: "Noto Sans TC", var(--display); letter-spacing: -0.005em; line-height: 1.2; }
+.ai-tag { margin: 1.25rem 0 0; font-size: 1.125rem; line-height: 1.6; color: var(--ink-2); max-width: var(--measure); }
+.ai-lede { margin: 0.75rem 0 0; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-3); max-width: var(--measure); }
+
+.stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  margin: 2rem 0 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+}
+.stats > div { padding: 0.9rem 0.75rem 0.9rem 0; margin: 0; border-right: 1px solid var(--hair); }
+.stats > div:last-child { border-right: 0; }
+.stats dt { font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+.stats dd {
+  margin: 0.3rem 0 0; font-family: var(--display); font-weight: 700; font-size: 1.75rem;
+  letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums;
+}
+
+.ai-snap {
+  margin: 0.9rem 0 0; font-family: var(--mono); font-size: 0.625rem;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); overflow-wrap: anywhere;
+}
+.ai-snap code, .ai-links code { font-size: inherit; text-transform: none; letter-spacing: 0; }
+.ai-links { margin: 1rem 0 0; font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-2); }
+
+.ai-sec { padding-top: clamp(2.5rem, 5vw, 3.75rem); }
+.sec-head-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 1rem; }
+.sec-more { font-family: var(--mono); font-size: 0.6875rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); text-decoration: none; white-space: nowrap; }
+.sec-more:hover { color: var(--ink); }
+.sec-sub {
+  font-family: var(--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; margin: 1.75rem 0 0.25rem; padding-bottom: 0.55rem; border-bottom: 1px solid var(--rule);
+}
+.sec-sub a { text-decoration: none; }
+.sec-sub a:hover { text-decoration: underline; }
+.empty { margin: 0.75rem 0 0; font-size: 0.9375rem; color: var(--ink-3); font-style: italic; }
+
+/* --- research cards ------------------------------------------------------ */
+
+.rlist { list-style: none; margin: 0; padding: 0; }
+.rc-link {
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.35rem 1.5rem;
+  padding: 1.05rem 0 1.15rem; border-bottom: 1px solid var(--hair);
+  text-decoration: none; transition: background 140ms ease;
+}
+.rc-link:hover { background: var(--paper-raised); }
+@media (min-width: 52rem) { .rc-link { grid-template-columns: 11rem minmax(0, 1fr); align-items: baseline; } }
+.rc-id { display: grid; gap: 0.25rem; align-content: start; }
+.rc-kind { font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+.rc-code { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-2); }
+.rc-body { display: grid; gap: 0.45rem; min-width: 0; }
+.rc-title { font-family: var(--display); font-weight: 700; font-size: 1.0625rem; letter-spacing: -0.01em; color: var(--ink); }
+html[lang="zh-Hant"] .rc-title { font-family: "Noto Sans TC", var(--display); letter-spacing: 0; }
+.rc-sum { font-size: 0.9375rem; line-height: 1.58; color: var(--ink-2); }
+.rc-link:hover .rc-sum { color: var(--ink); }
+.rc-meta {
+  display: flex; flex-wrap: wrap; gap: 0.35rem 0.75rem; align-items: center;
+  font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3);
+}
+
+.badge {
+  display: inline-block; font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule); border-radius: 2px;
+  padding: 0.1rem 0.4rem; line-height: 1.4; white-space: nowrap;
+}
+
+/* --- filters (metadata only; the page works without them) ---------------- */
+
+.filters {
+  display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; align-items: end;
+  margin: 0 0 1.25rem; padding-bottom: 1rem; border-bottom: 1px solid var(--hair);
+}
+.flt { display: grid; gap: 0.3rem; }
+.flt > span { font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+.flt select {
+  font-family: var(--mono); font-size: 0.75rem; color: var(--ink); background: var(--paper-raised);
+  border: 1px solid var(--rule); border-radius: 2px; padding: 0.3rem 0.5rem; max-width: 18rem;
+}
+.flt-count { margin-left: auto; font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+/* --- section index and object pages -------------------------------------- */
+
+.pg-head { padding-block: clamp(2.5rem, 7vw, 4.5rem) 0; }
+.pg-eyebrow {
+  display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; margin: 0 0 1rem;
+  font-family: var(--mono); font-size: 0.625rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3);
+}
+.pg-title {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(1.75rem, 4.5vw, 2.75rem); line-height: 1.1; letter-spacing: -0.02em;
+  margin: 0; max-width: 24ch; text-wrap: balance;
+}
+html[lang="zh-Hant"] .pg-title { font-family: "Noto Sans TC", var(--display); letter-spacing: 0; line-height: 1.25; }
+.pg-lede { margin: 1.25rem 0 0; font-size: 1.125rem; line-height: 1.6; color: var(--ink-2); max-width: var(--measure); }
+
+.meta {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  margin: 2rem 0 0; border-top: 1px solid var(--rule);
+}
+.meta > div { padding: 0.8rem 1rem 0.8rem 0; margin: 0; border-bottom: 1px solid var(--hair); }
+.meta dt { font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-3); }
+.meta dd { margin: 0.35rem 0 0; font-size: 0.9375rem; }
+.meta-help { font-size: 0.8125rem; color: var(--ink-3); }
+
+.obj-sec { padding-top: clamp(2rem, 4vw, 3rem); }
+.obj-h {
+  font-family: var(--mono); font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; margin: 0 0 0.75rem; padding-bottom: 0.55rem; border-bottom: 1px solid var(--rule);
+}
+
+.kv { margin: 0; }
+.kv > div { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.2rem 1.5rem; padding: 0.7rem 0; border-bottom: 1px solid var(--hair); }
+@media (min-width: 52rem) { .kv > div { grid-template-columns: 13rem minmax(0, 1fr); } }
+.kv dt { font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); }
+.kv dt code { font-size: inherit; }
+.kv dd { margin: 0; font-size: 0.9375rem; line-height: 1.58; overflow-wrap: anywhere; }
+.kv dd p { margin: 0 0 0.6rem; }
+.kv dd p:last-child { margin-bottom: 0; }
+.kv dd ul { margin: 0; padding-left: 1.1rem; }
+.kv-nested > div { padding: 0.25rem 0; border-bottom: 0; }
+@media (min-width: 52rem) { .kv-nested > div { grid-template-columns: 9rem minmax(0, 1fr); } }
+
+.tbl-wrap { overflow-x: auto; }
+.tbl { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.tbl caption { text-align: left; font-family: var(--mono); font-size: 0.6875rem; color: var(--ink-3); padding-bottom: 0.5rem; }
+.tbl th {
+  text-align: left; font-family: var(--mono); font-size: 0.5625rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink-3); font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 0; border-bottom: 1px solid var(--rule); white-space: nowrap;
+}
+.tbl td { padding: 0.6rem 1rem 0.6rem 0; border-bottom: 1px solid var(--hair); vertical-align: top; }
+.tbl a { text-decoration: none; }
+.tbl a:hover { text-decoration: underline; }
+
+.vocab { display: grid; gap: 2rem; }
+@media (min-width: 52rem) { .vocab { grid-template-columns: 1fr 1fr; column-gap: 3rem; } }
+.vocab-note { margin: 1.5rem 0 0; font-size: 0.9375rem; line-height: 1.6; color: var(--ink-2); max-width: 44rem; }

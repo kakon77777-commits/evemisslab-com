@@ -1,0 +1,43 @@
+{
+  "id": "RST-2026-0008",
+  "kind": "result",
+  "label": "v0.4: latent dependence coordinate not recovered",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0008/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Dependence-coordinate pass count 0 for all four systems in every seed; in high correlation real JS ≈ 0.0398 is below the 0.05 absolute gate but no better than shuffled (≈ 0.0400) or constant (≈ 0.0397).",
+    "eml_summary_zh": "四個系統在每個 seed 下依賴座標通過數皆為 0；高相關下真實 JS ≈ 0.0398 低於 0.05 絕對門檻，但不比 shuffled（≈ 0.0400）或 constant（≈ 0.0397）好。",
+    "eml_label_zh": "v0.4：潛在依賴座標無法重建",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_result_type": "NEGATIVE",
+    "eml_metrics": {
+      "dependence_pass": 0,
+      "systems": 4
+    },
+    "eml_interpretation": "Low absolute error ⇏ meaningful coordinate map; the negative-control gate is what stops a near-baseline predictor from being mislabelled latent-state equivalence.",
+    "eml_limitations": [
+      "'contradicts' the universal direct-affine reading only; the task-level reading survives."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

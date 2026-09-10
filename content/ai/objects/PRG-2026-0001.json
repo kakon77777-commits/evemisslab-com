@@ -1,0 +1,52 @@
+{
+  "id": "PRG-2026-0001",
+  "kind": "program",
+  "label": "Adaptive Epistemic Systems",
+  "created_at": "2026-09-07",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/programs/PRG-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A research program that derives an AI runtime from first principles — world knowledge changes at heterogeneous rates, natural language is a rendering rather than the canonical state, capability must be remembered and reused, algorithm and compute substrate are separate — and then forces the derivation into executable reality: the AER-0 reference runtime with six architecture-comparison rounds, and the PACC micro-lab on whether non-probabilistic primitives converge to probability-like structure.",
+    "eml_summary_zh": "從第一原理推導 AI runtime 的長期研究線：世界知識以不同速率變化、自然語言是 rendering 而非 canonical state、能力必須被記憶與重用、算法與計算載體分離；然後把推導結果逼進可執行的現實——AER-0 參考 runtime 與六輪架構比較，以及檢驗非概率 primitive 是否收斂到概率表象的 PACC 微型實驗室。",
+    "eml_label_zh": "自適應世界狀態系統的第一原理框架",
+    "eml_limitations": [
+      "Everything measured so far is synthetic data plus theoretical reasoning, or a deterministic scenario in a reference runtime. Until a real hybrid model exists, an inference is only an inference: theoretically possible is not actually possible."
+    ],
+    "eml_goals": [
+      "Derive an adaptive world-state architecture without starting from existing AI technology names, then test whether its differences survive implementation.",
+      "Decide, falsifiably, between Distinct Advantage, Operational Convergence, Behavioral Equivalence Only, Inconclusive and Architecture Worse.",
+      "Test the Probabilistic Appearance Convergence Conjecture (PACC) in fully observable micro-environments before touching language models."
+    ],
+    "eml_open_questions": [
+      "PACC-A (architecture attractor) is not closed: only two independent convergent families exist under the preregistered redundancy rule.",
+      "Reverse chart transport in the PACC atlas carries a persistent destination bias that neither a bounded quadratic transition nor a base-point residual field explains (v0.12–v0.13); v0.14 tests a sign-free residual subspace.",
+      "AER-0 has no executable cross-runtime comparison yet: LangGraph could not be installed in the comparison environment (R2), and R7 (independent witness, transparency proof, signer rotation) is not started.",
+      "The real-language-model PACC A/B/C benchmark has a validated harness but has never been executed with a real model."
+    ],
+    "eml_milestones": [
+      "Adaptive Epistemic Systems Series papers 01–11 complete (canonical UTF-8 sources, SHA-256 manifest).",
+      "Adaptive Epistemic AI Runtime technical whitepaper v0.1 with schemas, pseudocode and the AER-0 roadmap.",
+      "AER-0 MVP v0.1 (Python + SQLite, 25 tests) and comparison rounds R1–R6 (79 tests at R6).",
+      "PACC conjecture paper (2026-09-08) and PACC-Lab v0.1–v0.13.",
+      "PACC-LLM Hybrid Lab v0.1 (synthetic A/B/C) and v0.2 (real-LLM harness, not yet executed)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

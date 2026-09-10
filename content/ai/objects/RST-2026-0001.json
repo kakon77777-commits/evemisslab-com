@@ -1,0 +1,44 @@
+{
+  "id": "RST-2026-0001",
+  "kind": "result",
+  "label": "R1 comparison table",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0001/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "AER-0: 0 stale, 3 recomputations, 0 stable refreshes, 6 workflow reuses, blocks the no-provenance fact, catches the conflicting write. B4: 0 stale, 2 recomputations, 0 stable refreshes, 6 reuses, blocks neither.",
+    "eml_summary_zh": "AER-0：0 過期、3 次重算、0 次穩定節點刷新、6 次 workflow 重用、擋下無 provenance 事實、抓到衝突寫入。B4：0 過期、2 次重算、0 次穩定刷新、6 次重用、兩者都不擋。",
+    "eml_label_zh": "R1 比較表",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "DETERMINISTIC RUNTIME",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "aer_recomputations": 3,
+      "b4_recomputations": 2,
+      "aer_only": [
+        "blocks no-provenance fact",
+        "VersionConflict on stale expected version"
+      ]
+    },
+    "eml_interpretation": "Tension scheduling paid one proactive refresh that pure event invalidation did not need in an event-rich world; the surviving distinction is mutation authority, not refresh efficiency.",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

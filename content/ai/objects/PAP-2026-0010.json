@@ -1,0 +1,45 @@
+{
+  "id": "PAP-2026-0010",
+  "kind": "paper",
+  "label": "Paper 10 — Bayes within Bayes: who authorizes the update rule?",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0010/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Prior, likelihood and hypothesis space need an authorization Bayes' rule cannot give; meta-epistemic configuration becomes part of the architecture.",
+    "eml_summary_zh": "Prior、likelihood 與假設空間需要一個 Bayes 公式給不出的授權；meta-epistemic configuration 成為架構的一部分。",
+    "eml_label_zh": "貝葉斯中的貝葉斯——誰授權更新規則？從 Prior、Likelihood 到 Meta-Epistemology 的遞歸問題",
+    "eml_primary_domain": "Formal AI",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_publication_type": "series paper (Adaptive Epistemic Systems Series, 11 papers)",
+    "eml_data_basis": "THEORY",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_date": "2026-09-08",
+    "eml_source_artifact": "Adaptive_Epistemic_Systems_Series_Paper_10_Bayes_Within_Bayes_Meta_Epistemic_Justification_v0.1.md",
+    "eml_checksums": {
+      "sha256": "b1d66639204c40e843791aa06f87b7d5a796d9476ffa2adc25f80cf954dd987c"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 10/11"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

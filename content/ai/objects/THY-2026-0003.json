@@ -1,0 +1,55 @@
+{
+  "id": "THY-2026-0003",
+  "kind": "theory",
+  "label": "Intelligent architecture attractor",
+  "created_at": "2026-09-08",
+  "updated_at": "2026-09-08",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0003/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Different first principles may compile into the same small family of computational forms. The comparison framework separates six levels of difference — code, primitive, computation trace, architectural state semantics, observable behaviour, resource efficiency — and asks who owns state, what may rewrite canonical state, and whether dynamics are preserved under low-cost mapping. The series ends with a fixed verdict map: Distinct Advantage, Operational Convergence, Behavioral Equivalence Only, Inconclusive, Architecture Worse.",
+    "eml_summary_zh": "不同的第一原理可能編譯成同一小族計算形態。比較框架區分六個差異層級——程式碼、primitive、計算軌跡、架構狀態語義、可觀測行為、資源效率——並追問誰持有狀態、什麼可以改寫 canonical state、動態結構在低成本映射下是否保持。系列以固定的判決表結束：Distinct Advantage、Operational Convergence、Behavioral Equivalence Only、Inconclusive、Architecture Worse。",
+    "eml_label_zh": "智能架構吸引子",
+    "eml_primary_domain": "AI Architecture",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "THEORY",
+    "eml_assumptions": [
+      "The executed architecture is the architecture (runtime-truth principle); spec cannot defend runtime."
+    ],
+    "eml_claims": [
+      "Theory difference matters only insofar as it survives into measurable state, computation, behaviour or resource use; if it does not survive, the convergence itself becomes the phenomenon to explain.",
+      "If every possible outcome is interpreted as confirmation, the theory has explained nothing."
+    ],
+    "eml_predictions": [
+      "Independent architectures' ablation cores intersect (an attractor core) if the attractor is real."
+    ],
+    "eml_falsification_conditions": [
+      "Distinct Advantage: stable multidimensional advantage over baselines across models, seeds, tasks and horizons weakens the convergence suspicion.",
+      "Architecture Worse: added structure is operationally unnecessary or harmful."
+    ],
+    "eml_known_limitations": [
+      "One implementation provides at most candidate evidence for convergence; an attractor study needs n ≫ 2 independent starting points (Paper 11 §53)."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

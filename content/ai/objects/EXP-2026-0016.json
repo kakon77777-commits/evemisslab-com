@@ -1,0 +1,84 @@
+{
+  "id": "EXP-2026-0016",
+  "kind": "experiment",
+  "label": "PACC-Lab v0.9 — a three-anchor probability-coordinate atlas",
+  "created_at": "2026-09-09",
+  "updated_at": "2026-09-09",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0016/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Three preregistered charts at q = 0.12, 0.24, 0.36 give every family the same union {0.06 … 0.36}: 8/9 sweep coverage, stable across three secondary seeds, never covering q = 0.42. Nearest charts (0.12/0.24) agree directly; distant charts (0.12/0.36) do not (task JS ≈ 0.071–0.082), yet low-complexity transition maps calibrated on an independent seed pass 5/6 directions per family on the primary protocol — the weak direction is 0.36 → 0.12 (latent JS ≈ 0.017–0.021 > 0.01). Transition coherence is not robust across secondary seeds (mean pass ≈ 0.53–0.67).",
+    "eml_summary_zh": "在 q = 0.12、0.24、0.36 的三個預登記 chart 給每個家族相同的聯集 {0.06 … 0.36}：掃描覆蓋 8/9，三個次要 seed 下穩定，永遠蓋不到 q = 0.42。最近的 chart（0.12/0.24）直接一致；相距遠的（0.12/0.36）不一致（任務 JS ≈ 0.071–0.082），但在獨立 seed 上校準的低複雜度轉換映射在主要協定下每個家族 6 個方向通過 5 個——弱方向是 0.36 → 0.12（潛在 JS ≈ 0.017–0.021 > 0.01）。轉換一致性在次要 seed 下不穩健（平均通過 ≈ 0.53–0.67）。",
+    "eml_label_zh": "PACC-Lab v0.9——三錨點概率座標圖冊",
+    "eml_primary_domain": "Model Representation",
+    "eml_domains": [
+      "Evaluation",
+      "Formal AI"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_hypothesis": "A small multi-anchor atlas covers the sweep and its charts are mutually translatable by low-complexity transitions.",
+    "eml_metrics": {
+      "verdict": "PARTIAL_MULTI_ANCHOR_ATLAS",
+      "coverage": "8/9",
+      "uncovered_q": 0.42,
+      "transition_pass_primary": "5/6 per family",
+      "weak_direction": "0.36→0.12",
+      "secondary_transition_pass_rate": {
+        "N0_N1": 0.667,
+        "N2": 0.528,
+        "N3": 0.583
+      }
+    },
+    "eml_interpretation": "Rejects both extremes — one global chart (finite coverage) and unrelated local charts (overlaps translate cheaply) — leaving partially overlapping probability-like charts with finite coverage and nonuniform transition coherence.",
+    "eml_limitations": [
+      "Full atlas coverage, robust transition coherence, cocycle consistency and manifold structure not established."
+    ],
+    "eml_random_seeds": [
+      "20260909",
+      "independent calibration seed",
+      "3 secondary seeds"
+    ],
+    "eml_run_count": 3,
+    "eml_result_type": "MIXED",
+    "eml_controls": [
+      "shuffled-target mapping",
+      "constant prediction",
+      "broken composition (v0.6+)",
+      "target-local refit (v0.7+)"
+    ],
+    "eml_software_environment": "Python; deterministic seeded generators; no network, no LLM.",
+    "eml_reproduction_instructions": "Extract the version's FINAL bundle; python -m pytest -q; run the version's primary script with the recorded seed; docs/PACC_LAB_v0.N_RESULTS.md and docs/EXPERIMENT_PROTOCOL_v0.N.md are inside the bundle.",
+    "eml_completed_at": "2026-09-09",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_model_ids": [
+      "MOD-2026-0001",
+      "MOD-2026-0002",
+      "MOD-2026-0003",
+      "MOD-2026-0004",
+      "MOD-2026-0005"
+    ],
+    "eml_dataset_ids": [
+      "DAT-2026-0001"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0001"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

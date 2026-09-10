@@ -1,0 +1,19 @@
+{
+  "id": "REL-2026-0129",
+  "kind": "research_relation",
+  "label": "EXP-2026-0004 tests THY-2026-0006",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_relation_source": "EXP-2026-0004",
+    "eml_relation_predicate": "tests",
+    "eml_relation_target": "THY-2026-0006",
+    "eml_relation_status": "ACTIVE",
+    "eml_relation_provenance": {
+      "source": "extracted from the artifacts' own cross-references",
+      "date": "2026-09-11"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}
