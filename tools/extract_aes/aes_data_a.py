@@ -64,6 +64,7 @@ obj("RES-2026-0002", "research",
     "EXPERIMENTAL", "E3", created=mtime("PACC_Probability_Appearance_Convergence_Conjecture_v0.1_2026-09-08.md"), updated=D_LAST,
     domain="Model Representation", domains=["Formal AI", "Reasoning", "Evaluation"], eml_data_basis="SYNTHETIC",
     eml_research_questions=[
+        "Posed deliberately as a similar-but-not-probabilistic counter-construction to the claim that modern AI is simply a probability model: some of it is, all of it need not be. The experiments are set up so that either outcome is informative — convergence says something about attractors, divergence says something about what probability is uniquely doing.",
         "Is probability a necessary ontology of intelligence, an effective representation, an engineering convergence form, or an observer's compression of deeper competitive state?",
         "Can a non-probabilistic state be mapped by a low-complexity map to a Bayesian state on held-out tasks, with the update diagram approximately commuting?",
         "Do three or more independently designed non-probabilistic families converge (PACC-A)?",

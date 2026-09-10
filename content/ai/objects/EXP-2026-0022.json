@@ -5,7 +5,7 @@
   "created_at": "2026-09-09",
   "updated_at": "2026-09-09",
   "values": {
-    "eml_status": "ACTIVE",
+    "eml_status": "STABLE",
     "eml_evidence_level": "E1",
     "eml_object_version": "0.1",
     "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0022/",
@@ -37,7 +37,8 @@
     "eml_interpretation": "Closes the harness, not the scientific question. Next action: a small real smoke (6 tasks × 2 repetitions × 3 candidates), freeze the cache, inspect blind-evaluator consistency, then the full 16-task primary without changing prompts or metrics.",
     "eml_limitations": [
       "No claim about real-model reasoning, intent understanding, imagination, human-rated usefulness, cross-model transfer or hallucination is permitted before a real-model result exists.",
-      "A single-model judge is not human evaluation even after a live run."
+      "A single-model judge is not human evaluation even after a live run.",
+      "Executed for the first time on 2026-09-11 with a local open-weight model — see EXP-2026-0023."
     ],
     "eml_random_seeds": [],
     "eml_run_count": 0,

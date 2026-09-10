@@ -267,3 +267,80 @@ obj("EXP-2026-0022", "experiment", "PACC-Hybrid v0.2 — real-language-model A/B
 for p, t in (("runs_on", "SYS-2026-0003"), ("uses_benchmark", "BEN-2026-0003"), ("extends", "EXP-2026-0021"), ("tests", "THY-2026-0002")):
     rel("EXP-2026-0022", p, t)
 rel("EXP-2026-0022", "produced", artifact(HZ[2], kind="release-bundle", label=HZ[2]))
+
+# ---- real local-model run of the v0.2 protocol (Neo.K's authorization, 2026-09-11) ----
+# Every number below is read from the run's own result JSON inside the bundle;
+# only the interpretation strings are written by hand, after the run.
+import json as _json  # noqa: E402
+from aes_common import SRC, zip_member  # noqa: E402
+
+REAL_ZIP = "PACC-Hybrid-Lab_v0.2_REAL_LOCAL_LLM_RUN_Qwythos-9B-v2_2026-09-11.zip"
+REAL_INTERPRETATION = {
+    "result_type": "MIXED",
+    "verdict": "REAL_LOCAL_9B_MIXED: supersession and repair up, coherence flat, valid novelty slightly down, breadth unmeasurable at two repetitions",
+    "summary": "The v0.2 protocol executed for the first time on a real language model — a local open-weight 9B (Qwythos-9B-v2, Q4_K_M, Ollama, thinking off) as generator, selector and judge; 16 tasks × 2 repetitions × 4 candidates, 380 calls, 32 rows per condition. The PACC runtime (C) gains on supersession alignment (+0.031 vs B, +0.097 vs A) and repair success (+0.070 / +0.094), the two axes the canonical-intent compilation step exists for; derived coherence (+0.011) and intent persistence (−0.002) do not move; valid novelty is slightly lower (−0.045 vs B). Most per-task pairs are ties because the 9B judge saturates near 1.0, and with two repetitions per task the judge's free-text pattern labels never repeat, so creative breadth is not measurable. The conditions chose different candidates in 69 % of task × repetition pairs.",
+    "summary_zh": "v0.2 協定第一次在真實語言模型上執行——本地開放權重 9B（Qwythos-9B-v2、Q4_K_M、Ollama、關閉思考）同時當生成器、選擇器與評審；16 題 × 2 次 × 4 候選，380 次呼叫，每條件 32 筆。PACC runtime（C）在 supersession 對齊（相對 B +0.031、相對 A +0.097）與修復成功率（+0.070／+0.094）上升——正是 canonical intent 編譯步驟存在的那兩個軸；衍生一致性（+0.011）與意圖持續（−0.002）沒有動；有效新穎度略低（相對 B −0.045）。多數逐題配對是平手，因為 9B 評審在接近 1.0 處飽和；每題只重複兩次，評審的自由文字 pattern 標籤從不重複，所以創造廣度量不出來。三個條件在 69 % 的題 × 次配對中選了不同的候選。",
+    "interpretation": "Against the v0.2 predeclared interpretation: the predicted coherence and intent-persistence gains over B are not observed; raw novelty did not decrease (semantic novelty +0.017 vs B); the predicted breadth collapse cannot be tested at this repetition count. What did appear — governance gains on supersession and repair with a valid-novelty cost concentrated in multi_constraint and repair tasks — is mechanism-consistent but small, untested statistically, and runs opposite to the synthetic v0.1 valid-novelty picture (+0.196 there). One model, one run, one same-model judge: a first real data point, not a verdict on the architecture.",
+    "interpretation_zh": "對照 v0.2 預先宣告的解讀：預測中 C 相對 B 在一致性與意圖持續上的增益沒有出現；原始新穎度沒有下降（語義新穎度相對 B +0.017）；預測的廣度塌縮在這個重複次數下無法檢驗。真正出現的——supersession 與修復上的治理增益，以及集中在 multi_constraint 與 repair 題的有效新穎度代價——與機制一致但很小、未做統計檢定，而且與合成 v0.1 的有效新穎度圖像（那裡是 +0.196）方向相反。一個模型、一次執行、同一個模型當評審：這是第一個真實數據點，不是對架構的判決。",
+    "supports": [], "contradicts": [], "qualifies": ["THY-2026-0002"],
+}
+if (SRC / REAL_ZIP).exists():
+    assert REAL_INTERPRETATION["result_type"], "fill REAL_INTERPRETATION before extracting the real run"
+    P = _json.loads(zip_member(REAL_ZIP, "results/pacc_hybrid_v0.2_real_local_primary.json").decode("utf-8"))
+    S = _json.loads(zip_member(REAL_ZIP, "results/summary_primary.json").decode("utf-8"))
+    lr, proto = P["local_run"], P["protocol"]
+    A = ("A_llm_only", "B_hard_verifier", "C_pacc_runtime")
+    keys = ("hard_adherence", "derived_coherence", "intent_persistence", "supersession_alignment",
+            "repair_success", "usefulness", "semantic_novelty", "valid_novelty", "literal_check_mean",
+            "within_task_pattern_entropy_mean")
+    overall = {a: {k: round(P["architectures"][a]["overall"][k], 4) for k in keys} for a in A}
+    deltas = {d: {k: round(v, 4) for k, v in S["deltas"][d].items() if k in keys} for d in ("C-B", "C-A", "B-A")}
+    details = lr.get("model_details") or {}
+    obj("MOD-2026-0006", "model", "Qwythos-9B-v2 (Q4_K_M, local, Ollama)", "Qwythos-9B-v2（Q4_K_M，本地，Ollama）",
+        f"Open-weight {details.get('parameter_size', '8.95B')} model of the {details.get('family', 'qwen35')} family, GGUF Q4_K_M, served locally by Ollama {lr.get('ollama_version', '')} on an RTX 3070. Used as generator, selector and judge in the real local run of the PACC-Hybrid v0.2 protocol, with thinking disabled.",
+        f"{details.get('family', 'qwen35')} 系的開放權重 {details.get('parameter_size', '8.95B')} 模型，GGUF Q4_K_M，由 Ollama {lr.get('ollama_version', '')} 在 RTX 3070 上本地服務。在 PACC-Hybrid v0.2 協定的真實本地執行中同時擔任生成器、選擇器與評審，思考功能關閉。",
+        "STABLE", "E2", created="2026-09-11", domain="Evaluation", eml_data_basis="REAL MODEL",
+        eml_provider="empero-ai (Hugging Face GGUF) via Ollama", eml_model_version=lr.get("model_digest"),
+        eml_access_type="local, loopback only; open weights", eml_context_window=details.get("context_length"),
+        eml_configuration_notes=[f"run tag {lr.get('model_tag')} = base hf.co/empero-ai/Qwythos-9B-v2-GGUF:Q4_K_M (digest 5008e78bba127262f3f7ad86425bb49a5e0f47bb1959a4d30bfe17832ec45856) + PARAMETER num_ctx 8192 via scripts/Modelfile.qwythos-ctx8k; Ollama's default 4096 context aborted the first primary attempt after 55 calls",
+                                 "reasoning.effort = none (thinking off) for every call", "Ollama /v1/responses, OpenAI-compatible; package provider unchanged"],
+        eml_known_behavior_notes=["With thinking enabled, hidden reasoning consumes the protocol's output-token budgets and output_text comes back empty.", "As judge it sometimes returns a rubric sentence as pattern_label, which makes pattern-entropy numbers fragile."],
+        eml_canonical_external_reference="https://huggingface.co/empero-ai/Qwythos-9B-v2-GGUF")
+    rel("SYS-2026-0003", "uses_model", "MOD-2026-0006")
+    obj("EXP-2026-0023", "experiment",
+        "PACC-Hybrid v0.2 — first real-model run, on a local 9B open-weight model",
+        "PACC-Hybrid v0.2——第一次真實模型執行，本地 9B 開放權重模型",
+        REAL_INTERPRETATION["summary"], REAL_INTERPRETATION["summary_zh"],
+        "STABLE", "E2", created="2026-09-11", domain="Reasoning", domains=["Evaluation"], eml_data_basis="REAL MODEL",
+        eml_hypothesis="A real language model under the PACC runtime shows the coherence / valid-novelty gains and recoverable breadth loss seen in the synthetic witness (v0.2 predeclared interpretation).",
+        eml_metrics={"verdict": REAL_INTERPRETATION["verdict"], "execution_status": P["execution_status"],
+                     "protocol": {k: proto[k] for k in ("model", "judge_model", "task_count", "repetitions", "candidate_count", "equal_accounted_calls", "architecture_call_counts")},
+                     "rows_per_architecture": S["rows_per_architecture"], "overall": overall, "deltas": deltas,
+                     "selection_agreement": S["selection_agreement"], "usage": P["usage"], "wall_seconds": lr.get("wall_seconds"),
+                     "smoke_run": "6 tasks × 2 × 3 candidates executed first, 128 calls, all outputs parsed; kept in the bundle"},
+        eml_interpretation=REAL_INTERPRETATION["interpretation"],
+        eml_limitations=["One open-weight 9B model at 4-bit, one run, 32 rows per architecture; no significance or equivalence test — deltas are descriptive.",
+                         "Judge = the same 9B model; no human rating, no second judge; pattern labels are noisy, so entropy is fragile.",
+                         "Thinking disabled for every call (see docs/REAL_LOCAL_RUN_EVIDENCE_BOUNDARY.md); a thinking-enabled run is a different experiment.",
+                         "Says nothing about frontier models."],
+        eml_controls=["identical candidate ledger for A/B/C", "equal accounted calls", "condition-blind judge with deduplicated judge calls", "deterministic literal checks"],
+        eml_random_seeds=["model nondeterminism, single run; frozen response cache in the bundle for exact replay"], eml_run_count=1,
+        eml_result_type=REAL_INTERPRETATION["result_type"],
+        eml_procedure="scripts/run_real_local_ollama.py --candidate-count 4 --repetitions 2 (after a 6×2×3 smoke); summary by scripts/summarize_real_local.py; both scripts and both frozen caches are in the bundle.",
+        eml_software_environment=f"Python 3.14, openai SDK 3.0.0 against Ollama {lr.get('ollama_version', '')} /v1/responses; PACC-Hybrid-Lab v0.2 package unchanged (25 tests green before the run).",
+        eml_reproduction_instructions="Extract the bundle; python -m pytest -q; replay exactly with CachedReplayProvider('.pacc_real_cache_local', reasoning_effort='none'); or rerun scripts/run_real_local_ollama.py against any OpenAI-compatible endpoint serving the same model tag.",
+        eml_completed_at="2026-09-11", eml_model_ids=["MOD-2026-0006"], eml_benchmark_ids=["BEN-2026-0003"])
+    for p, t in (("runs_on", "SYS-2026-0003"), ("uses_benchmark", "BEN-2026-0003"), ("uses_model", "MOD-2026-0006"),
+                 ("extends", "EXP-2026-0022"), ("tests", "THY-2026-0002")):
+        rel("EXP-2026-0023", p, t)
+    rel("EXP-2026-0023", "produced", artifact(REAL_ZIP, kind="results-bundle", label="PACC-Hybrid v0.2 real local-model run (Qwythos-9B-v2) — results, frozen caches, scripts, docs"))
+    result("RST-2026-0014", "EXP-2026-0023", "Real local-model A/B/C table (Qwythos-9B-v2)", "真實本地模型 A/B/C 表（Qwythos-9B-v2）",
+           REAL_INTERPRETATION["summary"], REAL_INTERPRETATION["summary_zh"], REAL_INTERPRETATION["result_type"],
+           metrics={"overall": overall, "deltas": deltas, "selection_agreement": S["selection_agreement"]},
+           interpretation=REAL_INTERPRETATION["interpretation"],
+           supports=REAL_INTERPRETATION["supports"], contradicts=REAL_INTERPRETATION["contradicts"], qualifies=REAL_INTERPRETATION["qualifies"],
+           limitations=["Descriptive deltas from one local run with a same-model judge."])
+    # the harness record is no longer the end of the line
+    harness = next(o for o in OBJECTS if o["id"] == "EXP-2026-0022")
+    harness["values"]["eml_status"] = "STABLE"
+    harness["values"]["eml_limitations"].append("Executed for the first time on 2026-09-11 with a local open-weight model — see EXP-2026-0023.")

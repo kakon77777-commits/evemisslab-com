@@ -1,20 +1,21 @@
 {
   "id": "ART-2026-0036",
   "kind": "artifact",
-  "label": "PACC-Hybrid v0.2 mock smoke run (MOCK_ONLY_NOT_REAL_MODEL)",
-  "created_at": "2026-09-09",
-  "updated_at": "2026-09-09",
+  "label": "PACC-Hybrid v0.2 real local-model run (Qwythos-9B-v2) — results, frozen caches, scripts, docs",
+  "created_at": "2026-09-10",
+  "updated_at": "2026-09-10",
   "values": {
-    "eml_artifact_type": "mock-run-output",
-    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC-Hybrid-Lab_v0.2_REAL_LLM_HARNESS_FINAL.zip!/PACC-Hybrid-Lab-v0.2/results/pacc_hybrid_v0.2_mock_smoke.json",
-    "eml_artifact_sha256": "4e5252fdab8dddfb074832d892b3e2d3c6559439e2b3847af3d9ded35148d26d",
-    "eml_artifact_size": 16864,
-    "eml_artifact_media_type": "application/json",
+    "eml_artifact_type": "results-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/adaptive-epistemic-systems/PACC-Hybrid-Lab_v0.2_REAL_LOCAL_LLM_RUN_Qwythos-9B-v2_2026-09-11.zip",
+    "eml_artifact_sha256": "fbd1a183da843db16585b4835d0cbe1ab5e6e0a402329b56322355baf7d2ce46",
+    "eml_artifact_size": 861888,
+    "eml_artifact_media_type": "application/zip",
     "eml_artifact_provenance": {
-      "source": "PACC-Hybrid-Lab v0.2 bundle",
-      "note": "deterministic fake provider output; the bundle itself forbids using it to claim PACC improvement or degradation on real language models"
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
     },
-    "eml_visibility": "INTERNAL",
-    "eml_publication_policy": "NEVER_PUBLISH"
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
   }
 }

@@ -1,0 +1,123 @@
+{
+  "id": "RST-2026-0014",
+  "kind": "result",
+  "label": "Real local-model A/B/C table (Qwythos-9B-v2)",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0014/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The v0.2 protocol executed for the first time on a real language model — a local open-weight 9B (Qwythos-9B-v2, Q4_K_M, Ollama, thinking off) as generator, selector and judge; 16 tasks × 2 repetitions × 4 candidates, 380 calls, 32 rows per condition. The PACC runtime (C) gains on supersession alignment (+0.031 vs B, +0.097 vs A) and repair success (+0.070 / +0.094), the two axes the canonical-intent compilation step exists for; derived coherence (+0.011) and intent persistence (−0.002) do not move; valid novelty is slightly lower (−0.045 vs B). Most per-task pairs are ties because the 9B judge saturates near 1.0, and with two repetitions per task the judge's free-text pattern labels never repeat, so creative breadth is not measurable. The conditions chose different candidates in 69 % of task × repetition pairs.",
+    "eml_summary_zh": "v0.2 協定第一次在真實語言模型上執行——本地開放權重 9B（Qwythos-9B-v2、Q4_K_M、Ollama、關閉思考）同時當生成器、選擇器與評審；16 題 × 2 次 × 4 候選，380 次呼叫，每條件 32 筆。PACC runtime（C）在 supersession 對齊（相對 B +0.031、相對 A +0.097）與修復成功率（+0.070／+0.094）上升——正是 canonical intent 編譯步驟存在的那兩個軸；衍生一致性（+0.011）與意圖持續（−0.002）沒有動；有效新穎度略低（相對 B −0.045）。多數逐題配對是平手，因為 9B 評審在接近 1.0 處飽和；每題只重複兩次，評審的自由文字 pattern 標籤從不重複，所以創造廣度量不出來。三個條件在 69 % 的題 × 次配對中選了不同的候選。",
+    "eml_label_zh": "真實本地模型 A/B/C 表（Qwythos-9B-v2）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "REAL MODEL",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "overall": {
+        "A_llm_only": {
+          "hard_adherence": 0.9875,
+          "derived_coherence": 0.9812,
+          "intent_persistence": 0.9875,
+          "supersession_alignment": 0.8094,
+          "repair_success": 0.775,
+          "usefulness": 0.9528,
+          "semantic_novelty": 0.8084,
+          "valid_novelty": 0.8475,
+          "literal_check_mean": 0.9792,
+          "within_task_pattern_entropy_mean": 1.0
+        },
+        "B_hard_verifier": {
+          "hard_adherence": 0.9859,
+          "derived_coherence": 0.9797,
+          "intent_persistence": 0.9875,
+          "supersession_alignment": 0.875,
+          "repair_success": 0.7984,
+          "usefulness": 0.9503,
+          "semantic_novelty": 0.7725,
+          "valid_novelty": 0.8606,
+          "literal_check_mean": 0.9792,
+          "within_task_pattern_entropy_mean": 1.0
+        },
+        "C_pacc_runtime": {
+          "hard_adherence": 1.0,
+          "derived_coherence": 0.9906,
+          "intent_persistence": 0.9853,
+          "supersession_alignment": 0.9062,
+          "repair_success": 0.8688,
+          "usefulness": 0.9516,
+          "semantic_novelty": 0.7897,
+          "valid_novelty": 0.8153,
+          "literal_check_mean": 0.9792,
+          "within_task_pattern_entropy_mean": 1.0
+        }
+      },
+      "deltas": {
+        "C-B": {
+          "hard_adherence": 0.0141,
+          "derived_coherence": 0.0109,
+          "intent_persistence": -0.0022,
+          "supersession_alignment": 0.0312,
+          "repair_success": 0.0703,
+          "usefulness": 0.0012,
+          "semantic_novelty": 0.0172,
+          "valid_novelty": -0.0453,
+          "literal_check_mean": 0.0,
+          "within_task_pattern_entropy_mean": 0.0
+        },
+        "C-A": {
+          "hard_adherence": 0.0125,
+          "derived_coherence": 0.0094,
+          "intent_persistence": -0.0022,
+          "supersession_alignment": 0.0969,
+          "repair_success": 0.0938,
+          "usefulness": -0.0012,
+          "semantic_novelty": -0.0188,
+          "valid_novelty": -0.0322,
+          "literal_check_mean": 0.0,
+          "within_task_pattern_entropy_mean": 0.0
+        },
+        "B-A": {
+          "hard_adherence": -0.0016,
+          "derived_coherence": -0.0016,
+          "intent_persistence": 0.0,
+          "supersession_alignment": 0.0656,
+          "repair_success": 0.0234,
+          "usefulness": -0.0025,
+          "semantic_novelty": -0.0359,
+          "valid_novelty": 0.0131,
+          "literal_check_mean": 0.0,
+          "within_task_pattern_entropy_mean": 0.0
+        }
+      },
+      "selection_agreement": {
+        "A=B": 0.5625,
+        "A=C": 0.40625,
+        "B=C": 0.46875,
+        "all_same": 0.3125
+      }
+    },
+    "eml_interpretation": "Against the v0.2 predeclared interpretation: the predicted coherence and intent-persistence gains over B are not observed; raw novelty did not decrease (semantic novelty +0.017 vs B); the predicted breadth collapse cannot be tested at this repetition count. What did appear — governance gains on supersession and repair with a valid-novelty cost concentrated in multi_constraint and repair tasks — is mechanism-consistent but small, untested statistically, and runs opposite to the synthetic v0.1 valid-novelty picture (+0.196 there). One model, one run, one same-model judge: a first real data point, not a verdict on the architecture.",
+    "eml_limitations": [
+      "Descriptive deltas from one local run with a same-model judge."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}
