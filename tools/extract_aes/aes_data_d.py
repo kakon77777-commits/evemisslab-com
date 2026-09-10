@@ -344,3 +344,64 @@ if (SRC / REAL_ZIP).exists():
     harness = next(o for o in OBJECTS if o["id"] == "EXP-2026-0022")
     harness["values"]["eml_status"] = "STABLE"
     harness["values"]["eml_limitations"].append("Executed for the first time on 2026-09-11 with a local open-weight model — see EXP-2026-0023.")
+
+# ---- run 2: four repetitions + label-free breadth (same model, thinking off) ----
+RUN2_ZIP = "PACC-Hybrid-Lab_v0.2_REAL_LOCAL_LLM_RUN2_reps4_breadth_Qwythos-9B-v2_2026-09-11.zip"
+if (SRC / RUN2_ZIP).exists():
+    P2 = _json.loads(zip_member(RUN2_ZIP, "results/pacc_hybrid_v0.2_real_local_reps4.json").decode("utf-8"))
+    S2 = _json.loads(zip_member(RUN2_ZIP, "results/summary_reps4.json").decode("utf-8"))
+    B2 = _json.loads(zip_member(RUN2_ZIP, "results/breadth_reps4.json").decode("utf-8"))
+    lr2, proto2 = P2["local_run"], P2["protocol"]
+    A = ("A_llm_only", "B_hard_verifier", "C_pacc_runtime")
+    keys = ("hard_adherence", "derived_coherence", "intent_persistence", "supersession_alignment",
+            "repair_success", "usefulness", "semantic_novelty", "valid_novelty", "literal_check_mean")
+    overall2 = {a: {k: round(P2["architectures"][a]["overall"][k], 4) for k in keys} for a in A}
+    deltas2 = {d: {k: round(v, 4) for k, v in S2["deltas"][d].items() if k in keys} for d in ("C-B", "C-A", "B-A")}
+    breadth2 = {a: {k: B2["summary"][a][k] for k in ("cluster_entropy_mean", "breadth_ratio_mean", "selected_mean_pairwise_distance_mean")} for a in A}
+    run2_summary = ("Same model and settings as the first run, repetitions raised from two to four: 16 tasks × 4 × 4 candidates, 754 unique model requests, 64 rows per condition. "
+                    f"The PACC runtime (C) shows no reliable advantage on any judge axis — supersession {deltas2['C-B']['supersession_alignment']:+.4f} and repair {deltas2['C-B']['repair_success']:+.4f} vs B, so the first run's gains did not replicate — and sits a few hundredths below A and B on adherence, coherence and intent persistence. "
+                    f"A new label-free breadth measure (local nomic-embed-text embeddings, k-means labels over each task's candidate pool) finds no collapse: C's cluster entropy {breadth2['C_pacc_runtime']['cluster_entropy_mean']:.3f} vs A {breadth2['A_llm_only']['cluster_entropy_mean']:.3f} / B {breadth2['B_hard_verifier']['cluster_entropy_mean']:.3f}, breadth ratio {breadth2['C_pacc_runtime']['breadth_ratio_mean']:.3f} vs {breadth2['A_llm_only']['breadth_ratio_mean']:.3f} / {breadth2['B_hard_verifier']['breadth_ratio_mean']:.3f}. "
+                    f"Five selector/judge outputs failed strict JSON parsing and were regenerated under a disclosed retry policy.")
+    run2_summary_zh = ("與第一次執行相同的模型與設定，重複次數從 2 提高到 4：16 題 × 4 × 4 候選，754 次唯一模型請求，每條件 64 筆。"
+                       f"PACC runtime（C）在任何評審軸上都沒有可靠優勢——supersession 相對 B {deltas2['C-B']['supersession_alignment']:+.4f}、修復 {deltas2['C-B']['repair_success']:+.4f}，第一次執行的增益沒有重現——在遵守、一致性與意圖持續上還比 A、B 低幾個百分點。"
+                       f"新的標籤無關廣度指標（本地 nomic-embed-text 嵌入、對每題候選池做 k-means 當標籤）沒有發現塌縮：C 的群熵 {breadth2['C_pacc_runtime']['cluster_entropy_mean']:.3f}，A {breadth2['A_llm_only']['cluster_entropy_mean']:.3f}／B {breadth2['B_hard_verifier']['cluster_entropy_mean']:.3f}；廣度比 {breadth2['C_pacc_runtime']['breadth_ratio_mean']:.3f}，對 {breadth2['A_llm_only']['breadth_ratio_mean']:.3f}／{breadth2['B_hard_verifier']['breadth_ratio_mean']:.3f}。"
+                       f"五次 selector／judge 輸出未通過嚴格 JSON 解析，依公開的重試政策重新生成。")
+    obj("EXP-2026-0024", "experiment",
+        "PACC-Hybrid v0.2 — real-model run 2: four repetitions and label-free creative breadth",
+        "PACC-Hybrid v0.2——真實模型第二次執行：四次重複與標籤無關的創造廣度",
+        run2_summary, run2_summary_zh,
+        "STABLE", "E3", created="2026-09-11", domain="Reasoning", domains=["Evaluation"], eml_data_basis="REAL MODEL",
+        eml_hypothesis="With enough repetitions, (a) the first run's supersession/repair gains for the PACC runtime replicate, and (b) creative breadth can be measured — and the predeclared breadth collapse under PACC selection appears.",
+        eml_metrics={"verdict": "REAL_LOCAL_9B_NO_RELIABLE_DIFFERENCE_BREADTH_NOT_REDUCED", "execution_status": P2["execution_status"],
+                     "protocol": {k: proto2[k] for k in ("model", "judge_model", "task_count", "repetitions", "candidate_count", "equal_accounted_calls", "architecture_call_counts")},
+                     "rows_per_architecture": S2["rows_per_architecture"], "overall": overall2, "deltas": deltas2,
+                     "selection_agreement": S2["selection_agreement"], "breadth_label_free": breadth2,
+                     "breadth_method": f"{B2['embed_model']} embeddings; k-means k={B2['k']} over each task's {proto2['repetitions'] * proto2['candidate_count']}-candidate pool; normalized cluster entropy and mean pairwise cosine distance / pool distance",
+                     "retries": [r["purpose"] for r in lr2.get("retries", [])], "usage": P2["usage"], "wall_seconds": lr2.get("wall_seconds")},
+        eml_interpretation="Two thinking-off runs on the same 9B model (32 and 64 rows per condition) now disagree on the only gains the first run showed, so those gains were run-to-run variation of a same-model judge, not an effect. The predeclared coherence and intent gains are absent in both runs. The predeclared breadth collapse is not observed by either label-free measure — the shipped C selector prompt already instructs against collapsing, so this tests the shipped prompt, not naive commitment. On this model the three runtime conditions are practically equivalent; nothing is statistically tested; frontier models are not addressed.",
+        eml_limitations=["Same-model 9B judge, saturating near 1.0; no human rating, no second judge.",
+                         "The breadth measure is supplementary and label-free, not the protocol's judge-label entropy (which stays 1.0 because free-text labels never repeat).",
+                         "Retry policy: unparseable selector/judge JSON regenerated at most twice per call, never edited; 5 retries recorded.",
+                         "Thinking disabled; one model family; no significance or equivalence test."],
+        eml_controls=["identical candidate ledger for A/B/C", "equal accounted calls", "condition-blind judge with deduplicated judge calls", "deterministic literal checks", "pool-relative breadth ratio"],
+        eml_random_seeds=["model nondeterminism, single run; frozen response cache and embedding cache in the bundle"], eml_run_count=1,
+        eml_result_type="NEGATIVE",
+        eml_procedure="scripts/run_real_local_ollama.py --model qwythos-9b-v2-q4km-ctx8k --repetitions 4 --candidate-count 4 (resumed once from cache after a malformed judge JSON aborted the first pass at call 398); scripts/summarize_real_local.py; scripts/breadth_metrics.py.",
+        eml_software_environment=f"Python 3.14, openai SDK 3.0.0 against Ollama {lr2.get('ollama_version', '')} /v1/responses (flash attention on, q8_0 KV cache for the resumed pass); nomic-embed-text for breadth; harness package unchanged.",
+        eml_reproduction_instructions="Extract the bundle; replay exactly with CachedReplayProvider('.pacc_real_cache_local_reps4', reasoning_effort='none'); python scripts/breadth_metrics.py results/pacc_hybrid_v0.2_real_local_reps4.json --cache-dir .pacc_real_cache_local_reps4 (embeddings cached alongside).",
+        eml_completed_at="2026-09-11", eml_model_ids=["MOD-2026-0006"], eml_benchmark_ids=["BEN-2026-0003"])
+    for p, t in (("runs_on", "SYS-2026-0003"), ("uses_benchmark", "BEN-2026-0003"), ("uses_model", "MOD-2026-0006"),
+                 ("extends", "EXP-2026-0023"), ("tests", "THY-2026-0002"), ("replicates", "EXP-2026-0023")):
+        rel("EXP-2026-0024", p, t)
+    rel("EXP-2026-0024", "produced", artifact(RUN2_ZIP, kind="results-bundle", label="PACC-Hybrid v0.2 real local-model run 2 (4 repetitions, label-free breadth) — results, frozen caches, scripts, docs"))
+    result("RST-2026-0015", "EXP-2026-0024", "Run 2: no reliable condition difference; breadth not reduced (64 rows)", "第二次執行：條件間無可靠差異；廣度未縮減（64 筆）",
+           f"C vs B: supersession {deltas2['C-B']['supersession_alignment']:+.4f}, repair {deltas2['C-B']['repair_success']:+.4f}, derived coherence {deltas2['C-B']['derived_coherence']:+.4f}, intent {deltas2['C-B']['intent_persistence']:+.4f}, valid novelty {deltas2['C-B']['valid_novelty']:+.4f}; label-free breadth: cluster entropy C {breadth2['C_pacc_runtime']['cluster_entropy_mean']:.3f} / A {breadth2['A_llm_only']['cluster_entropy_mean']:.3f} / B {breadth2['B_hard_verifier']['cluster_entropy_mean']:.3f}.",
+           f"C 相對 B：supersession {deltas2['C-B']['supersession_alignment']:+.4f}、修復 {deltas2['C-B']['repair_success']:+.4f}、衍生一致性 {deltas2['C-B']['derived_coherence']:+.4f}、意圖 {deltas2['C-B']['intent_persistence']:+.4f}、有效新穎度 {deltas2['C-B']['valid_novelty']:+.4f}；標籤無關廣度：群熵 C {breadth2['C_pacc_runtime']['cluster_entropy_mean']:.3f}／A {breadth2['A_llm_only']['cluster_entropy_mean']:.3f}／B {breadth2['B_hard_verifier']['cluster_entropy_mean']:.3f}。",
+           "NEGATIVE", metrics={"deltas": deltas2, "breadth_label_free": breadth2, "selection_agreement": S2["selection_agreement"]},
+           interpretation="The first run's governance gains did not replicate; the three conditions are practically equivalent on this model, and the PACC runtime does not narrow creative breadth.",
+           qualifies=["THY-2026-0002"], contradicts=[],
+           limitations=["Descriptive; same-model judge; one model family; thinking off."])
+    first = next(o for o in OBJECTS if o["id"] == "EXP-2026-0023")
+    first["values"]["eml_limitations"].append("Not replicated: the second run with four repetitions (EXP-2026-0024, 64 rows per condition) shows supersession +0.0005 and repair −0.0125 vs B — the run-1 gains were run-to-run variation.")
+    line = next(o for o in OBJECTS if o["id"] == "RES-2026-0004")
+    line["values"]["eml_claims"].append("Real local 9B model, thinking off, two runs (32 and 64 rows per condition): the three runtime conditions are practically equivalent on every judge axis, and by label-free measures the PACC runtime does not narrow creative breadth. The synthetic v0.1 prediction did not appear on this model.")

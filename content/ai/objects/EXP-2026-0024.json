@@ -1,0 +1,192 @@
+{
+  "id": "EXP-2026-0024",
+  "kind": "experiment",
+  "label": "PACC-Hybrid v0.2 — real-model run 2: four repetitions and label-free creative breadth",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0024/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Same model and settings as the first run, repetitions raised from two to four: 16 tasks × 4 × 4 candidates, 754 unique model requests, 64 rows per condition. The PACC runtime (C) shows no reliable advantage on any judge axis — supersession +0.0005 and repair -0.0125 vs B, so the first run's gains did not replicate — and sits a few hundredths below A and B on adherence, coherence and intent persistence. A new label-free breadth measure (local nomic-embed-text embeddings, k-means labels over each task's candidate pool) finds no collapse: C's cluster entropy 0.923 vs A 0.909 / B 0.864, breadth ratio 0.975 vs 0.948 / 0.941. Five selector/judge outputs failed strict JSON parsing and were regenerated under a disclosed retry policy.",
+    "eml_summary_zh": "與第一次執行相同的模型與設定，重複次數從 2 提高到 4：16 題 × 4 × 4 候選，754 次唯一模型請求，每條件 64 筆。PACC runtime（C）在任何評審軸上都沒有可靠優勢——supersession 相對 B +0.0005、修復 -0.0125，第一次執行的增益沒有重現——在遵守、一致性與意圖持續上還比 A、B 低幾個百分點。新的標籤無關廣度指標（本地 nomic-embed-text 嵌入、對每題候選池做 k-means 當標籤）沒有發現塌縮：C 的群熵 0.923，A 0.909／B 0.864；廣度比 0.975，對 0.948／0.941。五次 selector／judge 輸出未通過嚴格 JSON 解析，依公開的重試政策重新生成。",
+    "eml_label_zh": "PACC-Hybrid v0.2——真實模型第二次執行：四次重複與標籤無關的創造廣度",
+    "eml_primary_domain": "Reasoning",
+    "eml_domains": [
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "REAL MODEL",
+    "eml_hypothesis": "With enough repetitions, (a) the first run's supersession/repair gains for the PACC runtime replicate, and (b) creative breadth can be measured — and the predeclared breadth collapse under PACC selection appears.",
+    "eml_metrics": {
+      "verdict": "REAL_LOCAL_9B_NO_RELIABLE_DIFFERENCE_BREADTH_NOT_REDUCED",
+      "execution_status": "EXECUTED_REAL_MODEL",
+      "protocol": {
+        "model": "qwythos-9b-v2-q4km-ctx8k:latest",
+        "judge_model": "qwythos-9b-v2-q4km-ctx8k:latest",
+        "task_count": 16,
+        "repetitions": 4,
+        "candidate_count": 4,
+        "equal_accounted_calls": true,
+        "architecture_call_counts": {
+          "A_llm_only": 448,
+          "B_hard_verifier": 448,
+          "C_pacc_runtime": 448
+        }
+      },
+      "rows_per_architecture": 64,
+      "overall": {
+        "A_llm_only": {
+          "hard_adherence": 0.9894,
+          "derived_coherence": 0.9942,
+          "intent_persistence": 0.9863,
+          "supersession_alignment": 0.9767,
+          "repair_success": 0.9798,
+          "usefulness": 0.9427,
+          "semantic_novelty": 0.8267,
+          "valid_novelty": 0.8691,
+          "literal_check_mean": 0.974
+        },
+        "B_hard_verifier": {
+          "hard_adherence": 0.9816,
+          "derived_coherence": 0.977,
+          "intent_persistence": 0.982,
+          "supersession_alignment": 0.9469,
+          "repair_success": 0.95,
+          "usefulness": 0.9355,
+          "semantic_novelty": 0.8044,
+          "valid_novelty": 0.9114,
+          "literal_check_mean": 0.9792
+        },
+        "C_pacc_runtime": {
+          "hard_adherence": 0.9672,
+          "derived_coherence": 0.9695,
+          "intent_persistence": 0.9706,
+          "supersession_alignment": 0.9473,
+          "repair_success": 0.9375,
+          "usefulness": 0.9234,
+          "semantic_novelty": 0.8161,
+          "valid_novelty": 0.8927,
+          "literal_check_mean": 0.974
+        }
+      },
+      "deltas": {
+        "C-B": {
+          "hard_adherence": -0.0144,
+          "derived_coherence": -0.0075,
+          "intent_persistence": -0.0114,
+          "supersession_alignment": 0.0005,
+          "repair_success": -0.0125,
+          "usefulness": -0.012,
+          "semantic_novelty": 0.0117,
+          "valid_novelty": -0.0187,
+          "literal_check_mean": -0.0052
+        },
+        "C-A": {
+          "hard_adherence": -0.0222,
+          "derived_coherence": -0.0247,
+          "intent_persistence": -0.0157,
+          "supersession_alignment": -0.0294,
+          "repair_success": -0.0423,
+          "usefulness": -0.0192,
+          "semantic_novelty": -0.0106,
+          "valid_novelty": 0.0236,
+          "literal_check_mean": 0.0
+        },
+        "B-A": {
+          "hard_adherence": -0.0078,
+          "derived_coherence": -0.0172,
+          "intent_persistence": -0.0043,
+          "supersession_alignment": -0.0298,
+          "repair_success": -0.0298,
+          "usefulness": -0.0072,
+          "semantic_novelty": -0.0223,
+          "valid_novelty": 0.0423,
+          "literal_check_mean": 0.0052
+        }
+      },
+      "selection_agreement": {
+        "A=B": 0.546875,
+        "A=C": 0.546875,
+        "B=C": 0.46875,
+        "all_same": 0.34375
+      },
+      "breadth_label_free": {
+        "A_llm_only": {
+          "cluster_entropy_mean": 0.9091,
+          "breadth_ratio_mean": 0.9475,
+          "selected_mean_pairwise_distance_mean": 0.1909
+        },
+        "B_hard_verifier": {
+          "cluster_entropy_mean": 0.8635,
+          "breadth_ratio_mean": 0.9411,
+          "selected_mean_pairwise_distance_mean": 0.1921
+        },
+        "C_pacc_runtime": {
+          "cluster_entropy_mean": 0.9227,
+          "breadth_ratio_mean": 0.9745,
+          "selected_mean_pairwise_distance_mean": 0.1964
+        }
+      },
+      "breadth_method": "nomic-embed-text:latest embeddings; k-means k=4 over each task's 16-candidate pool; normalized cluster entropy and mean pairwise cosine distance / pool distance",
+      "retries": [
+        "judge:repair_02:r1:c1",
+        "judge:design_01:r0:c0",
+        "selector:A_llm_only:design_01:r3",
+        "judge:design_03:r1:c2",
+        "judge:creative_03:r0:c2"
+      ],
+      "usage": {
+        "input_tokens": 718454,
+        "latency_ms_sum": 8037466.647999942,
+        "output_tokens": 223944
+      },
+      "wall_seconds": 3400.5
+    },
+    "eml_interpretation": "Two thinking-off runs on the same 9B model (32 and 64 rows per condition) now disagree on the only gains the first run showed, so those gains were run-to-run variation of a same-model judge, not an effect. The predeclared coherence and intent gains are absent in both runs. The predeclared breadth collapse is not observed by either label-free measure — the shipped C selector prompt already instructs against collapsing, so this tests the shipped prompt, not naive commitment. On this model the three runtime conditions are practically equivalent; nothing is statistically tested; frontier models are not addressed.",
+    "eml_limitations": [
+      "Same-model 9B judge, saturating near 1.0; no human rating, no second judge.",
+      "The breadth measure is supplementary and label-free, not the protocol's judge-label entropy (which stays 1.0 because free-text labels never repeat).",
+      "Retry policy: unparseable selector/judge JSON regenerated at most twice per call, never edited; 5 retries recorded.",
+      "Thinking disabled; one model family; no significance or equivalence test."
+    ],
+    "eml_controls": [
+      "identical candidate ledger for A/B/C",
+      "equal accounted calls",
+      "condition-blind judge with deduplicated judge calls",
+      "deterministic literal checks",
+      "pool-relative breadth ratio"
+    ],
+    "eml_random_seeds": [
+      "model nondeterminism, single run; frozen response cache and embedding cache in the bundle"
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "NEGATIVE",
+    "eml_procedure": "scripts/run_real_local_ollama.py --model qwythos-9b-v2-q4km-ctx8k --repetitions 4 --candidate-count 4 (resumed once from cache after a malformed judge JSON aborted the first pass at call 398); scripts/summarize_real_local.py; scripts/breadth_metrics.py.",
+    "eml_software_environment": "Python 3.14, openai SDK 3.0.0 against Ollama 0.33.3 /v1/responses (flash attention on, q8_0 KV cache for the resumed pass); nomic-embed-text for breadth; harness package unchanged.",
+    "eml_reproduction_instructions": "Extract the bundle; replay exactly with CachedReplayProvider('.pacc_real_cache_local_reps4', reasoning_effort='none'); python scripts/breadth_metrics.py results/pacc_hybrid_v0.2_real_local_reps4.json --cache-dir .pacc_real_cache_local_reps4 (embeddings cached alongside).",
+    "eml_completed_at": "2026-09-11",
+    "eml_model_ids": [
+      "MOD-2026-0006"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0003"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "id": "RST-2026-0015",
+  "kind": "result",
+  "label": "Run 2: no reliable condition difference; breadth not reduced (64 rows)",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0015/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "C vs B: supersession +0.0005, repair -0.0125, derived coherence -0.0075, intent -0.0114, valid novelty -0.0187; label-free breadth: cluster entropy C 0.923 / A 0.909 / B 0.864.",
+    "eml_summary_zh": "C 相對 B：supersession +0.0005、修復 -0.0125、衍生一致性 -0.0075、意圖 -0.0114、有效新穎度 -0.0187；標籤無關廣度：群熵 C 0.923／A 0.909／B 0.864。",
+    "eml_label_zh": "第二次執行：條件間無可靠差異；廣度未縮減（64 筆）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "REAL MODEL",
+    "eml_result_type": "NEGATIVE",
+    "eml_metrics": {
+      "deltas": {
+        "C-B": {
+          "hard_adherence": -0.0144,
+          "derived_coherence": -0.0075,
+          "intent_persistence": -0.0114,
+          "supersession_alignment": 0.0005,
+          "repair_success": -0.0125,
+          "usefulness": -0.012,
+          "semantic_novelty": 0.0117,
+          "valid_novelty": -0.0187,
+          "literal_check_mean": -0.0052
+        },
+        "C-A": {
+          "hard_adherence": -0.0222,
+          "derived_coherence": -0.0247,
+          "intent_persistence": -0.0157,
+          "supersession_alignment": -0.0294,
+          "repair_success": -0.0423,
+          "usefulness": -0.0192,
+          "semantic_novelty": -0.0106,
+          "valid_novelty": 0.0236,
+          "literal_check_mean": 0.0
+        },
+        "B-A": {
+          "hard_adherence": -0.0078,
+          "derived_coherence": -0.0172,
+          "intent_persistence": -0.0043,
+          "supersession_alignment": -0.0298,
+          "repair_success": -0.0298,
+          "usefulness": -0.0072,
+          "semantic_novelty": -0.0223,
+          "valid_novelty": 0.0423,
+          "literal_check_mean": 0.0052
+        }
+      },
+      "breadth_label_free": {
+        "A_llm_only": {
+          "cluster_entropy_mean": 0.9091,
+          "breadth_ratio_mean": 0.9475,
+          "selected_mean_pairwise_distance_mean": 0.1909
+        },
+        "B_hard_verifier": {
+          "cluster_entropy_mean": 0.8635,
+          "breadth_ratio_mean": 0.9411,
+          "selected_mean_pairwise_distance_mean": 0.1921
+        },
+        "C_pacc_runtime": {
+          "cluster_entropy_mean": 0.9227,
+          "breadth_ratio_mean": 0.9745,
+          "selected_mean_pairwise_distance_mean": 0.1964
+        }
+      },
+      "selection_agreement": {
+        "A=B": 0.546875,
+        "A=C": 0.546875,
+        "B=C": 0.46875,
+        "all_same": 0.34375
+      }
+    },
+    "eml_interpretation": "The first run's governance gains did not replicate; the three conditions are practically equivalent on this model, and the PACC runtime does not narrow creative breadth.",
+    "eml_limitations": [
+      "Descriptive; same-model judge; one model family; thinking off."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

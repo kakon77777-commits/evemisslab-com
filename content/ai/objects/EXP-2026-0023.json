@@ -140,7 +140,8 @@
       "One open-weight 9B model at 4-bit, one run, 32 rows per architecture; no significance or equivalence test — deltas are descriptive.",
       "Judge = the same 9B model; no human rating, no second judge; pattern labels are noisy, so entropy is fragile.",
       "Thinking disabled for every call (see docs/REAL_LOCAL_RUN_EVIDENCE_BOUNDARY.md); a thinking-enabled run is a different experiment.",
-      "Says nothing about frontier models."
+      "Says nothing about frontier models.",
+      "Not replicated: the second run with four repetitions (EXP-2026-0024, 64 rows per condition) shows supersession +0.0005 and repair −0.0125 vs B — the run-1 gains were run-to-run variation."
     ],
     "eml_controls": [
       "identical candidate ledger for A/B/C",

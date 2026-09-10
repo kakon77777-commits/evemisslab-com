@@ -33,7 +33,8 @@
       "Will a frontier language model show the same effect as the synthetic witness?"
     ],
     "eml_claims": [
-      "Within the synthetic witness: reasoning coherence ↑, valid novelty ↑, soft-preference fit slightly ↓, creative breadth ↓ under naive selection and recoverable with exploration separated from commitment (8/8 seeds sign-stable)."
+      "Within the synthetic witness: reasoning coherence ↑, valid novelty ↑, soft-preference fit slightly ↓, creative breadth ↓ under naive selection and recoverable with exploration separated from commitment (8/8 seeds sign-stable).",
+      "Real local 9B model, thinking off, two runs (32 and 64 rows per condition): the three runtime conditions are practically equivalent on every judge axis, and by label-free measures the PACC runtime does not narrow creative breadth. The synthetic v0.1 prediction did not appear on this model."
     ],
     "eml_limitations": [
       "Zero real LLM calls so far; no claim about real-model reasoning, intent understanding, imagination, hallucination or human-rated usefulness is permitted before a real-model result exists.",
