@@ -121,6 +121,28 @@
         "B=C": 0.46875,
         "all_same": 0.34375
       },
+      "paired_wins_ties_losses": {
+        "C-B": {
+          "hard_adherence": "1-62-1",
+          "derived_coherence": "2-60-2",
+          "intent_persistence": "0-61-3",
+          "supersession_alignment": "3-57-4",
+          "repair_success": "3-59-2",
+          "usefulness": "10-41-13",
+          "semantic_novelty": "14-39-11",
+          "valid_novelty": "8-46-10"
+        },
+        "C-A": {
+          "hard_adherence": "2-59-3",
+          "derived_coherence": "1-58-5",
+          "intent_persistence": "2-57-5",
+          "supersession_alignment": "3-57-4",
+          "repair_success": "2-59-3",
+          "usefulness": "10-44-10",
+          "semantic_novelty": "14-37-13",
+          "valid_novelty": "11-48-5"
+        }
+      },
       "breadth_label_free": {
         "A_llm_only": {
           "cluster_entropy_mean": 0.9091,

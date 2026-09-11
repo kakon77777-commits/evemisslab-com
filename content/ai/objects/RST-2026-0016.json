@@ -1,0 +1,121 @@
+{
+  "id": "RST-2026-0016",
+  "kind": "result",
+  "label": "Run 3: valid novelty and repair up for the PACC runtime with thinking on; governance flat; breadth not reduced (32 rows)",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E3",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0016/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "C vs B: valid novelty +0.0687, repair +0.0153, semantic novelty +0.0166, derived coherence -0.0063, intent -0.0053, supersession -0.0059; C vs A: valid novelty +0.0375, repair +0.0466; label-free breadth ratio C 1.047 / A 0.960 / B 0.973.",
+    "eml_summary_zh": "C 相對 B：有效新穎度 +0.0687、修復 +0.0153、語義新穎度 +0.0166、衍生一致性 -0.0063、意圖 -0.0053、supersession -0.0059；C 相對 A：有效新穎度 +0.0375、修復 +0.0466；標籤無關廣度比 C 1.047／A 0.960／B 0.973。",
+    "eml_label_zh": "第三次執行：開啟思考後 PACC runtime 的有效新穎度與修復上升；治理持平；廣度未縮減（32 筆）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "REAL MODEL",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "deltas": {
+        "C-B": {
+          "hard_adherence": -0.0069,
+          "derived_coherence": -0.0063,
+          "intent_persistence": -0.0053,
+          "supersession_alignment": -0.0059,
+          "repair_success": 0.0153,
+          "usefulness": 0.0044,
+          "semantic_novelty": 0.0166,
+          "valid_novelty": 0.0687,
+          "literal_check_mean": 0.0
+        },
+        "C-A": {
+          "hard_adherence": -0.0038,
+          "derived_coherence": -0.0013,
+          "intent_persistence": -0.0041,
+          "supersession_alignment": -0.0034,
+          "repair_success": 0.0466,
+          "usefulness": -0.0003,
+          "semantic_novelty": 0.0128,
+          "valid_novelty": 0.0375,
+          "literal_check_mean": 0.0
+        },
+        "B-A": {
+          "hard_adherence": 0.0031,
+          "derived_coherence": 0.005,
+          "intent_persistence": 0.0012,
+          "supersession_alignment": 0.0025,
+          "repair_success": 0.0312,
+          "usefulness": -0.0047,
+          "semantic_novelty": -0.0037,
+          "valid_novelty": -0.0312,
+          "literal_check_mean": 0.0
+        }
+      },
+      "paired_wins_ties_losses": {
+        "C-B": {
+          "hard_adherence": "1-28-3",
+          "derived_coherence": "1-26-5",
+          "intent_persistence": "0-29-3",
+          "supersession_alignment": "1-27-4",
+          "repair_success": "1-29-2",
+          "usefulness": "5-22-5",
+          "semantic_novelty": "7-18-7",
+          "valid_novelty": "6-21-5"
+        },
+        "C-A": {
+          "hard_adherence": "0-29-3",
+          "derived_coherence": "2-26-4",
+          "intent_persistence": "0-30-2",
+          "supersession_alignment": "1-28-3",
+          "repair_success": "2-28-2",
+          "usefulness": "6-22-4",
+          "semantic_novelty": "8-18-6",
+          "valid_novelty": "5-20-7"
+        }
+      },
+      "breadth_label_free": {
+        "A_llm_only": {
+          "cluster_entropy_mean": 0.75,
+          "breadth_ratio_mean": 0.9597,
+          "selected_mean_pairwise_distance_mean": 0.2079
+        },
+        "B_hard_verifier": {
+          "cluster_entropy_mean": 0.6875,
+          "breadth_ratio_mean": 0.9727,
+          "selected_mean_pairwise_distance_mean": 0.2087
+        },
+        "C_pacc_runtime": {
+          "cluster_entropy_mean": 0.875,
+          "breadth_ratio_mean": 1.0474,
+          "selected_mean_pairwise_distance_mean": 0.2275
+        }
+      },
+      "selection_agreement": {
+        "A=B": 0.5625,
+        "A=C": 0.46875,
+        "B=C": 0.46875,
+        "all_same": 0.34375
+      }
+    },
+    "eml_interpretation": "The valid-novelty half of the synthetic prediction appears in the means, at a third of the synthetic size, once the model reasons — carried by a few large single-task wins (per-pair 6–21–5 vs B); the coherence/intent half and the breadth-loss prediction do not appear. Unreplicated: a same-size gain in run 1 vanished at 64 rows.",
+    "eml_limitations": [
+      "Descriptive; 32 rows; same-model judge; one model family; single thinking budget."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

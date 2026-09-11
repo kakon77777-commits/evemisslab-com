@@ -345,6 +345,28 @@ if (SRC / REAL_ZIP).exists():
     harness["values"]["eml_status"] = "STABLE"
     harness["values"]["eml_limitations"].append("Executed for the first time on 2026-09-11 with a local open-weight model — see EXP-2026-0023.")
 
+def _paired(P):
+    """Per task × repetition wins-ties-losses of C against B and against A, from the rows themselves."""
+    rows = {(r["task_id"], r["repetition"], r["architecture"]): r for r in P["rows"]}
+    pairs = sorted({(t, rep) for (t, rep, _) in rows})
+    out = {}
+    for tag, other in (("C-B", "B_hard_verifier"), ("C-A", "A_llm_only")):
+        out[tag] = {}
+        for k in ("hard_adherence", "derived_coherence", "intent_persistence", "supersession_alignment",
+                  "repair_success", "usefulness", "semantic_novelty", "valid_novelty"):
+            w = t = l = 0
+            for task, rep in pairs:
+                c, o = rows[(task, rep, "C_pacc_runtime")][k], rows[(task, rep, other)][k]
+                if abs(c - o) < 1e-9:
+                    t += 1
+                elif c > o:
+                    w += 1
+                else:
+                    l += 1
+            out[tag][k] = f"{w}-{t}-{l}"
+    return out
+
+
 # ---- run 2: four repetitions + label-free breadth (same model, thinking off) ----
 RUN2_ZIP = "PACC-Hybrid-Lab_v0.2_REAL_LOCAL_LLM_RUN2_reps4_breadth_Qwythos-9B-v2_2026-09-11.zip"
 if (SRC / RUN2_ZIP).exists():
@@ -375,7 +397,7 @@ if (SRC / RUN2_ZIP).exists():
         eml_metrics={"verdict": "REAL_LOCAL_9B_NO_RELIABLE_DIFFERENCE_BREADTH_NOT_REDUCED", "execution_status": P2["execution_status"],
                      "protocol": {k: proto2[k] for k in ("model", "judge_model", "task_count", "repetitions", "candidate_count", "equal_accounted_calls", "architecture_call_counts")},
                      "rows_per_architecture": S2["rows_per_architecture"], "overall": overall2, "deltas": deltas2,
-                     "selection_agreement": S2["selection_agreement"], "breadth_label_free": breadth2,
+                     "selection_agreement": S2["selection_agreement"], "paired_wins_ties_losses": _paired(P2), "breadth_label_free": breadth2,
                      "breadth_method": f"{B2['embed_model']} embeddings; k-means k={B2['k']} over each task's {proto2['repetitions'] * proto2['candidate_count']}-candidate pool; normalized cluster entropy and mean pairwise cosine distance / pool distance",
                      "retries": [r["purpose"] for r in lr2.get("retries", [])], "usage": P2["usage"], "wall_seconds": lr2.get("wall_seconds")},
         eml_interpretation="Two thinking-off runs on the same 9B model (32 and 64 rows per condition) now disagree on the only gains the first run showed, so those gains were run-to-run variation of a same-model judge, not an effect. The predeclared coherence and intent gains are absent in both runs. The predeclared breadth collapse is not observed by either label-free measure — the shipped C selector prompt already instructs against collapsing, so this tests the shipped prompt, not naive commitment. On this model the three runtime conditions are practically equivalent; nothing is statistically tested; frontier models are not addressed.",
@@ -405,3 +427,74 @@ if (SRC / RUN2_ZIP).exists():
     first["values"]["eml_limitations"].append("Not replicated: the second run with four repetitions (EXP-2026-0024, 64 rows per condition) shows supersession +0.0005 and repair −0.0125 vs B — the run-1 gains were run-to-run variation.")
     line = next(o for o in OBJECTS if o["id"] == "RES-2026-0004")
     line["values"]["eml_claims"].append("Real local 9B model, thinking off, two runs (32 and 64 rows per condition): the three runtime conditions are practically equivalent on every judge axis, and by label-free measures the PACC runtime does not narrow creative breadth. The synthetic v0.1 prediction did not appear on this model.")
+
+# ---- run 3: thinking enabled with enlarged output budgets (same model, 12k context) ----
+RUN3_ZIP = "PACC-Hybrid-Lab_v0.2_REAL_LOCAL_LLM_RUN3_thinking_Qwythos-9B-v2_2026-09-11.zip"
+if (SRC / RUN3_ZIP).exists():
+    P3 = _json.loads(zip_member(RUN3_ZIP, "results/pacc_hybrid_v0.2_real_local_thinking.json").decode("utf-8"))
+    S3 = _json.loads(zip_member(RUN3_ZIP, "results/summary_thinking.json").decode("utf-8"))
+    B3 = _json.loads(zip_member(RUN3_ZIP, "results/breadth_thinking.json").decode("utf-8"))
+    lr3, proto3 = P3["local_run"], P3["protocol"]
+    A = ("A_llm_only", "B_hard_verifier", "C_pacc_runtime")
+    keys = ("hard_adherence", "derived_coherence", "intent_persistence", "supersession_alignment",
+            "repair_success", "usefulness", "semantic_novelty", "valid_novelty", "literal_check_mean")
+    overall3 = {a: {k: round(P3["architectures"][a]["overall"][k], 4) for k in keys} for a in A}
+    deltas3 = {d: {k: round(v, 4) for k, v in S3["deltas"][d].items() if k in keys} for d in ("C-B", "C-A", "B-A")}
+    breadth3 = {a: {k: B3["summary"][a][k] for k in ("cluster_entropy_mean", "breadth_ratio_mean", "selected_mean_pairwise_distance_mean")} for a in A}
+    cb, ca = deltas3["C-B"], deltas3["C-A"]
+    wtl3 = _paired(P3)
+    run3_summary = ("The same local 9B model with its thinking enabled (reasoning.effort = medium) and 3,500 extra output tokens on every call so the hidden reasoning has room; 12k context; 16 tasks × 2 repetitions × 4 candidates, 380 unique requests, 32 rows per condition, 3.7 h. "
+                    f"The PACC runtime (C) has the highest mean valid novelty ({overall3['C_pacc_runtime']['valid_novelty']:.4f}; {cb['valid_novelty']:+.4f} vs B, {ca['valid_novelty']:+.4f} vs A) and mean repair success ({cb['repair_success']:+.4f} / {ca['repair_success']:+.4f}) — but per task × repetition the record is even (valid novelty wins–ties–losses {wtl3['C-B']['valid_novelty']} vs B, {wtl3['C-A']['valid_novelty']} vs A; repair {wtl3['C-B']['repair_success']} vs B), so the means come from a few large single-task differences in multi_constraint and repair tasks — while adherence, coherence, intent persistence and supersession are flat to a few thousandths lower ({cb['hard_adherence']:+.4f}, {cb['derived_coherence']:+.4f}, {cb['intent_persistence']:+.4f}, {cb['supersession_alignment']:+.4f} vs B). "
+                    f"All three conditions pass every deterministic literal check with thinking on. Label-free breadth is again not reduced under C: cluster entropy {breadth3['C_pacc_runtime']['cluster_entropy_mean']:.3f} vs A {breadth3['A_llm_only']['cluster_entropy_mean']:.3f} / B {breadth3['B_hard_verifier']['cluster_entropy_mean']:.3f}, breadth ratio {breadth3['C_pacc_runtime']['breadth_ratio_mean']:.3f} vs {breadth3['A_llm_only']['breadth_ratio_mean']:.3f} / {breadth3['B_hard_verifier']['breadth_ratio_mean']:.3f}. "
+                    "Two selector outputs were regenerated under the disclosed retry policy (one cut off, one empty after the reasoning consumed its whole 3,800-token budget).")
+    run3_summary_zh = ("同一顆本地 9B 模型，開啟思考（reasoning.effort = medium），每次呼叫多給 3,500 個輸出 token 讓隱藏推理有空間；12k context；16 題 × 2 次 × 4 候選，380 次唯一請求，每條件 32 筆，3.7 小時。"
+                       f"PACC runtime（C）的平均有效新穎度最高（{overall3['C_pacc_runtime']['valid_novelty']:.4f}；相對 B {cb['valid_novelty']:+.4f}、相對 A {ca['valid_novelty']:+.4f}），平均修復成功率也最高（{cb['repair_success']:+.4f}／{ca['repair_success']:+.4f}）——但逐題 × 次配對的戰績是平的（有效新穎度勝–平–負：對 B {wtl3['C-B']['valid_novelty']}、對 A {wtl3['C-A']['valid_novelty']}；修復對 B {wtl3['C-B']['repair_success']}），平均差來自 multi_constraint 與 repair 題裡少數幾個大差距——遵守、一致性、意圖持續與 supersession 則持平到低幾個千分點（相對 B {cb['hard_adherence']:+.4f}、{cb['derived_coherence']:+.4f}、{cb['intent_persistence']:+.4f}、{cb['supersession_alignment']:+.4f}）。"
+                       f"開啟思考後三個條件全部通過所有確定性字面檢查。標籤無關廣度在 C 下再次沒有縮減：群熵 {breadth3['C_pacc_runtime']['cluster_entropy_mean']:.3f}，A {breadth3['A_llm_only']['cluster_entropy_mean']:.3f}／B {breadth3['B_hard_verifier']['cluster_entropy_mean']:.3f}；廣度比 {breadth3['C_pacc_runtime']['breadth_ratio_mean']:.3f}，對 {breadth3['A_llm_only']['breadth_ratio_mean']:.3f}／{breadth3['B_hard_verifier']['breadth_ratio_mean']:.3f}。"
+                       "兩次 selector 輸出依公開的重試政策重新生成（一次被截斷、一次推理吃光 3,800 token 預算後輸出為空）。")
+    obj("EXP-2026-0025", "experiment",
+        "PACC-Hybrid v0.2 — real-model run 3: thinking enabled with enlarged output budgets",
+        "PACC-Hybrid v0.2——真實模型第三次執行：開啟思考並放大輸出預算",
+        run3_summary, run3_summary_zh,
+        "STABLE", "E2", created="2026-09-11", domain="Reasoning", domains=["Evaluation"], eml_data_basis="REAL MODEL",
+        eml_hypothesis="With the model's own reasoning enabled (the setting runs 1–2 had to switch off), the v0.2 predeclared picture — coherence and intent-persistence gains plus higher valid novelty for the PACC runtime, with a recoverable breadth loss — appears.",
+        eml_metrics={"verdict": "REAL_LOCAL_9B_THINKING_MIXED: C's mean valid novelty highest (+0.069 vs B) but per-pair even (6-21-5); mean repair up on a couple of tasks; governance axes flat to slightly down; breadth not reduced; 32 rows", "execution_status": P3["execution_status"],
+                     "paired_wins_ties_losses": wtl3,
+                     "protocol": {k: proto3[k] for k in ("model", "judge_model", "task_count", "repetitions", "candidate_count", "equal_accounted_calls", "architecture_call_counts")},
+                     "settings": {"reasoning_effort": lr3.get("reasoning_effort"), "budget_add_tokens": lr3.get("budget_add_tokens"), "model_tag": lr3.get("model_tag"), "model_digest": lr3.get("model_digest")},
+                     "rows_per_architecture": S3["rows_per_architecture"], "overall": overall3, "deltas": deltas3,
+                     "selection_agreement": S3["selection_agreement"], "breadth_label_free": breadth3,
+                     "breadth_method": f"{B3['embed_model']} embeddings; k-means k={B3['k']} over each task's {proto3['repetitions'] * proto3['candidate_count']}-candidate pool; normalized cluster entropy and mean pairwise cosine distance / pool distance",
+                     "retries": [r["purpose"] for r in lr3.get("retries", [])], "usage": P3["usage"], "wall_seconds": lr3.get("wall_seconds"),
+                     "post_run_corrections": lr3.get("post_run_corrections", [])},
+        eml_interpretation="Half of the predeclared picture shows up in the means once the model can reason: the PACC runtime's valid novelty is the highest of the three (+0.069 vs the hard verifier, +0.038 vs the plain model — same direction as the synthetic v0.1 witness's +0.196, at a third of the size) and mean repair improves, concentrated in multi_constraint and repair tasks — but the per-pair record is even (6–21–5 on valid novelty vs B, 5–20–7 vs A; repair 1–29–2), so this is a few large single-task wins, not a consistent shift. The other half does not: coherence, intent persistence and supersession are flat to slightly lower, and creative breadth is not reduced by either label-free measure (it is widest under C). With thinking on, every condition passes every literal check, so the deterministic checks stop discriminating and the whole table rests on the same-model judge. Thirty-two rows, one run — run 1's gains of the same size vanished at 64 rows, so this valid-novelty gain is a candidate effect until a repetition at four or more repetitions, and it says nothing about frontier models.",
+        eml_limitations=["32 rows per condition, single run; run 1's gains of similar size did not survive four repetitions (EXP-2026-0024), so treat the valid-novelty gain as unreplicated.",
+                         "Same-model 9B judge, saturating near 1.0; deterministic literal checks all pass with thinking on and no longer discriminate.",
+                         "Thinking budget: a fixed +3,500 tokens per call; one selector still exhausted it (empty output, regenerated); reasoning tokens are counted in output_tokens (498k for 380 calls).",
+                         "Serving: Ollama with flash attention and q8_0 KV cache; model weights and digest unchanged from runs 1–2 apart from the num_ctx 12288 derived tag.",
+                         "Result-file metadata: the run script's hardcoded 'thinking disabled' label was corrected before sealing, with the correction recorded inside the file (local_run.post_run_corrections); no data or output field was touched."],
+        eml_controls=["identical candidate ledger for A/B/C", "equal accounted calls", "condition-blind judge with deduplicated judge calls", "deterministic literal checks", "pool-relative breadth ratio"],
+        eml_random_seeds=["model nondeterminism, single run; frozen response cache and embedding cache in the bundle"], eml_run_count=1,
+        eml_result_type="MIXED",
+        eml_procedure="scripts/run_real_local_ollama.py --model qwythos-9b-v2-q4km-ctx12k --reasoning-effort medium --budget-add 3500 --candidate-count 4 --repetitions 2; scripts/summarize_real_local.py; scripts/breadth_metrics.py.",
+        eml_software_environment=f"Python 3.14, openai SDK 3.0.0 against Ollama {lr3.get('ollama_version', '')} /v1/responses (OLLAMA_FLASH_ATTENTION=1, OLLAMA_KV_CACHE_TYPE=q8_0); nomic-embed-text for breadth; harness package unchanged.",
+        eml_reproduction_instructions="Extract the bundle; rerun scripts/run_real_local_ollama.py with the identical arguments — every request is served from the frozen cache .pacc_real_cache_local_thinking (cache keys include the enlarged budgets), so it completes without a model; python scripts/breadth_metrics.py results/pacc_hybrid_v0.2_real_local_thinking.json --cache-dir .pacc_real_cache_local_thinking.",
+        eml_completed_at="2026-09-11", eml_model_ids=["MOD-2026-0006"], eml_benchmark_ids=["BEN-2026-0003"])
+    for p, t in (("runs_on", "SYS-2026-0003"), ("uses_benchmark", "BEN-2026-0003"), ("uses_model", "MOD-2026-0006"),
+                 ("extends", "EXP-2026-0023"), ("extends", "EXP-2026-0024"), ("tests", "THY-2026-0002")):
+        rel("EXP-2026-0025", p, t)
+    rel("EXP-2026-0025", "produced", artifact(RUN3_ZIP, kind="results-bundle", label="PACC-Hybrid v0.2 real local-model run 3 (thinking enabled, enlarged budgets) — results, frozen caches, scripts, docs"))
+    result("RST-2026-0016", "EXP-2026-0025", "Run 3: valid novelty and repair up for the PACC runtime with thinking on; governance flat; breadth not reduced (32 rows)", "第三次執行：開啟思考後 PACC runtime 的有效新穎度與修復上升；治理持平；廣度未縮減（32 筆）",
+           f"C vs B: valid novelty {cb['valid_novelty']:+.4f}, repair {cb['repair_success']:+.4f}, semantic novelty {cb['semantic_novelty']:+.4f}, derived coherence {cb['derived_coherence']:+.4f}, intent {cb['intent_persistence']:+.4f}, supersession {cb['supersession_alignment']:+.4f}; C vs A: valid novelty {ca['valid_novelty']:+.4f}, repair {ca['repair_success']:+.4f}; label-free breadth ratio C {breadth3['C_pacc_runtime']['breadth_ratio_mean']:.3f} / A {breadth3['A_llm_only']['breadth_ratio_mean']:.3f} / B {breadth3['B_hard_verifier']['breadth_ratio_mean']:.3f}.",
+           f"C 相對 B：有效新穎度 {cb['valid_novelty']:+.4f}、修復 {cb['repair_success']:+.4f}、語義新穎度 {cb['semantic_novelty']:+.4f}、衍生一致性 {cb['derived_coherence']:+.4f}、意圖 {cb['intent_persistence']:+.4f}、supersession {cb['supersession_alignment']:+.4f}；C 相對 A：有效新穎度 {ca['valid_novelty']:+.4f}、修復 {ca['repair_success']:+.4f}；標籤無關廣度比 C {breadth3['C_pacc_runtime']['breadth_ratio_mean']:.3f}／A {breadth3['A_llm_only']['breadth_ratio_mean']:.3f}／B {breadth3['B_hard_verifier']['breadth_ratio_mean']:.3f}。",
+           "MIXED", metrics={"deltas": deltas3, "paired_wins_ties_losses": wtl3, "breadth_label_free": breadth3, "selection_agreement": S3["selection_agreement"]},
+           interpretation="The valid-novelty half of the synthetic prediction appears in the means, at a third of the synthetic size, once the model reasons — carried by a few large single-task wins (per-pair 6–21–5 vs B); the coherence/intent half and the breadth-loss prediction do not appear. Unreplicated: a same-size gain in run 1 vanished at 64 rows.",
+           qualifies=["THY-2026-0002"], contradicts=[],
+           limitations=["Descriptive; 32 rows; same-model judge; one model family; single thinking budget."])
+    mod = next(o for o in OBJECTS if o["id"] == "MOD-2026-0006")
+    mod["values"]["eml_summary"] = mod["values"]["eml_summary"].replace("with thinking disabled.", "with thinking disabled in runs 1–2 and enabled (effort medium, +3,500 output tokens per call) in run 3.")
+    mod["values"]["eml_summary_zh"] = mod["values"]["eml_summary_zh"].replace("思考功能關閉。", "第一、二次執行關閉思考，第三次執行開啟（effort medium，每次呼叫多 3,500 個輸出 token）。")
+    mod["values"]["eml_configuration_notes"].append(f"run 3 tag {lr3.get('model_tag')} = same base + PARAMETER num_ctx 12288 (digest {lr3.get('model_digest')}); served with OLLAMA_FLASH_ATTENTION=1 and OLLAMA_KV_CACHE_TYPE=q8_0; reasoning.effort = medium with +3500 output tokens on every call")
+    mod["values"]["eml_known_behavior_notes"].append("With thinking on and +3,500 tokens per call the protocol runs (380 calls, 3.7 h at 25–33 tok/s); reasoning still exhausted the whole budget once in 380 calls (empty output, regenerated). All deterministic literal checks pass with thinking on.")
+    first = next(o for o in OBJECTS if o["id"] == "EXP-2026-0023")
+    first["values"]["eml_limitations"].append("The thinking-enabled run exists now: EXP-2026-0025 (2026-09-11).")
+    line["values"]["eml_claims"].append("Real local 9B model with thinking enabled (32 rows per condition): the PACC runtime has the highest valid novelty (+0.069 vs the hard verifier, +0.038 vs the plain model) and repair, governance axes are flat to slightly lower, and breadth is again not reduced — half of the synthetic prediction, unreplicated.")

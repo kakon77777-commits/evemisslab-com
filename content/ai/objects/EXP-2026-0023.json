@@ -141,7 +141,8 @@
       "Judge = the same 9B model; no human rating, no second judge; pattern labels are noisy, so entropy is fragile.",
       "Thinking disabled for every call (see docs/REAL_LOCAL_RUN_EVIDENCE_BOUNDARY.md); a thinking-enabled run is a different experiment.",
       "Says nothing about frontier models.",
-      "Not replicated: the second run with four repetitions (EXP-2026-0024, 64 rows per condition) shows supersession +0.0005 and repair −0.0125 vs B — the run-1 gains were run-to-run variation."
+      "Not replicated: the second run with four repetitions (EXP-2026-0024, 64 rows per condition) shows supersession +0.0005 and repair −0.0125 vs B — the run-1 gains were run-to-run variation.",
+      "The thinking-enabled run exists now: EXP-2026-0025 (2026-09-11)."
     ],
     "eml_controls": [
       "identical candidate ledger for A/B/C",

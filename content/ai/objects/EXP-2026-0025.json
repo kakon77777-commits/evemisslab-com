@@ -1,0 +1,227 @@
+{
+  "id": "EXP-2026-0025",
+  "kind": "experiment",
+  "label": "PACC-Hybrid v0.2 — real-model run 3: thinking enabled with enlarged output budgets",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0025/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Adaptive Epistemic Systems (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each lab's own result reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_aes/extract.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The same local 9B model with its thinking enabled (reasoning.effort = medium) and 3,500 extra output tokens on every call so the hidden reasoning has room; 12k context; 16 tasks × 2 repetitions × 4 candidates, 380 unique requests, 32 rows per condition, 3.7 h. The PACC runtime (C) has the highest mean valid novelty (0.8375; +0.0687 vs B, +0.0375 vs A) and mean repair success (+0.0153 / +0.0466) — but per task × repetition the record is even (valid novelty wins–ties–losses 6-21-5 vs B, 5-20-7 vs A; repair 1-29-2 vs B), so the means come from a few large single-task differences in multi_constraint and repair tasks — while adherence, coherence, intent persistence and supersession are flat to a few thousandths lower (-0.0069, -0.0063, -0.0053, -0.0059 vs B). All three conditions pass every deterministic literal check with thinking on. Label-free breadth is again not reduced under C: cluster entropy 0.875 vs A 0.750 / B 0.688, breadth ratio 1.047 vs 0.960 / 0.973. Two selector outputs were regenerated under the disclosed retry policy (one cut off, one empty after the reasoning consumed its whole 3,800-token budget).",
+    "eml_summary_zh": "同一顆本地 9B 模型，開啟思考（reasoning.effort = medium），每次呼叫多給 3,500 個輸出 token 讓隱藏推理有空間；12k context；16 題 × 2 次 × 4 候選，380 次唯一請求，每條件 32 筆，3.7 小時。PACC runtime（C）的平均有效新穎度最高（0.8375；相對 B +0.0687、相對 A +0.0375），平均修復成功率也最高（+0.0153／+0.0466）——但逐題 × 次配對的戰績是平的（有效新穎度勝–平–負：對 B 6-21-5、對 A 5-20-7；修復對 B 1-29-2），平均差來自 multi_constraint 與 repair 題裡少數幾個大差距——遵守、一致性、意圖持續與 supersession 則持平到低幾個千分點（相對 B -0.0069、-0.0063、-0.0053、-0.0059）。開啟思考後三個條件全部通過所有確定性字面檢查。標籤無關廣度在 C 下再次沒有縮減：群熵 0.875，A 0.750／B 0.688；廣度比 1.047，對 0.960／0.973。兩次 selector 輸出依公開的重試政策重新生成（一次被截斷、一次推理吃光 3,800 token 預算後輸出為空）。",
+    "eml_label_zh": "PACC-Hybrid v0.2——真實模型第三次執行：開啟思考並放大輸出預算",
+    "eml_primary_domain": "Reasoning",
+    "eml_domains": [
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0001",
+    "eml_data_basis": "REAL MODEL",
+    "eml_hypothesis": "With the model's own reasoning enabled (the setting runs 1–2 had to switch off), the v0.2 predeclared picture — coherence and intent-persistence gains plus higher valid novelty for the PACC runtime, with a recoverable breadth loss — appears.",
+    "eml_metrics": {
+      "verdict": "REAL_LOCAL_9B_THINKING_MIXED: C's mean valid novelty highest (+0.069 vs B) but per-pair even (6-21-5); mean repair up on a couple of tasks; governance axes flat to slightly down; breadth not reduced; 32 rows",
+      "execution_status": "EXECUTED_REAL_MODEL",
+      "paired_wins_ties_losses": {
+        "C-B": {
+          "hard_adherence": "1-28-3",
+          "derived_coherence": "1-26-5",
+          "intent_persistence": "0-29-3",
+          "supersession_alignment": "1-27-4",
+          "repair_success": "1-29-2",
+          "usefulness": "5-22-5",
+          "semantic_novelty": "7-18-7",
+          "valid_novelty": "6-21-5"
+        },
+        "C-A": {
+          "hard_adherence": "0-29-3",
+          "derived_coherence": "2-26-4",
+          "intent_persistence": "0-30-2",
+          "supersession_alignment": "1-28-3",
+          "repair_success": "2-28-2",
+          "usefulness": "6-22-4",
+          "semantic_novelty": "8-18-6",
+          "valid_novelty": "5-20-7"
+        }
+      },
+      "protocol": {
+        "model": "qwythos-9b-v2-q4km-ctx12k:latest",
+        "judge_model": "qwythos-9b-v2-q4km-ctx12k:latest",
+        "task_count": 16,
+        "repetitions": 2,
+        "candidate_count": 4,
+        "equal_accounted_calls": true,
+        "architecture_call_counts": {
+          "A_llm_only": 224,
+          "B_hard_verifier": 224,
+          "C_pacc_runtime": 224
+        }
+      },
+      "settings": {
+        "reasoning_effort": "medium",
+        "budget_add_tokens": 3500,
+        "model_tag": "qwythos-9b-v2-q4km-ctx12k:latest",
+        "model_digest": "7ffdc602f28799ffa312ea8dc85c364b047e1386380c4616c21b02c96c3f85d5"
+      },
+      "rows_per_architecture": 32,
+      "overall": {
+        "A_llm_only": {
+          "hard_adherence": 0.9956,
+          "derived_coherence": 0.9903,
+          "intent_persistence": 0.9956,
+          "supersession_alignment": 0.9584,
+          "repair_success": 0.9,
+          "usefulness": 0.9759,
+          "semantic_novelty": 0.8172,
+          "valid_novelty": 0.8,
+          "literal_check_mean": 1.0
+        },
+        "B_hard_verifier": {
+          "hard_adherence": 0.9988,
+          "derived_coherence": 0.9953,
+          "intent_persistence": 0.9969,
+          "supersession_alignment": 0.9609,
+          "repair_success": 0.9313,
+          "usefulness": 0.9712,
+          "semantic_novelty": 0.8134,
+          "valid_novelty": 0.7688,
+          "literal_check_mean": 1.0
+        },
+        "C_pacc_runtime": {
+          "hard_adherence": 0.9919,
+          "derived_coherence": 0.9891,
+          "intent_persistence": 0.9916,
+          "supersession_alignment": 0.955,
+          "repair_success": 0.9466,
+          "usefulness": 0.9756,
+          "semantic_novelty": 0.83,
+          "valid_novelty": 0.8375,
+          "literal_check_mean": 1.0
+        }
+      },
+      "deltas": {
+        "C-B": {
+          "hard_adherence": -0.0069,
+          "derived_coherence": -0.0063,
+          "intent_persistence": -0.0053,
+          "supersession_alignment": -0.0059,
+          "repair_success": 0.0153,
+          "usefulness": 0.0044,
+          "semantic_novelty": 0.0166,
+          "valid_novelty": 0.0687,
+          "literal_check_mean": 0.0
+        },
+        "C-A": {
+          "hard_adherence": -0.0038,
+          "derived_coherence": -0.0013,
+          "intent_persistence": -0.0041,
+          "supersession_alignment": -0.0034,
+          "repair_success": 0.0466,
+          "usefulness": -0.0003,
+          "semantic_novelty": 0.0128,
+          "valid_novelty": 0.0375,
+          "literal_check_mean": 0.0
+        },
+        "B-A": {
+          "hard_adherence": 0.0031,
+          "derived_coherence": 0.005,
+          "intent_persistence": 0.0012,
+          "supersession_alignment": 0.0025,
+          "repair_success": 0.0312,
+          "usefulness": -0.0047,
+          "semantic_novelty": -0.0037,
+          "valid_novelty": -0.0312,
+          "literal_check_mean": 0.0
+        }
+      },
+      "selection_agreement": {
+        "A=B": 0.5625,
+        "A=C": 0.46875,
+        "B=C": 0.46875,
+        "all_same": 0.34375
+      },
+      "breadth_label_free": {
+        "A_llm_only": {
+          "cluster_entropy_mean": 0.75,
+          "breadth_ratio_mean": 0.9597,
+          "selected_mean_pairwise_distance_mean": 0.2079
+        },
+        "B_hard_verifier": {
+          "cluster_entropy_mean": 0.6875,
+          "breadth_ratio_mean": 0.9727,
+          "selected_mean_pairwise_distance_mean": 0.2087
+        },
+        "C_pacc_runtime": {
+          "cluster_entropy_mean": 0.875,
+          "breadth_ratio_mean": 1.0474,
+          "selected_mean_pairwise_distance_mean": 0.2275
+        }
+      },
+      "breadth_method": "nomic-embed-text:latest embeddings; k-means k=4 over each task's 8-candidate pool; normalized cluster entropy and mean pairwise cosine distance / pool distance",
+      "retries": [
+        "selector:A_llm_only:design_02:r1",
+        "selector:B_hard_verifier:creative_02:r0"
+      ],
+      "usage": {
+        "input_tokens": 246795,
+        "latency_ms_sum": 14828453.861500219,
+        "output_tokens": 498227
+      },
+      "wall_seconds": 13352.2,
+      "post_run_corrections": [
+        {
+          "field": "local_run.deviation_from_default_primary",
+          "now": "local 9B open-weight model instead of gpt-5.6-luna; judge = same local model; thinking ENABLED (reasoning.effort=medium) with +3500 output tokens added to every call's budget; num_ctx 12288 tag",
+          "reason": "the run script carried the run-1 wording as a hardcoded label; reasoning_effort and budget_add_tokens in this block were always correct; no data, metric or model-output field was touched",
+          "was": "local 9B open-weight model instead of gpt-5.6-luna; judge = same local model; thinking disabled",
+          "when": "2026-09-11 11:35 +08:00, before sealing"
+        }
+      ]
+    },
+    "eml_interpretation": "Half of the predeclared picture shows up in the means once the model can reason: the PACC runtime's valid novelty is the highest of the three (+0.069 vs the hard verifier, +0.038 vs the plain model — same direction as the synthetic v0.1 witness's +0.196, at a third of the size) and mean repair improves, concentrated in multi_constraint and repair tasks — but the per-pair record is even (6–21–5 on valid novelty vs B, 5–20–7 vs A; repair 1–29–2), so this is a few large single-task wins, not a consistent shift. The other half does not: coherence, intent persistence and supersession are flat to slightly lower, and creative breadth is not reduced by either label-free measure (it is widest under C). With thinking on, every condition passes every literal check, so the deterministic checks stop discriminating and the whole table rests on the same-model judge. Thirty-two rows, one run — run 1's gains of the same size vanished at 64 rows, so this valid-novelty gain is a candidate effect until a repetition at four or more repetitions, and it says nothing about frontier models.",
+    "eml_limitations": [
+      "32 rows per condition, single run; run 1's gains of similar size did not survive four repetitions (EXP-2026-0024), so treat the valid-novelty gain as unreplicated.",
+      "Same-model 9B judge, saturating near 1.0; deterministic literal checks all pass with thinking on and no longer discriminate.",
+      "Thinking budget: a fixed +3,500 tokens per call; one selector still exhausted it (empty output, regenerated); reasoning tokens are counted in output_tokens (498k for 380 calls).",
+      "Serving: Ollama with flash attention and q8_0 KV cache; model weights and digest unchanged from runs 1–2 apart from the num_ctx 12288 derived tag.",
+      "Result-file metadata: the run script's hardcoded 'thinking disabled' label was corrected before sealing, with the correction recorded inside the file (local_run.post_run_corrections); no data or output field was touched."
+    ],
+    "eml_controls": [
+      "identical candidate ledger for A/B/C",
+      "equal accounted calls",
+      "condition-blind judge with deduplicated judge calls",
+      "deterministic literal checks",
+      "pool-relative breadth ratio"
+    ],
+    "eml_random_seeds": [
+      "model nondeterminism, single run; frozen response cache and embedding cache in the bundle"
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_procedure": "scripts/run_real_local_ollama.py --model qwythos-9b-v2-q4km-ctx12k --reasoning-effort medium --budget-add 3500 --candidate-count 4 --repetitions 2; scripts/summarize_real_local.py; scripts/breadth_metrics.py.",
+    "eml_software_environment": "Python 3.14, openai SDK 3.0.0 against Ollama 0.33.3 /v1/responses (OLLAMA_FLASH_ATTENTION=1, OLLAMA_KV_CACHE_TYPE=q8_0); nomic-embed-text for breadth; harness package unchanged.",
+    "eml_reproduction_instructions": "Extract the bundle; rerun scripts/run_real_local_ollama.py with the identical arguments — every request is served from the frozen cache .pacc_real_cache_local_thinking (cache keys include the enlarged budgets), so it completes without a model; python scripts/breadth_metrics.py results/pacc_hybrid_v0.2_real_local_thinking.json --cache-dir .pacc_real_cache_local_thinking.",
+    "eml_completed_at": "2026-09-11",
+    "eml_model_ids": [
+      "MOD-2026-0006"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0003"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Sol (GPT-5.6, OpenAI ChatGPT)"
+    ]
+  }
+}

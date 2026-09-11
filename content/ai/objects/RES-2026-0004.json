@@ -34,7 +34,8 @@
     ],
     "eml_claims": [
       "Within the synthetic witness: reasoning coherence ↑, valid novelty ↑, soft-preference fit slightly ↓, creative breadth ↓ under naive selection and recoverable with exploration separated from commitment (8/8 seeds sign-stable).",
-      "Real local 9B model, thinking off, two runs (32 and 64 rows per condition): the three runtime conditions are practically equivalent on every judge axis, and by label-free measures the PACC runtime does not narrow creative breadth. The synthetic v0.1 prediction did not appear on this model."
+      "Real local 9B model, thinking off, two runs (32 and 64 rows per condition): the three runtime conditions are practically equivalent on every judge axis, and by label-free measures the PACC runtime does not narrow creative breadth. The synthetic v0.1 prediction did not appear on this model.",
+      "Real local 9B model with thinking enabled (32 rows per condition): the PACC runtime has the highest valid novelty (+0.069 vs the hard verifier, +0.038 vs the plain model) and repair, governance axes are flat to slightly lower, and breadth is again not reduced — half of the synthetic prediction, unreplicated."
     ],
     "eml_limitations": [
       "Zero real LLM calls so far; no claim about real-model reasoning, intent understanding, imagination, hallucination or human-rated usefulness is permitted before a real-model result exists.",
