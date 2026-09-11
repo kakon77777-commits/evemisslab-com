@@ -1,0 +1,63 @@
+{
+  "id": "THY-2026-0109",
+  "kind": "theory",
+  "label": "Scaffolding capability record: SSR, SDR, SCM and the ablation ladder",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0109/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A system is (model M, scaffolding vector S) with S = (tool, retry, multi-sample, verifier, environment, memory, planner). Single-pass quality Q_SP = Q(M, 0) and full quality Q_F = Q(M, S_F) define the scaffolding survival ratio SSR = Q_SP / Q_F, the dependence ratio SDR = 1 − SSR, the scaffold cost multiplier SCM_j = C_j^F / C_j^SP and marginal yields along a controlled ladder A0 native single pass → A1 extended budget → A2 multi-sample → A3 verifier → A4 tool/environment → A5 full agentic. The record also carries scaffold interactions (Shapley-style attribution), discarded and hidden work, and a capability vector (single-pass, loop, tool, verification, environment intelligence). A loop is not cheating; high dependence is a structure, not a defect — what destroys comparability is hiding the capability source and its physical cost.",
+    "eml_summary_zh": "系統 =（模型 M，鷹架向量 S），S =（工具、重試、多樣本、驗證器、環境、記憶、規劃器）。單次品質 Q_SP = Q(M, 0) 與完整品質 Q_F = Q(M, S_F) 定義鷹架存活率 SSR = Q_SP / Q_F、依賴率 SDR = 1 − SSR、鷹架成本倍率 SCM_j = C_j^F / C_j^SP，以及受控階梯 A0 原生單次 → A1 放大預算 → A2 多樣本 → A3 驗證器 → A4 工具／環境 → A5 完整 agentic 上的邊際產率。紀錄同時帶鷹架交互作用（Shapley 式歸因）、被丟棄與隱藏的工作，以及能力向量（單次、迴圈、工具、驗證、環境智能）。LOOP 不是作弊；高依賴是一種結構不是缺陷——摧毀可比較性的是把能力來源與物理成本藏起來。",
+    "eml_label_zh": "鷹架能力紀錄：SSR、SDR、SCM 與消融階梯",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Scaffolding vector S = (S_T, S_R, S_N, S_V, S_E, S_M, S_P); Q_SP = Q(M, 0), Q_F = Q(M, S_F).",
+      "SSR = Q_SP / Q_F; SDR = 1 − SSR; SCM_j = C_j^F / C_j^SP; marginal scaffolding yield Y_S,k = (Q_{k+1} − Q_k) / (C_{k+1} − C_k); scaffolding physical overhead ΔP_S = P_F ⊖ P_SP (typed).",
+      "Capability vector I = (I_SP, I_L, I_T, I_V, I_E); Scaffolding Capability Record 𝔖_C = (𝔔_SP, 𝔔_F, ΔQ_S, SSR, P_SP, P_F, ΔP_S, G_S, φ, P_waste, Grade_S).",
+      "S-grades E unknown harness / D declared components / C execution trace / B controlled ablations / A factorial interaction / A+ physical-causal attribution."
+    ],
+    "eml_assumptions": [
+      "Conditions start from the same initial information (A0–A3); A4/A5 information gain is marked separately.",
+      "Scaffold contributions interact (verifier needs candidates), so one-at-a-time ablation is not unique attribution."
+    ],
+    "eml_claims": [
+      "Loop ≠ Cheating; SystemCapability ≠ ModelNativeCapability; Pass@k ≠ Pass@1; BestOfN ≠ SingleTrajectory.",
+      "GenerationAbility ≠ VerificationAbility; ToolAccess ≠ ToolUtilizationIntelligence; ExternalMemory ≠ InternalLearning.",
+      "ScaffoldingDependence ≠ SystemDefect; Loopless ≠ SuperiorByDefinition; InvisibleOutput ≠ ZeroCost; HiddenRetry ≠ FreeRetry.",
+      "TransparencyOfCompute ≠ DisclosureOfPrivateReasoning; ScaffoldMeasurement ⇒ QualityAndCostTogether."
+    ],
+    "eml_formalization": [
+      "Shapley-like attribution φ_i = Σ_A w(A)[Q(A ∪ {i}) − Q(A)] with sampling approximation and uncertainty U_φ.",
+      "Brute-force region: ΔQ ≪ 1 with ΔC ≫ 1; selection waste ratio SWR = C_discarded / C_total; P_waste = Σ discarded attempts."
+    ],
+    "eml_predictions": [
+      "A stable scaffolding response curve exists for a fixed model and task set; SSR < 1 on non-trivial tasks (Falsifiable Claim 4)."
+    ],
+    "eml_falsification_conditions": [
+      "If Q_F ≈ Q_SP across most tasks, models and compute budgets, the native/system separation loses empirical necessity (F4)."
+    ],
+    "eml_known_limitations": [
+      "First real data point (2026-09-03): SSR = 1.0 on three easy tasks with a 3.1× energy multiplier — a null result on an instrument whose quality axis was itself confounded; no factorial or Shapley analysis yet."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

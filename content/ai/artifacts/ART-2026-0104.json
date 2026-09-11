@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0104",
+  "kind": "artifact",
+  "label": "EML-IPM Paper 03 — canonical UTF-8 Markdown + manifest (zip)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_artifact_type": "canonical-source-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_03_從認知到神經元_v0.1.zip",
+    "eml_artifact_sha256": "2b6cb2a10473d31cc6d17fe123cb6ea24bcbd35b7e62fb1bedf8a63ab71de6dc",
+    "eml_artifact_size": 14704,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

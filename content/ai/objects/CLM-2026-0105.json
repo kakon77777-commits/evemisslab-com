@@ -1,0 +1,42 @@
+{
+  "id": "CLM-2026-0105",
+  "kind": "claim",
+  "label": "F5 — Semantic intermediate utility",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/claims/CLM-2026-0105/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "If the semantic middle layer N_μ has no measurement value, then adding it should not improve the explanation or prediction of cross-architecture efficiency, error paths, scaffold gain or task transfer over a direct physical-cost → quality model. μI itself must pass this predictive/explanatory utility test or be revised or eliminated.",
+    "eml_summary_zh": "若語意中間層 N_μ 沒有測量價值，那麼加入它不應比直接的「物理成本 → 品質」模型更能解釋或預測跨架構效率、錯誤路徑、鷹架增益或任務遷移。μI 本身必須通過這個預測／解釋效用檢驗，否則就該被修正或淘汰。",
+    "eml_label_zh": "F5——語意中間層效用",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_falsification_conditions": [
+      "Falsified if N_μ adds no explanatory or predictive power over physical-cost → quality models; supported if it does."
+    ],
+    "eml_tags": [
+      "falsifiable proposition",
+      "IPM v0.1 canonical index §23",
+      "Paper 10"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

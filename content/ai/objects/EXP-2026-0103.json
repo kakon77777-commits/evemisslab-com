@@ -1,0 +1,250 @@
+{
+  "id": "EXP-2026-0103",
+  "kind": "experiment",
+  "label": "XA-06 first real-model pilot — Qwythos-9B-v2 on the A0→A5 ladder (36 trials, 2026-09-03)",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The first time a real model was placed inside the IPM instrument: hf.co/empero-ai/Qwythos-9B-v2-GGUF:Q4_K_M served by Ollama on an RTX 3070, run locally on 2026-09-03 by Splice (Claude Code) on Neo.K's authorization through XA-06L — MATH-003, CODE-001, CON-003 × A0–A5 × 2 replicates, 36 trials, 186 invocations, 162 trajectories, telemetry complete on every trial. Sealed REAL_MODEL_PILOT_INCOMPLETE: 33/36 complete, three trials aborted because the same-model verifier returned non-JSON to a strict parser (a real model behaviour, deliberately not re-rolled). SSR = 1.0, SDR = 0.0: scaffolding brought no measured quality gain on these three easy tasks while A5 used 3.10× the device energy and 3.13× the wall time of A0, and the fixed eight-sample conditions A2–A4 used 7.9–9.3×. The apparent A3/A4 quality rise to 0.667 is a missingness artifact; and for two of the three tasks the recorded 'quality' was output-format compliance, not task correctness (post-hoc: 33/33 completed outputs semantically correct; strict output-contract compliance 12/36).",
+    "eml_summary_zh": "第一次把真實模型放進 IPM 儀器：hf.co/empero-ai/Qwythos-9B-v2-GGUF:Q4_K_M 由 Ollama 在 RTX 3070 上服務，2026-09-03 由 Splice（Claude Code）在 Neo.K 授權下透過 XA-06L 於本地執行——MATH-003、CODE-001、CON-003 × A0–A5 × 2 次，36 次試驗、186 次呼叫、162 條軌跡，每次試驗遙測完整。封存為 REAL_MODEL_PILOT_INCOMPLETE：33/36 完成，三次試驗因同模型驗證器對嚴格解析器回了非 JSON 而中止（真實的模型行為，刻意不重擲）。SSR = 1.0、SDR = 0.0：在這三個簡單任務上鷹架沒有帶來可測的品質增益，A5 卻用了 A0 的 3.10× 裝置能量與 3.13× wall time，固定八樣本的 A2–A4 用了 7.9–9.3×。A3/A4 看似升到 0.667 是缺值造成的假象；且三個任務裡有兩個，記錄到的「品質」是輸出格式服從性而非任務正確性（事後檢查：33/33 完成的輸出語意正確；嚴格輸出契約合規 12/36）。",
+    "eml_label_zh": "XA-06 第一次真實模型 pilot——Qwythos-9B-v2 走 A0→A5 階梯（36 試驗，2026-09-03）",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Agent Systems",
+      "Computation"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "REAL MODEL",
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT) — protocol, instrument packages and the 2026-09-07 diagnostic",
+      "Splice (Claude Code, Anthropic) — local execution, sealing and the RESULT note"
+    ],
+    "eml_hypothesis": "Experiment A's H1–H4 on the three-task gate matrix: does scaffolding raise quality, at what physical cost, with non-constant marginal yield, and is SSR < 1?",
+    "eml_model_ids": [
+      "MOD-2026-0006"
+    ],
+    "eml_benchmark_ids": [
+      "BEN-2026-0101"
+    ],
+    "eml_hardware": "NVIDIA GeForce RTX 3070 (8 GiB VRAM; peak 7.59 GiB used, peak 208.9 W, 73 °C), Windows 10 host; physical boundary local-runner-plus-visible-accelerator; energy type device_measured (E-Grade C, CST-B)",
+    "eml_software_environment": "Ollama serving the model through an OpenAI-compatible endpoint at 127.0.0.1:11434; XA-02/03/04/06/06L v0.1 (hashes verified byte-exact against their manifests before the run); Python 3.14.5; XA-03 collectors system + nvidia_smi at 250 ms target (observed ~335–350 ms)",
+    "eml_configuration": {
+      "provider": {
+        "mode": "openai_compatible",
+        "provider_id": "local-openai-compatible",
+        "model_id": "hf.co/empero-ai/Qwythos-9B-v2-GGUF:Q4_K_M",
+        "base_max_tokens": 1024,
+        "temperature": 0.2,
+        "top_p": 1.0,
+        "seed": 7,
+        "budget_control_validated": true,
+        "auth_mode": "none"
+      },
+      "matrix": {
+        "tasks": [
+          "MATH-003",
+          "CODE-001",
+          "CON-003"
+        ],
+        "conditions": [
+          "A0",
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5"
+        ],
+        "replicates": 2
+      },
+      "allow_code_evaluation": false,
+      "telemetry": {
+        "collectors": [
+          "system",
+          "nvidia_smi"
+        ],
+        "physical_boundary": "local-runner-plus-visible-accelerator",
+        "required": false
+      }
+    },
+    "eml_procedure": "XA-06L configure → preflight (all checks PASS; isolated MATH-003/A0 quality 1.0) → run (36/36 terminal, 0 runtime failures) → verify gate (3 points xa03_not_complete) → analyze → seal. The three aborted points were not re-run with resume --force: re-rolling until the gate turns green would erase a real failure mode.",
+    "eml_metrics": {
+      "gate": {
+        "status": "REAL_MODEL_PILOT_INCOMPLETE",
+        "verified_complete_count": 33,
+        "invalid_or_missing": [
+          {
+            "point": "CODE-001__A3__r2",
+            "reason": "xa03_not_complete"
+          },
+          {
+            "point": "CON-003__A3__r1",
+            "reason": "xa03_not_complete"
+          },
+          {
+            "point": "CON-003__A4__r1",
+            "reason": "xa03_not_complete"
+          }
+        ]
+      },
+      "headline": {
+        "ssr": 1.0,
+        "sdr": 0.0,
+        "scm_device_energy": 3.1019,
+        "scm_wall_time": 3.1264,
+        "protocol_compliance_rate": 0.3333,
+        "quality_available_rate": 0.6111
+      },
+      "by_condition": {
+        "A0": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 10.21,
+          "device_energy_j": 1715.6,
+          "energy_ratio_vs_A0": 1.0,
+          "gpu_peak_memory_gib": 7.23,
+          "gpu_memory_residency_gib_s": 72.1,
+          "gpu_utilization_integral_s": 6.57
+        },
+        "A1": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 9.87,
+          "device_energy_j": 1819.0,
+          "energy_ratio_vs_A0": 1.06,
+          "gpu_peak_memory_gib": 7.32,
+          "gpu_memory_residency_gib_s": 70.0,
+          "gpu_utilization_integral_s": 6.26
+        },
+        "A2": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 79.09,
+          "device_energy_j": 15143.0,
+          "energy_ratio_vs_A0": 8.827,
+          "gpu_peak_memory_gib": 7.28,
+          "gpu_memory_residency_gib_s": 570.0,
+          "gpu_utilization_integral_s": 54.09
+        },
+        "A3": {
+          "quality_mean": 0.6667,
+          "quality_n": 3,
+          "success_rate": 0.6667,
+          "wall_time_s": 99.13,
+          "device_energy_j": 15921.5,
+          "energy_ratio_vs_A0": 9.281,
+          "gpu_peak_memory_gib": 7.34,
+          "gpu_memory_residency_gib_s": 714.6,
+          "gpu_utilization_integral_s": 70.02
+        },
+        "A4": {
+          "quality_mean": 0.6667,
+          "quality_n": 3,
+          "success_rate": 0.6667,
+          "wall_time_s": 69.08,
+          "device_energy_j": 13546.2,
+          "energy_ratio_vs_A0": 7.896,
+          "gpu_peak_memory_gib": 7.28,
+          "gpu_memory_residency_gib_s": 496.9,
+          "gpu_utilization_integral_s": 46.93
+        },
+        "A5": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 31.91,
+          "device_energy_j": 5321.5,
+          "energy_ratio_vs_A0": 3.102,
+          "gpu_peak_memory_gib": 7.24,
+          "gpu_memory_residency_gib_s": 228.7,
+          "gpu_utilization_integral_s": 22.17
+        }
+      },
+      "operational_totals": {
+        "model_invocations": 186,
+        "trajectories": 162,
+        "retries": 0,
+        "tool_calls": 0,
+        "verifier_passes": 18,
+        "candidates_created": 162,
+        "candidates_selected": 33,
+        "candidates_discarded": 105,
+        "failure_events": 6,
+        "candidates_abandoned_on_abort": 24
+      },
+      "verifier_failure": {
+        "count": 3,
+        "verifier_enabled_trials": 18,
+        "rate": 0.16666666666666666,
+        "by_condition": {
+          "A3": "2/6",
+          "A4": "1/6",
+          "A5": "0/6"
+        }
+      },
+      "strict_protocol_compliance": {
+        "count": 12,
+        "total": 36,
+        "rate": 0.3333333333333333
+      },
+      "posthoc_semantic_diagnostic (non-canonical)": {
+        "canonical": false,
+        "math": "12/12 canonical correct",
+        "code": "11/11 selected outputs pass all hidden tests after outer Markdown fence removal",
+        "constraint": "10/10 selected outputs satisfy all constraints after format-only normalization",
+        "completed_selected_outputs_correct": "33/33"
+      },
+      "physical_totals": {
+        "total_measured_gpu_energy_j": 320800.7795,
+        "total_measured_gpu_energy_kwh": 0.0891,
+        "summed_trial_wall_time_min": 29.9277,
+        "max_gpu_memory_gib": 7.5908,
+        "max_gpu_power_w": 208.88,
+        "max_gpu_temperature_c": 73.0,
+        "mean_sampling_call_wall_fraction": 0.2436
+      },
+      "quality_availability_reporting_inconsistency": {
+        "aggregate_analysis": "22/36",
+        "protocol_compliance_csv": "33/36",
+        "inconsistency": true
+      }
+    },
+    "eml_controls": [
+      "fresh provider per trial; frozen temperature 0.2, top-p 1.0, seed 7; base_max_tokens 1024 with validated 2× budget for A1",
+      "identical initial task text across conditions; calculator tool contract only in A4/A5 generator requests",
+      "scoring after XA-03 finalization; private references never in context; code evaluation disabled on the host"
+    ],
+    "eml_random_seeds": [
+      "seed 7 (frozen into every HTTP request); model nondeterminism otherwise uncontrolled"
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "MIXED",
+    "eml_interpretation": "As an instrument gate it did its job: real numbers, full telemetry, a sealed and relocatable bundle, and an honest INCOMPLETE. As science it says three things and no more. (1) On three tasks the native single pass already solves, scaffolding cannot show a quality gain — SSR = 1 is a legal null result, and it cost 3.1× (A5) to 9.3× (A3) the device energy of A0; A5 was cheaper than the fixed eight-sample conditions only because its loop stopped early. (2) The instrument's quality axis conflated output-format obedience with task correctness on CODE-001 (correct code inside a Markdown fence) and CON-003 (correct assignment written as A=X, not JSON) — exactly the SyntacticValidity ≠ SemanticCorrectness split Paper 06 predicts, now observed in the lab's own instrument. (3) The same-model verifier's serialization failed in 3 of 18 verifier trials and discarded eight candidates each time; tool access was enabled but never used, so tool and retry effects are unidentified. The A3/A4 'gain' is survivor bias from the aborted low-format trials. Seven instrument revisions are required before XA-07; the dataset stays immutable.",
+    "eml_limitations": [
+      "Three easy tasks, two replicates, one 9B model at 4-bit, one machine; not a population-level estimate of anything.",
+      "Gate INCOMPLETE (33/36); CODE-001 quality unmeasured (execution disabled) so 12 of 36 trials have no measured quality; quality-availability is reported inconsistently inside the bundle (22/36 vs 33/36).",
+      "Device-measured GPU energy only — not marginal, not whole-system; telemetry sampling itself cost ~24 % of trial wall time.",
+      "Same-model verifier; no independent or formal verifier condition."
+    ],
+    "eml_reproduction_instructions": "Unpack XA-02/03/04/06/06L as siblings, .\\configure.ps1 (local_openai_compatible, base_url http://127.0.0.1:11434, the model id above), .\\preflight.ps1, .\\run-pilot.ps1, .\\seal-results.ps1; verify the sealed bundle against its manifest.json (266 files). The bundle's raw events/telemetry/summaries are unchanged by sealing.",
+    "eml_completed_at": "2026-09-03",
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ]
+  }
+}

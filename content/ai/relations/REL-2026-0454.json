@@ -1,0 +1,19 @@
+{
+  "id": "REL-2026-0454",
+  "kind": "research_relation",
+  "label": "SYS-2026-0102 released_as ART-2026-0115",
+  "created_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "values": {
+    "eml_relation_source": "SYS-2026-0102",
+    "eml_relation_predicate": "released_as",
+    "eml_relation_target": "ART-2026-0115",
+    "eml_relation_status": "ACTIVE",
+    "eml_relation_provenance": {
+      "source": "extracted from the artifacts' own cross-references",
+      "date": "2026-09-11"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

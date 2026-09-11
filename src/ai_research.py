@@ -575,7 +575,7 @@ class Model:
 
         def section(section, home_key, items, cap=6, extra=""):
             head = (f'<div class="sec-head sec-head-row"><h2 class="sec-title" id="{section}">'
-                    f'{esc(t["home"][home_key])}</h2>'
+                    f'{esc(t["home"].get(home_key) or t["sections"][section][0])}</h2>'
                     f'<a class="sec-more" href="{base}{section}/">{esc(t["labels"]["view_all"])} ({len(items)}) →</a></div>')
             return f'  <section class="shell ai-sec">{head}{self.cards(lang, latest(items, cap))}{extra}</section>\n'
 
@@ -587,6 +587,10 @@ class Model:
         parts = [hero]
         parts.append(section("research", "research", by("research")))
         parts.append(section("theory", "theory", by("theory")))
+        # sections the spec leaves optional: shown only once a record of that kind exists
+        for kind, sec in (("claim", "claims"), ("observation", "observations"), ("evaluation", "evaluations")):
+            if by(kind):
+                parts.append(section(sec, sec, by(kind)))
         parts.append(section("experiments", "experiments", active_exp))
         parts.append(section("results", "results", by("result")))
         parts.append(

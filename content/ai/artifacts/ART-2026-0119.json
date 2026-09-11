@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0119",
+  "kind": "artifact",
+  "label": "XA-06 real-model pilot result bundle — Qwythos-9B-v2 Q4_K_M, 36 trials, sealed 2026-09-03 (REAL_MODEL_PILOT_INCOMPLETE)",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_artifact_type": "results-bundle",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/XA06_REAL_hf.co_empero-ai_Qwythos-9B-v2-GGUF_Q4_K_M_20260903T131913Z.zip",
+    "eml_artifact_sha256": "769f12c85e48658b9c077559b7d3def2717fabd2f4210f591dda3c51cf2dfed4",
+    "eml_artifact_size": 532618,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "sealed by XA-06L on the executing machine: secrets excluded, absolute paths redacted (redaction_provenance.json), per-file SHA-256 manifest"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

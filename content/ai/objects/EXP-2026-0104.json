@@ -1,0 +1,42 @@
+{
+  "id": "EXP-2026-0104",
+  "kind": "experiment",
+  "label": "Experiment B — binary vs numeric human measurement (declared)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "IDEA",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0104/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Compare direct 0–10 rating, structured yes/no items and adaptive pairwise comparison on response time, missingness, inconsistency, test–retest, predictive validity and fatigue, with participants randomized across formats. Declared in the canonical index as the third v0.2 experiment; not designed in detail and not run.",
+    "eml_summary_zh": "比較直接 0–10 評分、結構化是／否題與自適應成對比較在反應時間、缺答、不一致、重測、預測效度與疲勞上的表現，受試者隨機分配到不同格式。canonical index 宣告為 v0.2 第三個實驗；尚未細部設計、尚未執行。",
+    "eml_label_zh": "Experiment B——二元 vs 數值的人類測量（已宣告）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "NOT RUN",
+    "eml_hypothesis": "F3: well-designed binary/pairwise protocols beat direct numeric rating on at least one of response time, consistency, dropout, predictive validity or fatigue.",
+    "eml_procedure": "Randomize participants across the three formats on the same artifacts; estimate latent quality with Bradley–Terry / IRT models; report measurement-process metrics alongside the estimates.",
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_interpretation": "Declared, not run; listed so the program's falsifiable propositions each have their intended test on record.",
+    "eml_limitations": [
+      "No protocol package exists yet; the canonical index gives the design in one paragraph."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

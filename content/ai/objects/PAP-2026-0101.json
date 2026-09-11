@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0101",
+  "kind": "paper",
+  "label": "Paper 01 — What is a 'single turn', really? User turns, hidden loops, and the redefinition of single-pass intelligence",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Separates the chat-interface turn from model invocation, generation trajectory, agent loop and physical computation; defines externally loopless intelligence, a five-kind loop taxonomy and the single-pass condition U=1, G=1, R=1, L=0, S=0; introduces the event vector (Q, U, G, I, L, R, S, T, E, V_CST) and twelve invariants, starting with 'interaction compression ≠ computation compression'.",
+    "eml_summary_zh": "把聊天介面的一輪從模型呼叫、生成軌跡、agent 迴圈與物理計算中分離；定義外部無迴圈智能、五類 LOOP 分類與 single-pass 條件 U=1、G=1、R=1、L=0、S=0；引入事件向量 (Q, U, G, I, L, R, S, T, E, V_CST) 與十二個不變式，第一條是「互動壓縮 ≠ 計算壓縮」。",
+    "eml_label_zh": "一輪到底是一輪什麼？：使用者回合、隱藏 LOOP 與單次智能的重新定義",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-01",
+    "eml_source_artifact": "IPM_01_一輪到底是一輪什麼_v0.1.zip!/IPM_01_一輪到底是一輪什麼_使用者回合隱藏LOOP與單次智能的重新定義_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "995cb61c0c35f14eeebf51a467e98c705a48e64f6d4fbd3d9880bff642220d2f"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 1/10",
+      "role: 回合與執行邊界"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "THY-2026-0107",
+  "kind": "theory",
+  "label": "Binary residual quality measurement (IBQF / BRQM)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0107/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A 0–10 rating asks the respondent to perceive, build a reference, calibrate a scale, integrate dimensions and map to a number; the burden is highest exactly when the measured state is heaviest. BRQM instead takes many local, concrete, single-construct, non-numeric binary or pairwise answers b_i ∈ {0,1} and lets the measurement system reconstruct a latent multidimensional quality θ̂_H with Bradley–Terry / Thurstone / IRT-type models, adaptive item selection by information gain per human cost, blind and counterbalanced designs, and an explicit rater-disagreement structure — because binary observation is not binary phenomenon and disagreement is not error.",
+    "eml_summary_zh": "0–10 評分要回答者同時感知、建參照、校尺度、整合維度、映射成數字；被測狀態最重時負擔正好最高。BRQM 改成收集大量局部、具體、單一構念、非數值的二元或成對回答 b_i ∈ {0,1}，讓測量系統用 Bradley–Terry／Thurstone／IRT 類模型重建潛在多維品質 θ̂_H，依「每單位人類成本的資訊增益」自適應選題，盲測與平衡設計，並明確保留評審分歧結構——因為二元觀測不是二元現象，分歧不是誤差。",
+    "eml_label_zh": "二元殘餘品質測量（IBQF／BRQM）",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "BRQM: 𝔔_H → {0,1}^N → θ̂_H; primitives b^abs ∈ {0,1} and b^pair ∈ {A, B}; skip = missing metadata, not a third value.",
+      "Good-item conditions C_B = (local, single construct, concrete, temporally bounded, non-numeric).",
+      "Adaptive selection i* = argmax E[IG_i] / C_H(i); stop when U_H < ε.",
+      "Human residual object 𝔔_H^IBQF = (θ̂_H, Σ_H, N_obs, D_R, C_H, B_H, U_H, Grade_H); H-grades E uncontrolled rating … A+ cross-context validated."
+    ],
+    "eml_assumptions": [
+      "A latent continuous quality exists behind local judgments (IBQF/FDCS micro-binary → macro-continuous emergence)."
+    ],
+    "eml_claims": [
+      "BinaryObservation ≠ BinaryPhenomenon; HumanObservation ≠ HumanScaleConstruction; NumericRating = State + ScaleUse + Context.",
+      "MeasurementBurden ≠ MeasuredQuality; Disagreement ≠ Error; MeanPreference ≠ PreferenceStructure; Reliability ≠ Objectivity.",
+      "HumanResidual ⇏ HumanOverridesFormalTruth — the hard gate is applied first."
+    ],
+    "eml_formalization": [
+      "P(A ≻ B) = σ(q_A − q_B) (Bradley–Terry); P(b_rij = 1) = σ(a_i θ_j − d_i + β_r), multidimensional λ_i^T θ_j, context-conditioned θ_j(c).",
+      "C_rating = C_perceive + C_reference + C_scale + C_integrate + C_map; C_binary = C_local perceive + C_choose; C_binary, C_pair < C_rating is the hypothesis."
+    ],
+    "eml_predictions": [
+      "With well-designed items, binary/pairwise adaptive protocols beat direct numeric rating on response time, consistency, dropout, predictive validity or fatigue in at least some settings (Falsifiable Claim 3)."
+    ],
+    "eml_falsification_conditions": [
+      "If binary/pairwise protocols are worse than direct 0–10 rating on all of response time, consistency, dropout and predictive validity, the low-burden hypothesis must be revised."
+    ],
+    "eml_known_limitations": [
+      "Not a clinical scale proposal; builds on EveMissLab's internal IBQF/MTF and FDCS theory (2025); Experiment B has not been run."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

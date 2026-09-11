@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0106",
+  "kind": "paper",
+  "label": "Paper 06 — How should output quality be measured? From formal correctness to structured intelligence quality",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0106/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Makes quality a relation Q(Y | task, spec, environment, boundary) measured as a structured vector in three layers (formal, structured, human residual) with hard gates, coverage split three ways, mutation-tested test strength, the specification–verification separation and a quality evidence ladder E–A+; efficiency is kept out of quality unless the specification puts it in.",
+    "eml_summary_zh": "把品質變成關係 Q(Y | 任務、規格、環境、邊界)，以三層（形式化、結構化、人類殘餘）結構化向量量測，附 hard gate、三向覆蓋率、mutation 測出的測試強度、規格—驗證分離與 E–A+ 品質證據階梯；效率不進品質，除非規格把它放進去。",
+    "eml_label_zh": "成果品質到底怎麼量？：從形式化正確性到結構化智能品質",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-06",
+    "eml_source_artifact": "IPM_06_成果品質到底怎麼量_v0.1.zip!/IPM_06_成果品質到底怎麼量_從形式化正確性到結構化智能品質_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "25947f12ebfcff20aef144435dae50f9ffda1cccfdb143e319f8b2a6918356b8"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 6/10",
+      "role: 客觀與結構化品質"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

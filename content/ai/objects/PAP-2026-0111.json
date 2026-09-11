@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0111",
+  "kind": "paper",
+  "label": "IPM v0.1 canonical index — series overview, unified notation and the v0.2 experimental entry point",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0111/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The series' entry point: the canonical intelligence event, the dependency graph of the ten papers in three lines, a unified symbol table (turn/execution, semantic work, cross-level realization, energy, physical computation, computational spacetime and topology, quality, IBQF/BRQM, scaffolding, yield), the no-premature-scalarization principle, Pareto comparison, the 36-field minimum reporting standard, the ten-step comparison protocol, the series' core invariants, the five falsifiable propositions F1–F5, the v0.2 experiments A–E with the recommended order A → D → B → C → E, a minimal run schema and the versioning rule.",
+    "eml_summary_zh": "系列入口：canonical intelligence event、十篇論文分三條線的依賴圖、統一符號表（回合／執行、語意工作、跨層實現、能量、物理計算、計算時空與拓撲、品質、IBQF／BRQM、鷹架、產率）、不過早純量化原則、Pareto 比較、36 欄最低報告標準、十步比較協定、系列核心不變式、五個可證偽命題 F1–F5、v0.2 實驗 A–E 與建議順序 A → D → B → C → E、最小 run schema 與版本規則。",
+    "eml_label_zh": "IPM v0.1 Canonical Index：智能物理計量學系列總論、統一符號表與 v0.2 實驗入口",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "canonical series index (theory series entry point)",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM v0.1 Canonical Index",
+    "eml_source_artifact": "IPM_v0.1_Canonical_Series_Package.zip!/IPM_v0.1_Canonical_Index_統一符號表與v0.2實驗入口.md",
+    "eml_checksums": {
+      "index .md sha256": "54062e6af174ad899d801884d2e2ca682ad7306da4dd43397212e31ecb535b78"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "unified notation",
+      "v0.2 experimental entry point"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

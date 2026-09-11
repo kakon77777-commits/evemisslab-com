@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0107",
+  "kind": "paper",
+  "label": "Paper 07 — Do not ask humans to numerically score their own feelings: IBQF binary measurement and low-burden quality evaluation",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0107/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Brings EveMissLab's IBQF/FDCS micro-binary idea into IPM as Binary Residual Quality Measurement: humans answer local yes/no or A/B items, Bradley–Terry / IRT-type models reconstruct a latent multidimensional quality, items are chosen adaptively by information gain per human cost, and rater disagreement is kept as structure; the low-burden advantage is stated as a testable hypothesis.",
+    "eml_summary_zh": "把 EveMissLab 的 IBQF／FDCS 微觀二元想法帶進 IPM，成為二元殘餘品質測量：人只回答局部的是／否或 A／B，Bradley–Terry／IRT 類模型重建潛在多維品質，依每單位人類成本的資訊增益自適應選題，評審分歧當結構保留；低負擔優勢被寫成可檢驗的假說。",
+    "eml_label_zh": "不要叫人類替自己的感覺打分數：IBQF 二元測量與低負擔品質評估",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-07",
+    "eml_source_artifact": "IPM_07_不要叫人類替自己的感覺打分數_v0.1.zip!/IPM_07_不要叫人類替自己的感覺打分數_IBQF二元測量與低負擔品質評估_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "1267f620470cf0f900012dcfc58a9aa188116da77b2e0fb8f37470fd1122c5ee"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 7/10",
+      "role: 人類殘餘品質與二元測量"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

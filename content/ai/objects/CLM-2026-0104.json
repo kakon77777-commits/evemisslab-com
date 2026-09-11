@@ -1,0 +1,42 @@
+{
+  "id": "CLM-2026-0104",
+  "kind": "claim",
+  "label": "F4 — Scaffolding separation",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/claims/CLM-2026-0104/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "If scaffolding does not change the structure of the capability source, SSR ≈ 1 should hold across most tasks and test-time compute budgets. If a large share of benchmark quality appears only under multi-sample, tool, verifier or loop conditions, the distinction between model-native and system capability is empirically necessary. First data point: three easy tasks on a local 9B model gave SSR = 1.0 — consistent with 'no gap' on tasks the native pass already solves, and uninformative beyond that because the quality axis was confounded by format compliance.",
+    "eml_summary_zh": "若鷹架不改變能力來源的結構，則 SSR ≈ 1 應在多數任務與 test-time 算力預算下成立。若大量 benchmark 品質只在多樣本、工具、驗證器或迴圈條件下出現，模型原生與系統能力的區分就具有實證必要性。第一個數據點：本地 9B 模型在三個簡單任務上 SSR = 1.0——與「原生單次已解的任務沒有落差」一致，此外沒有更多訊息，因為品質軸被格式服從性混淆。",
+    "eml_label_zh": "F4——鷹架分離",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_falsification_conditions": [
+      "Falsified for the separation's necessity if Q_F ≈ Q_SP holds across most tasks, models and budgets; supported if the gap is common. The 2026-09-03 pilot is one uninformative-to-weak point on the 'no gap' side."
+    ],
+    "eml_tags": [
+      "falsifiable proposition",
+      "IPM v0.1 canonical index §23",
+      "Paper 10"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

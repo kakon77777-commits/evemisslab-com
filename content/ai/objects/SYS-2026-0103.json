@@ -1,0 +1,41 @@
+{
+  "id": "SYS-2026-0103",
+  "kind": "system",
+  "label": "XA-06 — real-model pilot gate",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/systems/SYS-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Puts a real model inside the validated XA-01→XA-04 instrument: preflight (one isolated MATH-003/A0 trial through provider, XA-03 and XA-02), the canonical 36-trial matrix (MATH-003, CODE-001, CON-003 × A0…A5 × 2 replicates), gate verification and analysis. Frozen temperature / top-p / seed, the A0/A1 generation-budget multiplier forwarded into the token budget, a calculator tool contract injected only for A4/A5 generator requests, disabled code evaluation treated as quality-unavailable rather than measured zero, and the rule that engineering validation can never be promoted to pilot completion: 'no real model run, no real model claim'. Valid real outcomes explicitly include A0 = A5, A3 < A2, A5 < A0 and SSR = 1. 20 tests; the package itself contains no pilot result (status READY_FOR_REAL_MODEL).",
+    "eml_summary_zh": "把真實模型放進已驗證的 XA-01→XA-04 儀器：preflight（一次隔離的 MATH-003/A0 試驗走過供應商、XA-03 與 XA-02）、canonical 36 試驗矩陣（MATH-003、CODE-001、CON-003 × A0…A5 × 2 次）、閘驗證與分析。凍結 temperature／top-p／seed，A0/A1 的生成預算倍率轉入 token 預算，計算機工具契約只注入 A4/A5 的生成請求，停用的程式評估視為「品質不可得」而非零分，且工程驗證永遠不能升格為 pilot 完成：「沒跑真模型，就沒有真模型宣稱」。合法的真實結果明文包含 A0 = A5、A3 < A2、A5 < A0 與 SSR = 1。20 個測試；套件本身不含 pilot 結果（狀態 READY_FOR_REAL_MODEL）。",
+    "eml_label_zh": "XA-06——真實模型 pilot 閘",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_purpose": "A gate whose only way to say REAL_MODEL_PILOT_COMPLETE is 36 real-provider terminal trials that pass integrity and protocol checks — without requiring scaffolding to help.",
+    "eml_architecture": "config (provider modes: local OpenAI-compatible / local command / cloud OpenAI-compatible with env-referenced secrets) → preflight → run_real_pilot (fresh provider per trial, XA-04 TrialExecutor, XA-03 spans) → verify_gate → analyze (condition means, SSR/SDR/SCM, marginal yield, physical by condition, protocol compliance, quality availability) → report.",
+    "eml_documentation": "README.md, SPEC.md, STATUS.json, validation_report.json inside the package",
+    "eml_tags": [
+      "EML-IPM-XA-06",
+      "v0.1",
+      "READY_FOR_REAL_MODEL"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "THY-2026-0104",
+  "kind": "theory",
+  "label": "Energy accounting hierarchy and thermodynamic type safety",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0104/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Neural energetics builds energy bottom-up (membrane dynamics → ion flux → pump work → ATP → dissipation) and finds that a spike has no fixed energy and that most cortical signaling energy is spent on synaptic integration and state maintenance, not the visible pulse. IPM copies the discipline, not the numbers: energy is typed as E = (gross, baseline, marginal, attributed, thermodynamic minimum), a boundary and baseline rule must be declared, information per Joule is not intelligence per Joule, Landauer's kT ln 2 bounds erasure and is not the price of a μI, and Shannon or variational 'energies' never become physical Joules without an explicit mapping.",
+    "eml_summary_zh": "神經能量學由下往上算能量（膜動力學 → 離子流 → 幫浦功 → ATP → 耗散），並發現一個 spike 沒有固定能量、皮質的訊號能量大半花在突觸整合與狀態維持而非顯眼的脈衝。IPM 複製的是紀律不是數字：能量分型為 E =（gross、baseline、marginal、attributed、熱力學下限），必須宣告邊界與基線規則，每焦耳資訊不等於每焦耳智能，Landauer 的 kT ln 2 只約束抹除、不是一個 μI 的價格，Shannon 或變分「能量」沒有明確映射前永遠不是物理焦耳。",
+    "eml_label_zh": "能量帳本層級與熱力學型別安全",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "E_gross = ∫ P_system dt; E_base = ∫ P_baseline dt; E_marg = E_gross − E_base; E_attrib = E_marg + α·E_shared with a declared α.",
+      "Energy boundary: accelerator / node / rack / data center / infrastructure / lifecycle; E = E(Boundary, BaselineRule, AttributionRule).",
+      "E-grades: D estimated / C device telemetry / B node meter / A infrastructure meter / A+ marginal causal energy.",
+      "Landauer distance D_L = E_actual / E_Landauer — an implementation distance, not an intelligence score."
+    ],
+    "eml_assumptions": [
+      "Evolution and engineering optimize a Pareto set (energy, speed, reliability, robustness, adaptability), so minimum energy is not maximum utility."
+    ],
+    "eml_claims": [
+      "Spike ≠ FixedEnergyUnit; Token ≠ FixedEnergyUnit; μI ≠ FixedEnergyUnit; SignalShape ≠ EnergyCost.",
+      "GrossEnergy ≠ MarginalEnergy ≠ AttributedEnergy; EnergyComparison ⇒ SameBoundary.",
+      "InformationPerJoule ≠ IntelligencePerJoule; LandauerBound ≠ ActualComputationCost; 1 μI ≠ kT ln 2.",
+      "ShannonEntropy ≠ ThermodynamicEntropy and VariationalFreeEnergy ≠ PhysicalEnergy without an explicit mapping."
+    ],
+    "eml_formalization": [
+      "Three efficiencies η_I/E = I/E, η_μ/E = N_μ^eff / E_marg, η_Q/E = Q / E_marg — never equated.",
+      "Energy of a μI is a realization distribution P(E | μI, architecture, hardware, context, boundary)."
+    ],
+    "eml_predictions": [
+      "Reports that give a single 'Joules per answer' without type and boundary will not be comparable across systems."
+    ],
+    "eml_falsification_conditions": [
+      "If marginal, attributed and gross energies of the same task turn out to be interchangeable in practice, the typing is unnecessary."
+    ],
+    "eml_known_limitations": [
+      "The pilot measured device energy only (E-Grade C); no marginal or attributed energy has been measured."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

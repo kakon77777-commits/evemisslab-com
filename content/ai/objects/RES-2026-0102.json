@@ -1,0 +1,51 @@
+{
+  "id": "RES-2026-0102",
+  "kind": "research",
+  "label": "Quality line — measuring outcome quality without asking humans for a score",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Papers 06–08. Quality is a relation Q(Y | task, specification, environment, boundary), not a number an artifact carries: formalize what can be formalized (proof checkers, compilers, constraint solvers), structure what can be structured (requirement coverage, contradiction graphs, evidence checks, hard gates), and only then hand the genuine residual to humans — as many local binary or pairwise judgments reconstructed into a latent quality vector by a psychometric model (IBQF / BRQM), inside a typed, versioned, context-aware quality ontology for text, image, music, story and design.",
+    "eml_summary_zh": "第 06–08 篇。品質是關係 Q(Y | 任務、規格、環境、邊界)，不是作品自帶的一個數字：能形式化的先形式化（proof checker、compiler、constraint solver），能結構化的先結構化（需求覆蓋、矛盾圖、證據核查、hard gate），最後才把真正的殘餘交給人類——以大量局部二元或成對判斷，由心理計量模型重建成潛在品質向量（IBQF／BRQM），並放在有型別、有版本、隨情境的品質本體裡，涵蓋文字、圖像、音樂、故事與設計。",
+    "eml_label_zh": "品質線——不叫人打分數也能量成果品質",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Cognitive Science"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_research_questions": [
+      "Which parts of 'quality' can be decided by a formal system, which by structured checks, and which only by human perception?",
+      "When humans must judge, what should they be asked so that they observe and the measurement system builds the scale?",
+      "For high-ambiguity artifacts, which constructs must be defined before any item is written — and how does the ontology grow without moving the goalposts?"
+    ],
+    "eml_claims": [
+      "Quality is not an intrinsic scalar; a scalar Q* exists only under a declared projection rule, task, weights, gates and boundary.",
+      "Compile success ≠ correct program; all tests passed ≠ universal correctness; formal proof ≠ real-world goal correctness — specification and verification are separate axes.",
+      "Binary observation ≠ binary phenomenon: {0,1}^N answers can reconstruct a continuous, multidimensional latent quality, and the binary-burden advantage is an empirical hypothesis (F3), not a law.",
+      "Disagreement ≠ error; mean preference ≠ preference structure; reliability ≠ validity; novelty ≠ creativity."
+    ],
+    "eml_limitations": [
+      "No experiment on this line has run (Experiment B is declared only); the EveMissLab IBQF/FDCS sources it builds on are internal theory.",
+      "Paper 07 explicitly does not propose a clinical scale; the pain example illustrates observer burden only."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "THY-2026-0110",
+  "kind": "theory",
+  "label": "The canonical intelligence event, Pareto comparison and no premature scalarization",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0110/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Intelligence is not a score of a model but an event 𝔍_IPM = (task object, quality object, semantic work object, physical computation object, scaffolding capability record, measurement metadata); the research object is the relation physical computation → effective semantic work → quality. Given a declared projection Q*, an intelligence yield vector (Q*/E_marg, Q*/V_C, Q*/V_M, Q*/B_M, Q*/B_N, Q*/T_wall) and semantic yields split efficiency into physical→semantic and semantic→outcome stages. Systems are compared on Pareto frontiers — single-pass, scaffolded, and their gap — under the rule 'vector before score, structure before average, uncertainty before false precision'; four capability archetypes (native, efficiently scaffoldable, compute-amplified, environment-coupled) are descriptive, not a ranking. A minimum reporting standard and a grade bundle (Q, μ, E, CST, S) make every claim carry its boundary and uncertainty. IPM is a metrology candidate, not a discovered natural constant.",
+    "eml_summary_zh": "智能不是模型的分數，而是事件 𝔍_IPM =（任務物件、品質物件、語意工作物件、物理計算物件、鷹架能力紀錄、測量詮釋資料）；研究對象是關係 物理計算 → 有效語意工作 → 品質。在宣告的投影 Q* 下，智能產率向量（Q*/E_marg、Q*/V_C、Q*/V_M、Q*/B_M、Q*/B_N、Q*/T_wall）與語意產率把效率拆成「物理→語意」與「語意→成果」兩段。系統在 Pareto 前沿上比較——單次、鷹架化與其落差——遵守「能保留向量就不壓總分、能保留結構就不壓平均、能保留不確定性就不假裝精確」；四種能力原型（原生、可高效鷹架化、算力放大、環境耦合）是描述不是排名。最低報告標準與等級束（Q、μ、E、CST、S）讓每個宣稱帶著邊界與不確定性。IPM 是計量學候選框架，不是被發現的自然常數。",
+    "eml_label_zh": "canonical intelligence event、Pareto 比較與不過早純量化",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "𝔍_IPM = (𝔗, 𝔔_IPM, N_μ, P_compute, 𝔖_C, 𝔐) with 𝔗 = (X, S, W, B_Q, B_P) and 𝔐 = (uncertainty, versions, hardware, software, clock, provenance).",
+      "Intelligence yield vector Y_I and semantic yields Y_μ, Y_Q/μ; two-stage efficiency η_{P→μ}, η_{μ→Q}.",
+      "Pareto dominance A ≻_IPM B: 𝔔_A ⪰ 𝔔_B and every relevant cost axis ≤ with one strict, same task, schema, boundary and grade.",
+      "Grade bundle G_IPM = (G_Q, G_μ, G_E, G_CST, G_S); IPM Minimum Reporting Standard v0.1 (task, quality, execution, physical, hidden work, measurement metadata)."
+    ],
+    "eml_assumptions": [
+      "Cross-substrate comparison (GPU LLM, neuromorphic, symbolic, biological) is legitimate only with a shared task, a shared quality construct and semantic-equivalence evidence."
+    ],
+    "eml_claims": [
+      "Intelligence ≠ TokenCount ≠ FLOPs ≠ BenchmarkScore ≠ OneUserTurn; Quality ≠ UniversalScalar.",
+      "SemanticWork ≠ PhysicalWork ≠ EnergyOnly; SameQuality ≠ SamePhysicalCost ≠ SameSemanticWork ≠ SameQuality.",
+      "Scalarization ⇒ DeclaredPolicy; Comparison ⇒ SharedBoundary; Measurement ⇒ Uncertainty; OntologyRevision ⇒ Versioning.",
+      "IPM = MetrologyCandidate, not a discovered natural constant."
+    ],
+    "eml_formalization": [
+      "Y_I = (Q*/E_marg, Q*/V_C, Q*/V_M, Q*/B_M, Q*/B_N, Q*/T_wall); brute-force region B_F(ε) = {c : dQ/dC < ε}; three frontiers F_Q/P, F_μ/P, F_Q/μ.",
+      "Canonical comparison protocol: freeze task and quality schema → single pass → scaffolded → SSR/SDR/ΔP → N_μ where feasible → frontier → projection only if a decision needs it → grades and uncertainty → raw traces."
+    ],
+    "eml_predictions": [
+      "Five falsifiable claims: token hypothesis, FLOPs sufficiency, binary burden, scaffolding separation, semantic intermediate utility."
+    ],
+    "eml_falsification_conditions": [
+      "The framework is refuted piecewise: each of F1–F5 has its own condition, and μI in particular must earn predictive or explanatory utility or be dropped."
+    ],
+    "eml_known_limitations": [
+      "A synthesis paper with no external references and no measurement of its own; the reporting standard has been applied once, to a three-task pilot."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

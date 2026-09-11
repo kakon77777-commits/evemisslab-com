@@ -1,0 +1,42 @@
+{
+  "id": "SYS-2026-0101",
+  "kind": "system",
+  "label": "XA-03 — telemetry and run logger (physical execution evidence layer)",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/systems/SYS-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Provider-agnostic logger that records one benchmark run as append-only events plus telemetry and derives a typed summary deterministically: model-invocation, trajectory, tool-call and verifier spans, candidate created/discarded accounting, wall time, device-time, GPU power integrated to device_energy_j (energy type device_measured, never relabelled as marginal), peak memory and memory residency, with unknowns kept null (Unknown ≠ 0) and forbidden conversions (tokens → J, TDP → J, price → J, GPU-hours → J). Golden fixture 450 J / 1.75 util·s / 12 GB peak / 33 GB·s residency verified; 35 passed, 1 skipped in 0.39s; instrumentation burden is calibrated and reported, not subtracted.",
+    "eml_summary_zh": "與模型供應商無關的記錄器：把一次 benchmark 執行記成只增不改的事件流與遙測，再確定性地導出型別化摘要——模型呼叫、軌跡、工具呼叫與驗證器區段，候選建立／丟棄會計，wall time、裝置時間、GPU 功率積分成 device_energy_j（能量型別 device_measured，絕不改標成 marginal）、峰值記憶體與記憶體駐留，未知值保持 null（Unknown ≠ 0），並禁止 tokens → J、TDP → J、price → J、GPU-hours → J 的換算。黃金夾具 450 J／1.75 util·s／12 GB 峰值／33 GB·s 駐留驗證通過；35 passed, 1 skipped in 0.39s；儀器負擔經校準並報告，不自動扣除。",
+    "eml_label_zh": "XA-03——遙測與執行記錄器（物理執行證據層）",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_purpose": "Make the physical side of an IPM event (wall time, device energy, memory residency, utilization, operational counts, discarded work) reproducible evidence rather than a claim.",
+    "eml_architecture": "RunSession → EventLogger (paired spans) + TelemetryCollector (Null / System via psutil / NvidiaSmi) → MetricIntegrator (deterministic) → RunSink with atomic finalization (.partial → COMPLETE | ABORTED) and crash recovery that never invents end events; JSON schemas for events, telemetry and run summary.",
+    "eml_documentation": "README.md, SPEC.md (36 sections), IMPLEMENTATION_PLAN.md, validation_report.json inside the package",
+    "eml_tags": [
+      "EML-IPM-XA-03",
+      "v0.1",
+      "PRE_RELEASE_VERIFIED",
+      "Python ≥3.11, no runtime dependencies"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

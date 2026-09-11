@@ -1,0 +1,74 @@
+{
+  "id": "EXP-2026-0101",
+  "kind": "experiment",
+  "label": "Experiment A — single-pass vs scaffolded controlled measurement (protocol v0.1)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The first v0.2 experiment: for one model and a fixed task set, climb the scaffold ladder A0 native single pass → A1 extended trajectory → A2 multi-sample → A3 verifier → A4 deterministic local tools → A5 bounded full agentic loop, recording quality and physical cost at every level to obtain a scaffolding response curve, SSR/SDR, scaffold cost multipliers and marginal yields. Five hypotheses (H1 gain exists, H2 gain has physical cost, H3 marginal yield is non-constant, H4 native and system capability are distinguishable, H5 models have different scaffolding profiles), pre-registered quality projections, initial-information equality across A0–A3, budget caps, n = 5 pilot / 20 formal replicates, failure classification and the rule that a null result is not an experiment failure. Status READY FOR PILOT; the thirty-task run itself has not been executed — only the three-task instrument gates below.",
+    "eml_summary_zh": "第一個 v0.2 實驗：對同一模型與固定任務集，沿鷹架階梯 A0 原生單次 → A1 放大軌跡 → A2 多樣本 → A3 驗證器 → A4 確定性本地工具 → A5 有界完整 agentic 迴圈往上爬，每一級同時記品質與物理成本，得出鷹架響應曲線、SSR/SDR、鷹架成本倍率與邊際產率。五個假說（H1 增益存在、H2 增益有物理成本、H3 邊際產率非常數、H4 原生與系統能力可區分、H5 不同模型有不同鷹架剖面）、預先登記的品質投影、A0–A3 初始資訊相等、預算上限、pilot n = 5／正式 n = 20 次重複、失敗分類，以及「null 結果不是實驗失敗」的規則。狀態 READY FOR PILOT；三十題的正式執行尚未進行——只跑過下面的三題儀器閘。",
+    "eml_label_zh": "Experiment A——單次智能與鷹架增益的受控實驗協定 v0.1",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "NOT RUN",
+    "eml_hypothesis": "H1 Q_A5 > Q_A0 for at least some non-trivial tasks; H2 E, V_C, T rise with it; H3 marginal yield differs by stage; H4 SSR < 1 stably; H5 SSR and SCM differ across models even at equal Q_A5.",
+    "eml_procedure": "30 tasks (10 math, 10 code, 10 constraint; Easy/Medium/Hard predefined) × A0–A5 × n replicates; A2 8 trajectories with deterministic majority; A3 typed verifier (same-model / independent / formal); A4 ≤ 4 deterministic local tool calls; A5 ≤ 16 invocations, ≤ 8 tool calls, ≤ 3 retry cycles with explicit termination; seeds and decoding frozen; warm weights, clean task state; run IDs IPM-XA-{model}-{task}-{condition}-{replicate}; paired within-task statistics with bootstrap CIs and effect sizes.",
+    "eml_metrics": {
+      "planned outputs": [
+        "ΔQ_k = Q_k − Q_0",
+        "SSR = Q_0 / Q_5, SDR = 1 − SSR",
+        "SCM_j = C_5,j / C_0,j per cost axis",
+        "marginal yield Y_k,j",
+        "response curves Q vs T, E, invocations, device-time",
+        "brute-force flag ΔQ < 0.01 with ΔC/C > 0.5 (exploratory thresholds)",
+        "selection waste ratio, discarded work"
+      ],
+      "minimum physical telemetry": [
+        "T_wall",
+        "E_device (E-Grade C)",
+        "M_peak",
+        "V_C"
+      ],
+      "status": "READY FOR PILOT"
+    },
+    "eml_controls": [
+      "identical prompt, initial context, decoding, system instruction and model version across conditions",
+      "initial-information equality A0–A3; external information gain marked for A4/A5",
+      "no cross-condition leakage; budget self-extension forbidden"
+    ],
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_interpretation": "A protocol, not a result. Its instrument (XA-02…XA-06L) was validated synthetically and then used once on three easy tasks with a real local model; whether a scaffolding response curve exists on non-trivial tasks is still open.",
+    "eml_limitations": [
+      "Deliberately does not attempt μI identification, lifecycle energy, cross-substrate comparison, high-ambiguity quality, full Shapley attribution or multi-agent settings.",
+      "Pilot budgets are reference values, not IPM standards."
+    ],
+    "eml_software_environment": "protocol document + JSON run schema + YAML example run (EML-IPM-XA-01 v0.1)",
+    "eml_reproduction_instructions": "Implement the ladder with XA-04 against XA-02 tasks, log with XA-03, run through XA-06/XA-06L; see EXP-2026-0103 for the first real execution.",
+    "eml_benchmark_ids": [
+      "BEN-2026-0101"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

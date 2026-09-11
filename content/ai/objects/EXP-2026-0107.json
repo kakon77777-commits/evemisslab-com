@@ -1,0 +1,42 @@
+{
+  "id": "EXP-2026-0107",
+  "kind": "experiment",
+  "label": "Experiment E — token / FLOPs proxy failure test (declared)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "IDEA",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0107/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Executions of the same task quality under different languages, verbosity, context lengths and memory pressure, comparing token count, FLOPs, energy, time, memory traffic and N_μ^eff to see where token and FLOPs stop tracking cost and work. Declared as the last v0.2 experiment; not run.",
+    "eml_summary_zh": "在相同任務品質下用不同語言、冗長度、上下文長度與記憶體壓力執行，比較 token 數、FLOPs、能量、時間、記憶體流量與 N_μ^eff，看 token 與 FLOPs 在哪裡不再追蹤成本與工作。宣告為 v0.2 最後一個實驗；尚未執行。",
+    "eml_label_zh": "Experiment E——token／FLOPs 代理量失效檢驗（已宣告）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "NOT RUN",
+    "eml_hypothesis": "F1 and F2: N_μ^eff per token drifts across phrasings/languages, and same-FLOPs executions differ in T, E, B_M, V_M.",
+    "eml_procedure": "Matched-quality executions varied in language, verbosity, context and memory pressure; record TokenCount, FLOPs, E, T, B_M, N_μ^eff.",
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_interpretation": "Declared, not run; listed so the program's falsifiable propositions each have their intended test on record.",
+    "eml_limitations": [
+      "No protocol package exists yet; the canonical index gives the design in one paragraph."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

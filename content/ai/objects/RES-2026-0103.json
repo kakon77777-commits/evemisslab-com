@@ -1,0 +1,52 @@
+{
+  "id": "RES-2026-0103",
+  "kind": "research",
+  "label": "Capability line — how much intelligence remains without the loop, and the unified intelligence event",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Papers 09–10 and the v0.2 Experiment A instrument. A system is (model, scaffolding vector); single-pass quality Q_SP and full-system quality Q_F give the scaffolding survival ratio SSR = Q_SP/Q_F, the dependence ratio SDR, the scaffold cost multiplier SCM and marginal scaffolding yields along a controlled ablation ladder A0…A5 — all read together with the physical overhead, because a loop is not cheating; hiding its cost is. Paper 10 packs quality, semantic work, physical computation and scaffolding into the canonical intelligence event, compares systems on Pareto frontiers under a no-premature-scalarization rule, and fixes a minimum reporting standard. The line's first real data point is the 2026-09-03 pilot on a local 9B model.",
+    "eml_summary_zh": "第 09–10 篇與 v0.2 Experiment A 儀器。系統 =（模型，鷹架向量）；單次品質 Q_SP 與完整系統品質 Q_F 給出鷹架存活率 SSR = Q_SP/Q_F、依賴率 SDR、鷹架成本倍率 SCM 與受控消融階梯 A0…A5 上的邊際鷹架產率——全部要跟物理額外成本一起讀，因為 LOOP 不是作弊，隱藏成本才是。第 10 篇把品質、語意工作、物理計算與鷹架封裝成 canonical intelligence event，在「不過早純量化」規則下用 Pareto 前沿比較系統，並固定最低報告標準。這條線的第一個真實數據點是 2026-09-03 在本地 9B 模型上的 pilot。",
+    "eml_label_zh": "能力線——拿掉 LOOP 還剩多少智能，以及統一的智能事件",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Agent Systems",
+      "Computation"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_research_questions": [
+      "Of a final answer, how much came from the model's native single pass and how much from retries, sampling, verifiers, tools, memory and planners — at what physical cost?",
+      "Does a stable scaffolding response curve exist for a fixed model and task set, and where does it enter the brute-force region?",
+      "Can two systems with the same final quality be told apart by capability source and physical cost rather than by a leaderboard score?"
+    ],
+    "eml_claims": [
+      "System capability ≠ model-native capability; Pass@k ≠ Pass@1; tool access ≠ tool utilization intelligence; invisible output ≠ zero cost.",
+      "SSR/SDR describe the structure of an intelligence source, not a defect; they must be read with SCM and the scaffolding physical overhead.",
+      "Intelligence is not any single element of the tuple (task, quality, semantic work, physical computation, scaffolding, metadata); the research object is the relation P_compute → N_μ → 𝔔.",
+      "First real pilot (three easy tasks, local 9B, 2026-09-03): SSR = 1.0 with a 3.1× device-energy multiplier from A0 to A5 — and the instrument's quality axis turned out to measure output-format compliance on two of the three tasks."
+    ],
+    "eml_limitations": [
+      "One model, three tasks, two replicates, same-model verifier, code quality unmeasured, gate INCOMPLETE — a dataset for instrument revision, not an estimate.",
+      "Shapley-style scaffold attribution, information-matched tool controls and the 900-trial physical comparison are all still ahead."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

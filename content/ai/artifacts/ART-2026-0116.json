@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0116",
+  "kind": "artifact",
+  "label": "EML-IPM-XA-05 v0.1 — 36-trial end-to-end synthetic smoke gate with canonical scripted run",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_artifact_type": "smoke-gate-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_v0.2_XA05_36Trial_SmokeGate_v0.1.zip",
+    "eml_artifact_sha256": "cef131ffb34d31c892bda71a8060672d82f132196d00a9f4ae87757543cdd0af",
+    "eml_artifact_size": 255620,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "EXP-2026-0102",
+  "kind": "experiment",
+  "label": "XA-05 — 36-trial end-to-end smoke gate with a scripted provider (synthetic)",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Runs MATH-003, CODE-001 and CON-003 × A0–A5 × 2 replicates through XA-04 + XA-03 + XA-02 with a ScriptedProvider whose outputs were constructed so the expected quality curve is known in advance (A0 0.30, A1 0.633, A2–A5 1.0 → SSR 0.30 / SDR 0.70 as fixtures). 36 trials, 180 invocations, 168 trajectories, 6 retries, 6 tool calls, 24 verifier passes; candidates 168 = 36 selected + 132 discarded; 0 accounting mismatches, 0 private-reference leaks; energy null on purpose (NullCollector) to prove Unknown ≠ 0. The package states scientific_interpretation_allowed: false.",
+    "eml_summary_zh": "用 ScriptedProvider 把 MATH-003、CODE-001、CON-003 × A0–A5 × 2 次跑過 XA-04 + XA-03 + XA-02，輸出被刻意設計成品質曲線事先已知（A0 0.30、A1 0.633、A2–A5 1.0 → SSR 0.30／SDR 0.70 純屬夾具）。36 次試驗、180 次呼叫、168 條軌跡、6 次重試、6 次工具呼叫、24 次驗證；候選 168 = 36 選中 + 132 丟棄；會計不符 0 件、私有參考洩漏 0 件；能量刻意為 null（NullCollector）以證明 Unknown ≠ 0。套件明寫 scientific_interpretation_allowed: false。",
+    "eml_label_zh": "XA-05——以腳本化供應商跑的 36 試驗端到端煙霧閘（合成）",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Agent Systems"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "SYNTHETIC",
+    "eml_hypothesis": "Engineering only: the XA-01→XA-04 pipeline reconstructs a pre-designed A0→A5 quality structure with exact candidate accounting and no private-reference leakage.",
+    "eml_procedure": "python -m pytest under IPM_XA02_ROOT / IPM_XA03_ROOT / IPM_XA04_ROOT; verify_canonical_output('canonical_smoke_run') re-validates the packaged run from the extracted package.",
+    "eml_metrics": {
+      "gate": {
+        "trial_count": 36,
+        "all_trials_complete": true,
+        "accounting_mismatches": 0,
+        "private_sentinel_leaks": 0,
+        "ssr": 0.3,
+        "sdr": 0.7,
+        "energy_scm": null,
+        "scientific_interpretation_allowed": false
+      },
+      "execution_totals": {
+        "created": 168,
+        "discarded": 132,
+        "model": 180,
+        "retry": 6,
+        "selected": 36,
+        "tool": 6,
+        "trajectory": 168,
+        "verifier": 24
+      }
+    },
+    "eml_controls": [
+      "scripted outputs with a known oracle",
+      "NullCollector so no physical number can masquerade as measurement",
+      "dependency packages pinned by SHA-256"
+    ],
+    "eml_run_count": 1,
+    "eml_result_type": "POSITIVE",
+    "eml_interpretation": "The instrument works as an accounting machine: candidate identity 168 = 36 + 132 holds, nothing leaks, the designed curve comes back out. Nothing here is a statement about any model — the package forbids reading it that way, and this record carries the SYNTHETIC badge for the same reason.",
+    "eml_limitations": [
+      "Synthetic fixtures; three tasks; no physical telemetry by design."
+    ],
+    "eml_software_environment": "XA-05 v0.1 over XA-02/03/04 (hashes declared in README and asserted by this extractor)",
+    "eml_reproduction_instructions": "Extract XA-02, XA-03, XA-04 and XA-05 as siblings, export the three roots, PYTHONPATH=. python -m pytest -q; or verify the shipped canonical_smoke_run/.",
+    "eml_benchmark_ids": [
+      "BEN-2026-0101"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

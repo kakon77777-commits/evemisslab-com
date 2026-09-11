@@ -1,0 +1,54 @@
+{
+  "id": "RES-2026-0101",
+  "kind": "research",
+  "label": "Execution and physical line — what one answer costs in turns, semantic work, energy and computational spacetime",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/research/RES-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Papers 01–05. Decomposes the chat-interface 'turn' into user turns, generation trajectories, model invocations, external loops, retries, selection and a physical execution trace; proposes the minimum intelligent semantic execution unit μI as the missing middle layer between physical primitives and task achievement; borrows the cross-level, latent-inference, population-coding and causal-perturbation method of neuroscience; types energy as gross / baseline / marginal / attributed with a declared boundary and keeps Landauer as a bound, not a price; and replaces FLOPs with a physical cost vector and a vector-first computational spacetime with its own topology.",
+    "eml_summary_zh": "第 01–05 篇。把聊天介面的「一輪」拆成使用者回合、生成軌跡、模型呼叫、外部 LOOP、重試、選擇與物理執行軌跡；提出最小智能語意執行單位 μI 作為物理原語與任務成果之間缺失的中間層；借用神經科學的跨層、潛變量推斷、群體編碼與因果擾動方法；把能量分型為 gross／baseline／marginal／attributed 並要求宣告邊界，Landauer 只是下界不是價格；並以物理成本向量與「向量優先」的計算時空及其拓撲取代 FLOPs。",
+    "eml_label_zh": "執行與物理線——一個答案在回合、語意工作、能量與計算時空上的代價",
+    "eml_primary_domain": "Computation",
+    "eml_domains": [
+      "Cognitive Science",
+      "Evaluation"
+    ],
+    "eml_program_id": "PRG-2026-0101",
+    "eml_research_questions": [
+      "What is the physical unit of 'one turn' once interaction compression is separated from computation compression?",
+      "What does intelligence compute once — if not a token, a FLOP, a neuron activation, a layer or a thought?",
+      "How can a semantic unit that cannot be observed directly be measured the way cognitive neuroscience measures cognition?",
+      "Which Joule is meant — gross, baseline, marginal or attributed — and inside which boundary?",
+      "What is the full physical cost of a computation beyond arithmetic: memory traffic, residency, interconnect, occupancy, time, topology?"
+    ],
+    "eml_claims": [
+      "One user turn ≠ one model invocation ≠ one generation trajectory ≠ one agent loop ≠ one physical computation; interaction compression is not computation compression.",
+      "Token ≠ μI ≠ FLOP; the minimal unit of intelligent work must sit between semantics and physics and be resolution-relative, not an absolute atom.",
+      "The same observable event type (a spike, a token, a μI) has no fixed energy; energy is a realization distribution conditioned on architecture, hardware, context and boundary.",
+      "FLOPs are one projection; V_C + V_M + V_N + V_S has no physical meaning before normalization — computational spacetime is vector-first, and equal volume is not equal topology."
+    ],
+    "eml_limitations": [
+      "Pure theory with no MVP; the only measurement so far is device-level GPU telemetry (E-Grade C, CST-B) from a three-task pilot.",
+      "μI remains observer-reconstructed (μI^obs); its approximation to internal semantic units is unproven and graded, not asserted."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

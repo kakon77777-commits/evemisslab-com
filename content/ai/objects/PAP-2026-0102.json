@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0102",
+  "kind": "paper",
+  "label": "Paper 02 — What does intelligence compute once? A candidate theory of the minimum intelligent semantic execution unit",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Argues that token, FLOP, neuron activation, layer and 'thought' all fail as units of intelligent work and proposes μI, a resolution-relative semantic state transition with seven conditions, four candidate families, gross/effective counts, a semantic work vector and a cross-level map down to physical trace; explicitly a candidate ontology with no MVP.",
+    "eml_summary_zh": "論證 token、FLOP、neuron activation、layer 與「想法」都不能當智能工作單位，提出 μI——相對於解析度的語意狀態轉換，帶七個條件、四個候選族、gross／effective 計數、語意工作向量與向下到物理軌跡的跨層映射；明言是候選本體、無 MVP。",
+    "eml_label_zh": "智能到底算了一次什麼？：最小智能語意執行單位的候選理論",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-02",
+    "eml_source_artifact": "IPM_02_智能到底算了一次什麼_v0.1.zip!/IPM_02_智能到底算了一次什麼_最小智能語意執行單位的候選理論_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "0183cf1066b211701efaec5e9f4c5dae5f25d3825b5940f870e33cb8a57ee201"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 2/10",
+      "role: 語意工作中間層"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

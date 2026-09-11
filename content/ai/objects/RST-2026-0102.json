@@ -1,0 +1,96 @@
+{
+  "id": "RST-2026-0102",
+  "kind": "result",
+  "label": "Diagnostic: the measured 'quality' was format compliance on 2 of 3 tasks; verifier serialization failed 3/18; the A3/A4 rise is a missingness artifact",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Strict output-contract compliance 12/36 (MATH-003 12/12, CODE-001 0/12, CON-003 0/12), but the non-canonical post-hoc check finds every completed selected output correct — math 12/12 canonical correct, code 11/11 selected outputs pass all hidden tests after outer Markdown fence removal, constraint 10/10 selected outputs satisfy all constraints after format-only normalization — 33/33 overall. Verifier-enabled trials 18, verifier-protocol failures 3 (A3 2/6, A4 1/6, A5 0/6), each after eight candidates had been generated. Tool calls 0, retries 0; 24 candidates abandoned on abort are neither selected nor discarded in the schema. Quality availability is reported as 22/36 in the aggregate and 33/36 in protocol_compliance.csv. Telemetry sampling wall fraction 0.244.",
+    "eml_summary_zh": "嚴格輸出契約合規 12/36（MATH-003 12/12、CODE-001 0/12、CON-003 0/12），但非 canonical 的事後檢查發現所有完成的選中輸出都正確——數學 12/12 canonical correct、程式 11/11 selected outputs pass all hidden tests after outer Markdown fence removal、約束 10/10 selected outputs satisfy all constraints after format-only normalization——整體 33/33。啟用驗證器的試驗 18 次，驗證器協定失敗 3 次（A3 2/6、A4 1/6、A5 0/6），每次都在已生成八個候選之後。工具呼叫 0 次、重試 0 次；24 個在中止時被拋棄的候選在 schema 裡既非選中也非丟棄。品質可得率在聚合檔報 22/36、在 protocol_compliance.csv 報 33/36。遙測取樣占 wall time 的 0.244。",
+    "eml_label_zh": "診斷：三題中兩題量到的「品質」是格式服從性；驗證器序列化失敗 3/18；A3/A4 的上升是缺值假象",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "REAL MODEL",
+    "eml_result_type": "NEGATIVE",
+    "eml_metrics": {
+      "strict_protocol_compliance": {
+        "count": 12,
+        "total": 36,
+        "rate": 0.3333333333333333
+      },
+      "posthoc_semantic_diagnostic": {
+        "canonical": false,
+        "math": "12/12 canonical correct",
+        "code": "11/11 selected outputs pass all hidden tests after outer Markdown fence removal",
+        "constraint": "10/10 selected outputs satisfy all constraints after format-only normalization",
+        "completed_selected_outputs_correct": "33/33"
+      },
+      "verifier_failure": {
+        "count": 3,
+        "verifier_enabled_trials": 18,
+        "rate": 0.16666666666666666,
+        "by_condition": {
+          "A3": "2/6",
+          "A4": "1/6",
+          "A5": "0/6"
+        }
+      },
+      "operational_totals": {
+        "model_invocations": 186,
+        "trajectories": 162,
+        "retries": 0,
+        "tool_calls": 0,
+        "verifier_passes": 18,
+        "candidates_created": 162,
+        "candidates_selected": 33,
+        "candidates_discarded": 105,
+        "failure_events": 6,
+        "candidates_abandoned_on_abort": 24
+      },
+      "quality_availability_reporting": {
+        "aggregate_analysis": "22/36",
+        "protocol_compliance_csv": "33/36",
+        "inconsistency": true
+      },
+      "instrumentation": {
+        "mean_sampling_call_wall_fraction": 0.2436,
+        "target_sampling_ms": 250,
+        "observed_cadence_ms": "335–350"
+      },
+      "instrument_revisions_required_before_XA-07": [
+        "R1 typed subject/system failure is valid data, separate from instrument failure",
+        "R2 split task_semantic_quality / output_contract_compliance / system_completion_reliability / verifier_protocol_reliability",
+        "R3 failure-aware aggregation (no survivor means)",
+        "R4 abandoned-candidate accounting",
+        "R5 preserve verifier parse diagnostics",
+        "R6 cheaper telemetry (persistent nvidia-smi / NVML)",
+        "R7 tool-trigger tasks"
+      ]
+    },
+    "eml_interpretation": "Negative for the instrument, informative for the theory. Task semantic quality ≠ protocol/serialization compliance — the model solved everything it completed and was scored 0.5 on average for not obeying a JSON/no-fence contract; same-model verification reduced system reliability rather than raising quality; tool access ≠ tool utilization (enabled, never used). The bundle stays immutable as XA-06 empirical v0.1; the next step is to revise the instrument and re-run a small validation set, not to re-roll failures until they disappear.",
+    "eml_limitations": [
+      "The post-hoc semantic check is explicitly non-canonical and does not make the strict outputs compliant.",
+      "One model; whether stronger models obey the output contract is unknown."
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT) — 2026-09-07 diagnostic",
+      "Splice (Claude Code, Anthropic) — execution and RESULT note"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ]
+  }
+}

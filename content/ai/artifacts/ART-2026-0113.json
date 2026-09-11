@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0113",
+  "kind": "artifact",
+  "label": "EML-IPM-XA-02 v0.1 — 30-task pilot pack and reference evaluators (private references separated)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_artifact_type": "benchmark-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_v0.2_XA02_30Task_PilotPack_v0.1.zip",
+    "eml_artifact_sha256": "424950d34dc54180ebe048b172285615a964e783d6a326166bee9a3bf7d78e4c",
+    "eml_artifact_size": 11304,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

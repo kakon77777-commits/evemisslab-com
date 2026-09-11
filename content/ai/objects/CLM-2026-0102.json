@@ -1,0 +1,42 @@
+{
+  "id": "CLM-2026-0102",
+  "kind": "claim",
+  "label": "F2 — FLOPs sufficiency",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/claims/CLM-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "If FLOPs suffice to describe physical computational cost, then with operations controlled, wall time, energy, memory traffic, interconnect traffic and memory residency should not show large independent variation. If same-FLOPs workloads differ greatly because of memory patterns or topology, a single FLOPs cost model is insufficient.",
+    "eml_summary_zh": "若 FLOPs 足以描述物理計算成本，則控制運算量後，wall time、能量、記憶體流量、互連流量與記憶體駐留不應出現大幅獨立變化。若相同 FLOPs 的工作因記憶體模式或拓撲而差異巨大，單一 FLOPs 成本模型就不足。",
+    "eml_label_zh": "F2——FLOPs 充分性",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_falsification_conditions": [
+      "Falsified for FLOPs-sufficiency if T, E, B_M, B_N, V_M vary substantially at fixed FLOPs; supported if they do not."
+    ],
+    "eml_tags": [
+      "falsifiable proposition",
+      "IPM v0.1 canonical index §23",
+      "Paper 10"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

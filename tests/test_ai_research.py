@@ -321,8 +321,10 @@ class OutputTests(unittest.TestCase):
         for section in ("archive", "memory", "computation", "theory", "claims"):
             with self.subTest(section=section):
                 if section == "claims":
-                    # no claim records yet: no page, and no dangling nav link either
-                    self.assertFalse((DIST / "ai" / "claims").exists())
+                    # optional section: present (and linked from the /ai/ home) exactly when claim records exist
+                    has_claims = any(o["kind"] == "claim" for o in self.objects)
+                    self.assertEqual((DIST / "ai" / "claims" / "index.html").is_file(), has_claims)
+                    self.assertEqual('href="/ai/claims/"' in read("dist/ai/index.html"), has_claims)
                     continue
                 self.assertTrue((DIST / "ai" / section / "index.html").is_file())
                 self.assertTrue((DIST / "ai" / section / "index.json").is_file())

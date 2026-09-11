@@ -1,0 +1,42 @@
+{
+  "id": "SYS-2026-0102",
+  "kind": "system",
+  "label": "XA-04 — A0→A5 model runner and scaffold orchestrator",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/systems/SYS-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A policy-driven state machine that runs the same TrialExecutor under immutable condition policies: A0 native single pass, A1 extended single trajectory (2× generation budget), A2 eight samples with exact-majority selection, A3 eight samples plus a typed verifier, A4 verifier plus a bounded deterministic tool loop, A5 a bounded PLAN → ACT → OBSERVE → VERIFY → REVISE loop. XA-02 and XA-03 are external canonical dependencies (declared by hash, not vendored); tool actions under A0–A3 are protocol violations; benchmark scoring happens only after the XA-03 run is finalized so scoring cost is never charged to the system; private references are never read by the task loader; no private chain-of-thought is captured. 29 tests, status CANDIDATE_CLEAN_VERIFIED.",
+    "eml_summary_zh": "策略驅動的狀態機，用不可變的條件策略跑同一個 TrialExecutor：A0 原生單次、A1 放大單軌跡（2× 生成預算）、A2 八樣本精確多數決、A3 八樣本加型別化驗證器、A4 驗證器加有界的確定性工具迴圈、A5 有界的 PLAN → ACT → OBSERVE → VERIFY → REVISE 迴圈。XA-02 與 XA-03 是外部 canonical 依賴（以雜湊宣告、不內嵌）；A0–A3 下的工具動作是協定違規；benchmark 評分只在 XA-03 執行封存後進行，評分成本永不計入受測系統；私有參考檔不被任務載入器讀取；不擷取私有思考鏈。29 個測試，狀態 CANDIDATE_CLEAN_VERIFIED。",
+    "eml_label_zh": "XA-04——A0→A5 模型執行器與鷹架調度器",
+    "eml_primary_domain": "Agent Systems",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_purpose": "Instantiate Paper 09's controlled ablation ladder so that scaffolding gain and scaffolding physical overhead are measured under identical initial information.",
+    "eml_architecture": "ProviderAdapter (Scripted / LocalCommand / OpenAI-compatible) → ConditionPolicy A0–A5 with a BudgetLedger → candidate model → SameModelVerifier (strict JSON parse of an explicit orchestration message) → tool action envelope → EvaluatorBridge to XA-02 → aggregator for SSR / SDR / SCM / marginal yield; all spans recorded through XA-03.",
+    "eml_documentation": "README.md, SPEC.md (27 sections), IMPLEMENTATION_PLAN.md, validation_report.json inside the package",
+    "eml_tags": [
+      "EML-IPM-XA-04",
+      "v0.1",
+      "CANDIDATE_CLEAN_VERIFIED",
+      "Policy-Driven State Machine"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

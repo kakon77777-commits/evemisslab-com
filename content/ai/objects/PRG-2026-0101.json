@@ -1,0 +1,57 @@
+{
+  "id": "PRG-2026-0101",
+  "kind": "program",
+  "label": "Intelligence Physical Metrology (IPM)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "ACTIVE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/programs/PRG-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A research program that asks not how smart an AI is but what one answer costs a physical system: how many user turns, generation trajectories and hidden loops it took, how much effective semantic work was done, how much energy and computational spacetime was occupied, how much external scaffolding was leaned on, and how much verifiable quality came back. Ten theoretical papers (2026-09-02) define the measurement objects — task, quality, semantic work, physical computation, scaffolding capability, measurement metadata — and five falsifiable propositions; the v0.2 experimental protocol (Experiment A, single-pass vs scaffolded) is instantiated as the XA-02…XA-06L instrument packages and was executed once on a local 9B model.",
+    "eml_summary_zh": "這個研究計畫問的不是「AI 有幾分聰明」，而是一個答案讓物理系統付出了什麼：花了幾次使用者回合、幾條生成軌跡、幾層隱藏 LOOP，做了多少有效語意工作，占用多少能量與計算時空，依賴多少外部鷹架，最後換回多少可驗證品質。十篇理論論文（2026-09-02）定義了測量物件——任務、品質、語意工作、物理計算、鷹架能力、測量詮釋資料——與五個可證偽命題；v0.2 實驗協定（Experiment A：single-pass vs scaffolded）落實為 XA-02…XA-06L 儀器套件，並在本地 9B 模型上執行過一次。",
+    "eml_label_zh": "智能的物理計量（IPM）",
+    "eml_primary_domain": "Evaluation",
+    "eml_domains": [
+      "Computation",
+      "Cognitive Science",
+      "AI Architecture"
+    ],
+    "eml_goals": [
+      "Replace token, FLOP, benchmark score and 'one turn' as units of intelligence with a typed event 𝔍_IPM = (task, quality, semantic work, physical computation, scaffolding, metadata).",
+      "Measure the relation physical computation → effective semantic work → verifiable quality, and compare systems on a Pareto frontier instead of a single score.",
+      "Put the five falsifiable propositions — token hypothesis, FLOPs sufficiency, binary burden, scaffolding separation, semantic intermediate utility — in front of experiments in the order A → D → B → C → E.",
+      "Publish under the IPM Minimum Reporting Standard: boundary, energy type, hidden work, uncertainty and measurement grade on every number."
+    ],
+    "eml_milestones": [
+      "2026-09-02: EML-IPM v0.1 theoretical series complete, 10/10 papers with a SHA-256 manifest; canonical index with unified notation and the v0.2 experimental entry point.",
+      "2026-09-02: Experiment A protocol (EML-IPM-XA-01 v0.1, READY FOR PILOT).",
+      "2026-09-03: instrument packages XA-02 (30-task pack), XA-03 (telemetry logger), XA-04 (A0→A5 runner), XA-05 (36-trial synthetic smoke gate), XA-06 (real-model pilot gate), XA-06L (local execution handoff).",
+      "2026-09-03: first real-model pilot on a local Qwythos-9B-v2 — 36 trials, sealed REAL_MODEL_PILOT_INCOMPLETE (33/36 complete).",
+      "2026-09-07: diagnostic analysis of the pilot with seven instrument revisions required before XA-07."
+    ],
+    "eml_open_questions": [
+      "μI has no operational identification yet (Experiment C); the series itself says μI must pass a predictive/explanatory utility test or be revised or eliminated.",
+      "The pilot's quality axis measured output-format compliance for two of three tasks; task semantic quality, output-contract compliance, system completion reliability and verifier reliability have to be separated before scaling.",
+      "Same-model verifier serialization failed in 3 of 18 verifier trials; candidates abandoned on abort are not yet accounted; telemetry sampling costs about 24 % of trial wall time.",
+      "CODE tasks have no measured quality until the pilot runs inside a disposable sandbox with code evaluation enabled.",
+      "Experiments B, C, D and E are declared, not run."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

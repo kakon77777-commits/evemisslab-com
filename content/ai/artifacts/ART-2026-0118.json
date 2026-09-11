@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0118",
+  "kind": "artifact",
+  "label": "EML-IPM-XA-06L v0.1 — local real-model execution handoff pack (configure → preflight → run → seal)",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_artifact_type": "software-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_v0.2_XA06L_Local_Execution_Handoff_v0.1.zip",
+    "eml_artifact_sha256": "538b61bfe263cf19534dbb9fe1a605925fa1d7566469138c5a75a7e43f7c0a45",
+    "eml_artifact_size": 41801,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "id": "THY-2026-0108",
+  "kind": "theory",
+  "label": "Typed, versioned quality ontology for high-ambiguity artifacts",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0108/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Before any item is written, quality must be a typed space Q[domain, task, context, audience] = Q_core ⊕ Q_domain ⊕ Q_task, with a construct graph of dependencies and conflicts and a measurement itemization pipeline Task → Construct → Indicator → Item → Observation → Latent estimate. Any metric (BLEU, CLIPScore, aesthetic model score) is one projection of the space; a construct validity gate (coverage, discriminant validity, convergent evidence, context stability) guards against measuring the wrong thing precisely; the ontology is open — new constructs may be added from residual errors — but every revision is a version, and multimodal quality is not the mean of modality scores.",
+    "eml_summary_zh": "在寫任何題目之前，品質必須先是有型別的空間 Q[領域、任務、情境、受眾] = Q_core ⊕ Q_domain ⊕ Q_task，附帶構念之間依賴與衝突的構念圖，以及測量條目化管線 任務 → 構念 → 指標 → 題目 → 觀測 → 潛在估計。任何指標（BLEU、CLIPScore、美學模型分數）都只是空間的一個投影；構念效度閘（覆蓋、區辨效度、收斂證據、情境穩定）防止「精準地量錯東西」；本體是開放的——可從殘餘錯誤新增構念——但每次修訂都是一個版本，而多模態品質不是各模態分數的平均。",
+    "eml_label_zh": "高歧義成果的有型別、有版本品質本體",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Core Q_core = (fidelity, coherence, completeness, robustness, usefulness, verifiability); domain schemas for text, image, music, story, design; multimodal coupling dimensions.",
+      "Quality construct graph G_Q = (V_Q, E_Q); construct validity gate G_C; open ontology Q_{t+1} = Q_t ∪ {new construct} under versioning.",
+      "High-ambiguity quality object 𝔔_HA = (Q_schema, G_Q, Q_F, Q_S, θ̂_H, Σ_H, D_R, B_Q, Version_Q)."
+    ],
+    "eml_assumptions": [
+      "Subjective ≠ unstructured: large populations reliably detect structural failures even in creative artifacts."
+    ],
+    "eml_claims": [
+      "HighAmbiguity ≠ Unmeasurable; Construct ≠ Indicator ≠ Item ≠ Metric; Reliability ≠ Validity.",
+      "Fluency ≠ Factuality; Coherence ≠ Correctness; TechnicalQuality ≠ AestheticQuality; PromptSimilarity ≠ ImageQuality; Novelty ≠ Creativity; AestheticAppeal ≠ Usability.",
+      "MultimodalQuality ≠ Mean(ModalityScores); CrossDomainComparison ⇒ SharedConstructBasis; OntologyRevision ⇒ Versioning; PreciseMeasurement ≠ CorrectConstructSelection."
+    ],
+    "eml_formalization": [
+      "Quality fiber view Q = ∪_x Q_x over x = (d, τ, c, a); cross-task projection Π_{x→y} only over shared constructs.",
+      "Creativity as a region (novelty, appropriateness, value, surprise, coherence), not novelty × usefulness."
+    ],
+    "eml_predictions": [
+      "Benchmarks whose quality ontology drifts without versioning will produce longitudinal comparisons that are silently invalid."
+    ],
+    "eml_falsification_conditions": [
+      "If a flat, unversioned checklist explains rater residuals and new failure modes as well as the typed construct graph, the ontology machinery is unnecessary."
+    ],
+    "eml_known_limitations": [
+      "Schema proposals only; no domain ontology has been validated across populations."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0111",
+  "kind": "artifact",
+  "label": "EML-IPM Paper 10 — canonical UTF-8 Markdown + manifest (zip)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_artifact_type": "canonical-source-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_10_一個答案值多少物理世界_v0.1.zip",
+    "eml_artifact_sha256": "b7d2e5cfa761a7b98e0610df0d293e3721250f947f7493c89549eac5c2a6e696",
+    "eml_artifact_size": 13100,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

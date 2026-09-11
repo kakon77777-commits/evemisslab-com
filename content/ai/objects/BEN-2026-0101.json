@@ -1,0 +1,84 @@
+{
+  "id": "BEN-2026-0101",
+  "kind": "benchmark",
+  "label": "XA-02 — 30-task pilot pack for the A0→A5 scaffolding response",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/benchmarks/BEN-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "30 tasks — 10 math, 10 code, 10 constraint — with a public task file (prompt, output contract, pre-registered quality projection), a private reference file that must never enter model context, a deterministic evaluator and a 30/30 self-test. Math and constraint answers are one JSON object; code answers are Python source scored by hidden tests, and code execution is refused unless explicitly enabled inside an external sandbox. The pack's own words: not a general intelligence benchmark but a controlled instrument for measuring scaffolding response under Experiment A.",
+    "eml_summary_zh": "30 題——數學 10、程式 10、約束 10——含公開任務檔（題目、輸出契約、預先登記的品質投影）、絕不可進入模型上下文的私有參考檔、確定性評分器與 30/30 自測。數學與約束題回一個 JSON 物件；程式題回 Python 原始碼、以隱藏測試評分，且除非在外部沙箱明確啟用，否則拒絕執行程式。套件自己的說法：不是通用智能 benchmark，而是 Experiment A 下量測鷹架響應的受控儀器。",
+    "eml_label_zh": "XA-02——A0→A5 鷹架響應的 30 題 pilot 任務包",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_purpose": "Fixed task set with objective, pre-registered quality projections so that the same model can be run from native single pass (A0) to full agentic scaffold (A5) and the quality change attributed to scaffolding rather than to task drift.",
+    "eml_tasks": [
+      "MATH-001 (math, easy)",
+      "MATH-002 (math, easy)",
+      "MATH-003 (math, easy)",
+      "MATH-004 (math, medium)",
+      "MATH-005 (math, medium)",
+      "MATH-006 (math, medium)",
+      "MATH-007 (math, medium)",
+      "MATH-008 (math, hard)",
+      "MATH-009 (math, hard)",
+      "MATH-010 (math, hard)",
+      "CODE-001 (code, easy)",
+      "CODE-002 (code, easy)",
+      "CODE-003 (code, easy)",
+      "CODE-004 (code, medium)",
+      "CODE-005 (code, medium)",
+      "CODE-006 (code, medium)",
+      "CODE-007 (code, medium)",
+      "CODE-008 (code, hard)",
+      "CODE-009 (code, hard)",
+      "CODE-010 (code, hard)",
+      "CON-001 (constraint, easy)",
+      "CON-002 (constraint, easy)",
+      "CON-003 (constraint, easy)",
+      "CON-004 (constraint, medium)",
+      "CON-005 (constraint, medium)",
+      "CON-006 (constraint, medium)",
+      "CON-007 (constraint, medium)",
+      "CON-008 (constraint, hard)",
+      "CON-009 (constraint, hard)",
+      "CON-010 (constraint, hard)"
+    ],
+    "eml_metrics": {
+      "math and constraint": "weighted exact fields on one JSON object; constraint tasks satisfied / m with fatal constraints as hard gate",
+      "code": "hidden tests passed / tests (IPM_ALLOW_CODE_EXEC=1 required)",
+      "output contract": "Return only one JSON object. Do not use Markdown fences."
+    },
+    "eml_evaluation_protocol": "evaluate.py is deterministic; reference_private.json is evaluator-private; validation_report.json records the 30/30 package self-test; manifest.json carries per-file SHA-256.",
+    "eml_baseline_results": {
+      "self-test": "SELF-TESTED_30_OF_30"
+    },
+    "eml_limitations": [
+      "Only three of the thirty tasks (MATH-003, CODE-001, CON-003) have been used, in the 36-trial gate matrices.",
+      "The output contract makes 'quality' depend on format obedience: the first real pilot showed a correct answer scored 0 for not being JSON."
+    ],
+    "eml_tags": [
+      "EML-IPM-XA-02",
+      "v0.1",
+      "SELF-TESTED_30_OF_30"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

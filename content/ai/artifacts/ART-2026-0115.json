@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0115",
+  "kind": "artifact",
+  "label": "EML-IPM-XA-04 v0.1 — A0→A5 model runner and scaffold orchestrator",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_artifact_type": "software-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_v0.2_XA04_Model_Runner_v0.1.zip",
+    "eml_artifact_sha256": "14f602676aeeb162c5a72e1c2f66763d9f96bcc07c31dd5ba7e5133b61e9ad18",
+    "eml_artifact_size": 37584,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

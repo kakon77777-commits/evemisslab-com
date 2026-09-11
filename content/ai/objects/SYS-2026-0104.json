@@ -1,0 +1,41 @@
+{
+  "id": "SYS-2026-0104",
+  "kind": "system",
+  "label": "XA-06L — local real-model execution handoff pack",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-03",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/systems/SYS-2026-0104/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "The Windows/local handoff from READY_FOR_REAL_MODEL to a sealed result bundle: configure → preflight → run/resume → verify/analyze → seal. Resume skips a matrix point only if its trial result and XA-03 summary exist, both SHA-256 hashes still match, identity matches and the XA-03 state is COMPLETE; a modified point becomes INVALID and is never overwritten silently. Sealing excludes secret values, redacts absolute paths with provenance, makes run directories bundle-relative and re-hashes everything so the bundle can be re-verified on another machine. Software 29/29 PASS, experiment status in the package: NOT_RUN — the distinction 'READY_FOR_REAL_MODEL ≠ REAL_MODEL_PILOT_COMPLETE' is the package's stated point.",
+    "eml_summary_zh": "從 READY_FOR_REAL_MODEL 到密封結果包的 Windows／本地交接：configure → preflight → run/resume → verify/analyze → seal。resume 只在試驗結果與 XA-03 摘要都在、兩個 SHA-256 仍相符、身分相符且 XA-03 狀態為 COMPLETE 時才跳過該點；被改過的點變成 INVALID，絕不靜默覆寫。封存排除機密值、以來源紀錄遮蔽絕對路徑、把執行目錄改為相對於封存包並全部重新雜湊，讓封存包能在另一台機器上重新驗證。軟體 29/29 PASS，套件內的實驗狀態：NOT_RUN——「READY_FOR_REAL_MODEL ≠ REAL_MODEL_PILOT_COMPLETE」正是套件要說的重點。",
+    "eml_label_zh": "XA-06L——本地真實模型執行交接包",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_purpose": "Let a local machine with a GPU execute the canonical 36-trial pilot against an OpenAI-compatible server and hand back a relocatable, hash-sealed bundle — including an honest REAL_MODEL_PILOT_INCOMPLETE when a gate fails.",
+    "eml_architecture": "thin PowerShell wrappers over a cross-platform core: config, preflight, matrix, runner, state (pilot_state.json with per-point hashes), gate, seal; IMPORT_BACK.md defines what to upload for analysis.",
+    "eml_documentation": "README.md, SPEC.md, IMPLEMENTATION_PLAN.md, IMPORT_BACK.md, STATUS.json, validation_report.json inside the package",
+    "eml_tags": [
+      "EML-IPM-XA-06L",
+      "v0.1",
+      "FINAL_RELEASE_BUILT_AFTER_CLEAN_CANDIDATE_GATE"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

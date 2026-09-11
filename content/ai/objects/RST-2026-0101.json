@@ -1,0 +1,144 @@
+{
+  "id": "RST-2026-0101",
+  "kind": "result",
+  "label": "Scaffolding response on three easy tasks: SSR = 1.0, 3.1× device energy at A5, 7.9–9.3× at A2–A4",
+  "created_at": "2026-09-03",
+  "updated_at": "2026-09-07",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E2",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/results/RST-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Condition means (quality over available trials / wall s / device J): A0 0.5 / 10.21 / 1715.6; A1 0.5 / 9.87 / 1819.0; A2 0.5 / 79.09 / 15143.0; A3 0.6667 / 99.13 / 15921.5; A4 0.6667 / 69.08 / 13546.2; A5 0.5 / 31.91 / 5321.5. Energy ratio vs A0: A1 1.06, A2 8.827, A3 9.281, A4 7.896, A5 3.102. Total measured GPU energy 0.0891 kWh over 29.9 min of trial time; memory residency rises from 72.1 GiB·s (A0) to 714.6 GiB·s (A3).",
+    "eml_summary_zh": "各條件平均（可用試驗的品質／wall 秒／裝置焦耳）：A0 0.5／10.21／1715.6；A1 0.5／9.87／1819.0；A2 0.5／79.09／15143.0；A3 0.6667／99.13／15921.5；A4 0.6667／69.08／13546.2；A5 0.5／31.91／5321.5。能量相對 A0：A1 1.06、A2 8.827、A3 9.281、A4 7.896、A5 3.102。36 次試驗共量得 GPU 能量 0.0891 kWh、試驗時間 29.9 分鐘；記憶體駐留從 A0 的 72.1 GiB·s 升到 A3 的 714.6 GiB·s。",
+    "eml_label_zh": "三個簡單任務上的鷹架響應：SSR = 1.0，A5 的裝置能量 3.1×、A2–A4 7.9–9.3×",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "REAL MODEL",
+    "eml_result_type": "MIXED",
+    "eml_metrics": {
+      "ssr": 1.0,
+      "sdr": 0.0,
+      "scm": {
+        "device_energy_j": 3.1019,
+        "wall_time_s": 3.1264
+      },
+      "by_condition": {
+        "A0": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 10.21,
+          "device_energy_j": 1715.6,
+          "energy_ratio_vs_A0": 1.0,
+          "gpu_peak_memory_gib": 7.23,
+          "gpu_memory_residency_gib_s": 72.1,
+          "gpu_utilization_integral_s": 6.57
+        },
+        "A1": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 9.87,
+          "device_energy_j": 1819.0,
+          "energy_ratio_vs_A0": 1.06,
+          "gpu_peak_memory_gib": 7.32,
+          "gpu_memory_residency_gib_s": 70.0,
+          "gpu_utilization_integral_s": 6.26
+        },
+        "A2": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 79.09,
+          "device_energy_j": 15143.0,
+          "energy_ratio_vs_A0": 8.827,
+          "gpu_peak_memory_gib": 7.28,
+          "gpu_memory_residency_gib_s": 570.0,
+          "gpu_utilization_integral_s": 54.09
+        },
+        "A3": {
+          "quality_mean": 0.6667,
+          "quality_n": 3,
+          "success_rate": 0.6667,
+          "wall_time_s": 99.13,
+          "device_energy_j": 15921.5,
+          "energy_ratio_vs_A0": 9.281,
+          "gpu_peak_memory_gib": 7.34,
+          "gpu_memory_residency_gib_s": 714.6,
+          "gpu_utilization_integral_s": 70.02
+        },
+        "A4": {
+          "quality_mean": 0.6667,
+          "quality_n": 3,
+          "success_rate": 0.6667,
+          "wall_time_s": 69.08,
+          "device_energy_j": 13546.2,
+          "energy_ratio_vs_A0": 7.896,
+          "gpu_peak_memory_gib": 7.28,
+          "gpu_memory_residency_gib_s": 496.9,
+          "gpu_utilization_integral_s": 46.93
+        },
+        "A5": {
+          "quality_mean": 0.5,
+          "quality_n": 4,
+          "success_rate": 0.5,
+          "wall_time_s": 31.91,
+          "device_energy_j": 5321.5,
+          "energy_ratio_vs_A0": 3.102,
+          "gpu_peak_memory_gib": 7.24,
+          "gpu_memory_residency_gib_s": 228.7,
+          "gpu_utilization_integral_s": 22.17
+        }
+      },
+      "marginal_yield": {
+        "A0->A1": {
+          "allocated_device_time_s": null,
+          "device_energy_j": 0.0,
+          "wall_time_s": null
+        },
+        "A1->A2": {
+          "allocated_device_time_s": null,
+          "device_energy_j": 0.0,
+          "wall_time_s": 0.0
+        },
+        "A2->A3": {
+          "allocated_device_time_s": null,
+          "device_energy_j": 0.00021406648843853404,
+          "wall_time_s": 0.008315919866432606
+        },
+        "A3->A4": {
+          "allocated_device_time_s": null,
+          "device_energy_j": null,
+          "wall_time_s": null
+        },
+        "A4->A5": {
+          "allocated_device_time_s": null,
+          "device_energy_j": null,
+          "wall_time_s": null
+        }
+      }
+    },
+    "eml_interpretation": "The cost side of the scaffolding response curve is real and steep; the quality side is flat because the tasks were already solved at A0 and because the quality axis was confounded (RST-2026-0102). This is one point on the 'no gap' side of F4 with almost no weight: it neither supports nor refutes the scaffolding-separation hypothesis on non-trivial tasks. The A3/A4 0.667 is not a gain: the aborted CON-003 trials dropped out of the quality denominator and the surviving mean rose.",
+    "eml_limitations": [
+      "quality_n is 4 (A0–A2, A5) or 3 (A3, A4) per condition because CODE-001 quality is unavailable and three trials aborted — means over 3–4 values.",
+      "Device-measured GPU energy at ~24 % sampling overhead; not marginal energy."
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT) — 2026-09-07 diagnostic",
+      "Splice (Claude Code, Anthropic) — execution and RESULT note"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ]
+  }
+}

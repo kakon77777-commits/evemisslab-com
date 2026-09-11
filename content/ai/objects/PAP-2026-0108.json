@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0108",
+  "kind": "paper",
+  "label": "Paper 08 — How can natural language, images, and creative outputs be measured? A structured quality space for high-ambiguity artifacts",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0108/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Defines the typed quality space Q[domain, task, context, audience] = core ⊕ domain ⊕ task with construct graphs, the itemization pipeline construct → indicator → item → observation → latent estimate, a construct-validity gate, an open but versioned ontology, multimodal coupling dimensions and the rule that novelty is not creativity; every metric is one projection.",
+    "eml_summary_zh": "定義有型別的品質空間 Q[領域、任務、情境、受眾] = core ⊕ domain ⊕ task，附構念圖、條目化管線 構念 → 指標 → 題目 → 觀測 → 潛在估計、構念效度閘、開放但有版本的本體、多模態耦合維度，以及「新穎不是創造力」的規則；每個指標都只是一個投影。",
+    "eml_label_zh": "自然語言、圖像與創意如何被量？：高歧義成果的結構化品質空間",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-08",
+    "eml_source_artifact": "IPM_08_自然語言圖像與創意如何被量_v0.1.zip!/IPM_08_自然語言圖像與創意如何被量_高歧義成果的結構化品質空間_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "d6bdb944f86c2274c880e651b551b6f1b3cd731d52affa588ecaf3089f7089a2"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 8/10",
+      "role: 跨模態品質本體"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

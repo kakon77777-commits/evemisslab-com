@@ -1,0 +1,21 @@
+{
+  "id": "ART-2026-0101",
+  "kind": "artifact",
+  "label": "EML-IPM v0.1 canonical series package — 10 papers + canonical index + SHA-256 manifest (UTF-8 Markdown)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_artifact_type": "canonical-series-package",
+    "eml_artifact_uri": "artifact://evemisslab/intelligence-physical-metrology/IPM_v0.1_Canonical_Series_Package.zip",
+    "eml_artifact_sha256": "7699b94fc9ab15228a62aa4768d652e20bc9e31292face6476f724f1bb5291a7",
+    "eml_artifact_size": 127962,
+    "eml_artifact_media_type": "application/zip",
+    "eml_artifact_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "verification": "sha256 computed over the file bytes on 2026-09-11",
+      "note": "canonical file; not yet published at a public URL"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED"
+  }
+}

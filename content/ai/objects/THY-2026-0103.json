@@ -1,0 +1,61 @@
+{
+  "id": "THY-2026-0103",
+  "kind": "theory",
+  "label": "Cross-level triangulation and measurement grades",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Neuroscience has no '1 thought = N spikes' conversion; what it has is a cross-level proxy method: behavior → latent cognitive model → neural code → cellular events → physical implementation, each layer with its own units. IPM borrows five principles (level separation, latent inference, population over atomism, encoding–decoding duality, causal perturbation), extends Marr's three levels to five (task, semantic, algorithmic, physical events, thermodynamic), and defines cross-level triangulation for AI as E = (output, semantic, internal trace, ablation, hardware) evidence with a graded confidence in μI from D (behavioral) to A+ (physical-semantic alignment).",
+    "eml_summary_zh": "神經科學沒有「1 個想法 = N 個 spike」的換算，有的是跨層代理量測：行為 → 潛在認知模型 → 神經編碼 → 細胞事件 → 物理實現，每層各有單位。IPM 借用五個原則（層級分離、潛變量推斷、群體優先於原子、編碼—解碼對偶、因果擾動），把 Marr 三層擴成五層（任務、語意、演算法、物理事件、熱力學），並為 AI 定義跨層三角化 E =（輸出、語意、內部軌跡、消融、硬體）證據，μI 的可信度分級從 D（行為）到 A+（物理—語意對齊）。",
+    "eml_label_zh": "跨層證據三角化與測量等級",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Five layers L4 task achievement, L3 semantic/cognitive operation, L2 algorithmic realization, L1 physical events, L0 thermodynamic realization; L4 ≠ L3 ≠ L2 ≠ L1 ≠ L0.",
+      "Cross-level triangulation X_L = (E_B behavioral, E_C cognitive-model, E_N neural, E_P perturbational); for AI X_AI = (E_O, E_S, E_I, E_A, E_H).",
+      "Measurement grades D behavioral / C structured semantic / B internal correlation / A causal internal / A+ physical-semantic alignment.",
+      "Eight borrowing principles: level separation, proxy discipline, model-mediated inference, distributed realization, causal perturbation, scale declaration, trial separation, grounding downward."
+    ],
+    "eml_assumptions": [
+      "Latent quantities are scientific when they make observable predictions, have competitors, are falsifiable and accept intervention (the diffusion-decision-model template)."
+    ],
+    "eml_claims": [
+      "CognitiveUnit ≠ NeuralEvent ≠ InformationBit ≠ PhysicalOperation; bits/spike ≠ cognitive bits; Decodable ≠ CausallyUsed.",
+      "OutputRate ≠ InternalComputationRate (the ~10 bits/s behavioral throughput is not the brain's computation rate; 1000 output tokens are not 1000 intelligent events).",
+      "EnsemblePerformance ≠ SingleEpisodePerformance; Proxy ≠ Ontology; BiologicalNeuron ≠ ANNNeuron."
+    ],
+    "eml_formalization": [
+      "Conf(μI) = F(E_O, E_S, E_I, E_A, E_H) ∈ [0, 1]; report N̂_μ ± uncertainty with Grade_μ, never a falsely precise count.",
+      "ValueOfComputation = ExpectedImprovement − Cost (resource-rational template for μI → Cost → Value)."
+    ],
+    "eml_predictions": [
+      "Confidence that μI^obs ≈ μI^int rises only when behavioral, semantic, internal, causal and physical evidence converge."
+    ],
+    "eml_falsification_conditions": [
+      "A μI account that survives behavioral evidence but is contradicted by ablation or hardware evidence must lose its grade, not be kept by verbal interpretation."
+    ],
+    "eml_known_limitations": [
+      "Methodological borrowing only; no biological unit is equated with an AI unit and no measurement was performed."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

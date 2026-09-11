@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0103",
+  "kind": "paper",
+  "label": "Paper 03 — From cognition to neurons: how human intelligence is measured across levels",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Reads cognitive science and neuroscience for method rather than numbers: Marr's levels extended to five, resource-rational operation costs, diffusion-model latent inference, encoding–decoding duality, population coding, causal perturbation, the 10 bits/s throughput lesson; yields cross-level triangulation and a D–A+ measurement grade for μI.",
+    "eml_summary_zh": "向認知科學與神經科學借方法而非數字：Marr 三層擴成五層、resource-rational 的操作成本、擴散模型的潛變量推斷、編碼—解碼對偶、群體編碼、因果擾動、10 bits/s 的教訓；得出跨層三角化與 μI 的 D–A+ 測量等級。",
+    "eml_label_zh": "從認知到神經元：人腦如何跨層測量智能計算",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-03",
+    "eml_source_artifact": "IPM_03_從認知到神經元_v0.1.zip!/IPM_03_從認知到神經元_人腦如何跨層測量智能計算_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "3a1996da839c94367b1d6ffb69ce12309bc51b330b120aa181c514a0793daead"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 3/10",
+      "role: 跨層測量與證據三角化"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

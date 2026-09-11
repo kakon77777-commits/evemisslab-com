@@ -1,0 +1,42 @@
+{
+  "id": "EXP-2026-0106",
+  "kind": "experiment",
+  "label": "Experiment D — physical trace alignment (declared)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "IDEA",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0106/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "On one machine, align GPU power telemetry, latency, peak memory, memory bandwidth and device occupancy with execution events — the telemetry side that XA-03 already provides — before any claim about data-center energy. Declared as the second v0.2 experiment in the recommended order; the pilot's XA-03 traces are its first raw material, but the alignment study itself has not been run.",
+    "eml_summary_zh": "在同一台機器上把 GPU 功率遙測、延遲、峰值記憶體、記憶體頻寬與裝置占用對齊到執行事件——XA-03 已提供的遙測面——在任何資料中心能源宣稱之前先做。建議順序中的第二個 v0.2 實驗；pilot 的 XA-03 軌跡是它的第一批原料，但對齊研究本身尚未執行。",
+    "eml_label_zh": "Experiment D——物理軌跡對齊（已宣告）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "NOT RUN",
+    "eml_hypothesis": "F2 (partial): with operations controlled, time, energy, memory traffic and residency still vary independently; device-level traces can be aligned to semantic-level events.",
+    "eml_procedure": "Same hardware, matched workloads differing in memory pattern; XA-03 telemetry at reduced instrument cost (NVML) aligned to trajectory/tool/verifier spans.",
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_interpretation": "Declared, not run; listed so the program's falsifiable propositions each have their intended test on record.",
+    "eml_limitations": [
+      "No protocol package exists yet; the canonical index gives the design in one paragraph."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "THY-2026-0106",
+  "kind": "theory",
+  "label": "Structured quality, hard gates and the specification–verification separation",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0106/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Quality is Q(Y | X, S, W, B_Q): output relative to task, specification, environment and boundary. It is measured as a structured vector (correctness, alignment, completeness, consistency, robustness, verifiability, provenance) in three layers — formal objective, structured semi-objective, human residual — with fatal conditions as a hard gate that soft quality cannot compensate. Coverage splits into specification, test and state coverage; mutation score measures test strength; verification and specification are separate axes (a perfect proof of the wrong theorem solves nothing); evaluator agreement is not truth; cost is not quality unless the specification makes it one. Quality evidence grades run from E (surface validity) to A+ (formal verification plus goal alignment).",
+    "eml_summary_zh": "品質是 Q(Y | X, S, W, B_Q)：輸出相對於任務、規格、環境與邊界。以結構化向量（正確性、對齊、完整、一致、穩健、可驗證、來源）量測，分三層——形式化客觀、結構化半客觀、人類殘餘——致命條件是 hard gate，軟品質不能補償。覆蓋率拆成規格、測試與狀態覆蓋；mutation score 量測試強度；驗證與規格是兩個軸（完美證明了錯的定理什麼都沒解決）；評審一致不等於真；成本不是品質，除非規格把它變成品質。品質證據等級從 E（表面有效）到 A+（形式驗證加目標對齊）。",
+    "eml_label_zh": "結構化品質、hard gate 與規格—驗證分離",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Q_S = (Q_C, Q_A, Q_K, Q_R, Q_B, Q_V, Q_P), typed per domain; layers Q_L = (Q_F, Q_S, Q_H).",
+      "Hard gate G_H(Y) = ∧ h_i(Y); coverage C_Q = (C_spec, C_test, C_state); mutation score MS = killed / non-equivalent mutants.",
+      "Q_verified = Q_verification ⊗ Q_specification; math vector Q_math = (well-formedness, derivation validity, goal alignment, scope fidelity, axiom transparency, counterexample resistance).",
+      "Quality object 𝔔 = (Q_S, G_H, C_Q, E_Q, Grade_Q, Conf_Q, U_Q, Boundary_Q); scalar Q* = Π_Q(𝔔 | task, projection rule)."
+    ],
+    "eml_assumptions": [
+      "Evaluation oracles (tests, proof checkers, judge models, humans) are themselves fallible: ObservedQuality = F(TrueQuality, EvaluatorPower, Coverage)."
+    ],
+    "eml_claims": [
+      "Quality ≠ IntrinsicScalar; SyntacticValidity ≠ SemanticCorrectness; CompileSuccess ≠ CorrectProgram; AllTestsPassed ≠ UniversalCorrectness.",
+      "FormalVerification ≠ RealWorldGoalCorrectness; ProofValidity ≠ GoalEquivalence; ProofGrade ≠ GoalAlignmentGrade.",
+      "FatalConstraintFailure ≁ SoftQualityTradeoff; PeakEpisode ≠ ReliableQuality; Length ≠ Completeness; Cost ≠ Quality.",
+      "ObjectifiableFirst, HumanResidualLast."
+    ],
+    "eml_formalization": [
+      "Robustness sensitivity S_R = ΔQ / d(x, x′); requirement coverage C_R = |satisfied| / n with typed importance."
+    ],
+    "eml_predictions": [
+      "Instruments that fold output-format compliance into 'quality' will misreport task competence as failure on tasks the model actually solves."
+    ],
+    "eml_falsification_conditions": [
+      "If a single universal quality scalar predicts downstream task success across domains as well as the structured object does, the structure is redundant."
+    ],
+    "eml_known_limitations": [
+      "The first pilot showed the prediction in practice — two of three tasks had their 'quality' decided by JSON/Markdown obedience — but that is one instrument on one model, and the theory itself has not been tested beyond it."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

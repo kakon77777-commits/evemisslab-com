@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0105",
+  "kind": "paper",
+  "label": "Paper 05 — Computation is more than FLOPs: memory, interconnect, hardware occupancy, and computational spacetime volume",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0105/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Replaces FLOPs with a physical cost vector (typed ops, memory traffic by hierarchy, I/O, interconnect, residency, occupancy, time, energy), defines computational spacetime as a vector-first measure V_CST = ∫ R(t) dt with its own topology and peak footprint, and fixes CST measurement grades and boundaries; roofline and memory-wall results are the engineering backbone.",
+    "eml_summary_zh": "以物理成本向量（分型運算、按層級的記憶體流量、I/O、互連、駐留、占用、時間、能量）取代 FLOPs，把計算時空定義為向量優先的測度 V_CST = ∫ R(t) dt，附拓撲與峰值占用，並固定 CST 測量等級與邊界；roofline 與 memory wall 是工程骨幹。",
+    "eml_label_zh": "計算不是只有 FLOPs：記憶體、互連、硬體占用與計算時空體積",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-05",
+    "eml_source_artifact": "IPM_05_計算不是只有FLOPs_v0.1.zip!/IPM_05_計算不是只有FLOPs_記憶體互連硬體占用與計算時空體積_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "588407fccc64b1bc1c6e501314543e17444729b0e6736bb9bb3d8174b25c99f8"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 5/10",
+      "role: 完整物理成本與計算時空"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

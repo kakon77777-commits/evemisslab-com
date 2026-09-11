@@ -1,0 +1,64 @@
+{
+  "id": "THY-2026-0102",
+  "kind": "theory",
+  "label": "μI — the minimum intelligent semantic execution unit (candidate theory)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0102/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "μI is a task-relative semantic state transition z_t → z_{t+1} that satisfies seven conditions: task relevance, state change, causal contribution (Q(Y | μ) > Q(Y | do(μ=0))), non-decomposability at the chosen resolution, composability, realization independence and physical realizability. It is neither token, FLOP, neuron activation, layer nor thought; its minimality is resolution-, task- and observer-relative. Four candidate families (belief update, relation construction, constraint resolution, information gain) unify as a task-relevant, causally useful, non-redundant Δz. Gross vs effective counts give the semantic efficiency η_μ, and a cross-level map μI → ρ_C → ρ_P → ρ_T leads down to physical cost.",
+    "eml_summary_zh": "μI 是相對於任務的語意狀態轉換 z_t → z_{t+1}，須滿足七個條件：任務相關、狀態改變、因果貢獻（Q(Y | μ) > Q(Y | do(μ=0))）、在指定解析度下不可再拆、可組合、實現無關、物理可實現。它既不是 token、FLOP、neuron activation、layer，也不是「想法」；最小性相對於解析度、任務與觀察者。四個候選族（信念更新、關係建立、約束消解、資訊增益）統一為任務相關、因果有用、語意不冗餘的 Δz。gross 與 effective 計數給出語意效率 η_μ，跨層映射 μI → ρ_C → ρ_P → ρ_T 一路向下接到物理成本。",
+    "eml_label_zh": "μI——最小智能語意執行單位（候選理論）",
+    "eml_primary_domain": "Cognitive Science",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "μI: z_t → z_{t+1} with z = (beliefs, relations, constraints, goals, uncertainty, procedures).",
+      "Seven conditions C_μ = (C_T, C_S, C_C, C_N, C_K, C_R, C_P).",
+      "N_μ^gross, N_μ^eff, η_μ = N_μ^eff / N_μ^gross; semantic work vector N_μ = (N_B, N_R, N_C, N_I, N_G).",
+      "μI^obs (observer-reconstructed) vs μI^int (true internal); measurement ladder L0 behavioral proxy → L1 structured trace → L2 causal internal probe → L3 physical-semantic alignment."
+    ],
+    "eml_assumptions": [
+      "A task-relative semantic solution state can be abstracted at observer level without claiming the model literally stores those fields.",
+      "Counterfactual removal of a transition is at least conceptually testable."
+    ],
+    "eml_claims": [
+      "Token ≠ μI ≠ FLOP ≠ NeuronActivation ≠ Layer ≠ Thought.",
+      "SemanticActivity ≠ EffectiveIntelligentWork; SameAnswer ≠ SameSemanticExecution.",
+      "SemanticWork ≠ PhysicalWork (type safety: semantic work is never a Joule)."
+    ],
+    "eml_formalization": [
+      "Causal contribution: Q(Y | μI) > Q(Y | do(μI = 0)) in expectation.",
+      "Semantic yield Y_μ = Q / N_μ^eff; Q = C_phys · η_{P→μ} · η_{μ→Q} (conceptual, not a physical equation).",
+      "Signed contribution w_i^Q = ΔQ_i; equivalence class [μI] = {ρ | same pre-state, post-state and downstream function}."
+    ],
+    "eml_predictions": [
+      "If μI is a good intermediate layer, adding N_μ improves prediction of efficiency, failure paths, scaffold gain and cross-architecture comparison over physical cost → quality alone (F5)."
+    ],
+    "eml_falsification_conditions": [
+      "If N_μ never adds explanatory or predictive power over direct physical-cost → quality models, μI should be revised or eliminated (Paper 10, Falsifiable Claim 5)."
+    ],
+    "eml_known_limitations": [
+      "Explicitly a candidate ontology: no claim that a unique neural or model-internal 'intelligence atom' exists; μI^obs ≈ μI^int is unproven.",
+      "Experiment C (operational identification) has not been run."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

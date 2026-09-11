@@ -1,0 +1,42 @@
+{
+  "id": "EXP-2026-0105",
+  "kind": "experiment",
+  "label": "Experiment C — μI operational identification (declared)",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "IDEA",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/experiments/EXP-2026-0105/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "On proof steps, code repair and constraint puzzles, construct candidate semantic transitions, then test them by ablation and counterfactual replacement to see whether an effective semantic count N_μ can be identified and whether it predicts anything. Declared as the fourth v0.2 experiment; not run.",
+    "eml_summary_zh": "在證明步驟、程式修復與約束謎題上建構候選語意轉換，再以消融與反事實替換檢驗，看有效語意計數 N_μ 能否被辨識、能否預測任何事。宣告為 v0.2 第四個實驗；尚未執行。",
+    "eml_label_zh": "Experiment C——μI 的操作性辨識（已宣告）",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "NOT RUN",
+    "eml_hypothesis": "F5: adding N_μ improves prediction or explanation of efficiency, error paths, scaffold gain or cross-architecture comparison over physical cost → quality alone.",
+    "eml_procedure": "Candidate transition construction → ablation / counterfactual replacement → contribution test Q(Y | μ) > Q(Y | do(μ = 0)) → utility test against direct physical-cost models.",
+    "eml_run_count": 0,
+    "eml_result_type": "INCONCLUSIVE",
+    "eml_interpretation": "Declared, not run; listed so the program's falsifiable propositions each have their intended test on record.",
+    "eml_limitations": [
+      "No protocol package exists yet; the canonical index gives the design in one paragraph."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

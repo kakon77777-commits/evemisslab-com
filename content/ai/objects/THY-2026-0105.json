@@ -1,0 +1,61 @@
+{
+  "id": "THY-2026-0105",
+  "kind": "theory",
+  "label": "Physical computation cost vector and computational spacetime",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "EXPERIMENTAL",
+    "eml_evidence_level": "E1",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0105/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Physical cost is the vector C_P = (typed operations, memory traffic by hierarchy, I/O, interconnect, memory residency, device occupancy, wall time, energy), not FLOPs. Computational spacetime is first a measure V_CST = ∫ R(t) dt = (V_C, V_M, V_N, V_S) over a resource field; the components may not be added before a declared normalization, and equal volume (8 GPU × 10 s = 1 GPU × 80 s) is not equal topology Θ_CST = (T_wall, T_serial, P_parallel, D_peak, M_peak, B_peak, Γ_comm). Roofline, memory-wall and data-movement results explain why same-FLOPs workloads differ in time and energy; a peak hardware footprint is a capacity barrier; CST grades run from D (spec estimate) to A+ (causal resource attribution).",
+    "eml_summary_zh": "物理成本是向量 C_P =（分型的運算、按層級的記憶體流量、I/O、互連、記憶體駐留、裝置占用、wall time、能量），不是 FLOPs。計算時空首先是資源場的測度 V_CST = ∫ R(t) dt =（V_C、V_M、V_N、V_S）；未宣告正規化前各分量不可相加，體積相等（8 GPU × 10 s = 1 GPU × 80 s）不等於拓撲 Θ_CST =（T_wall、T_serial、P_parallel、D_peak、M_peak、B_peak、Γ_comm）相等。Roofline、memory wall 與資料搬移的結果解釋了為何相同 FLOPs 的工作在時間與能量上不同；峰值硬體占用是容量門檻；CST 等級從 D（規格推估）到 A+（因果資源歸因）。",
+    "eml_label_zh": "物理計算成本向量與計算時空",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "C_P = (O, B_M, B_I, B_N, M_R, D, T, E); O typed by precision; nominal vs executed vs useful operations.",
+      "V_M = ∫ M_resident dt (byte·s), V_C = ∫ D(t) dt (device·s); MemoryTraffic ≠ MemoryResidency.",
+      "Normalized scalar V*_CST(Reference, Weights, Boundary); topology Θ_CST; peak footprint H_peak.",
+      "Measurement confidence bundle G_M = (Grade_μ, Grade_E, Grade_CST); P_compute = (C_P, V_CST, Θ_CST, H_peak, E, Boundary_P, G_M)."
+    ],
+    "eml_assumptions": [
+      "Attainable performance is bounded by min(P_peak, BW · arithmetic intensity) (Roofline)."
+    ],
+    "eml_claims": [
+      "FLOPs ≠ PhysicalComputationalCost; SameFLOPs ≠ SameLatency ≠ SameEnergy; SameDeviceTime ≠ SameEnergy.",
+      "SameCSTVolume ≠ SameCSTTopology; TotalResource ≠ PeakCapacityRequirement; MoreDevices ⇏ LowerLatency.",
+      "ScalarCST ⇒ DeclaredNormalization; CSTComparison ⇒ SameBoundaryOrExplicitConversion; LowUtilization ≠ BadSystem."
+    ],
+    "eml_formalization": [
+      "V_CST = ∫ R(t) dt with R = (r_C, r_M, r_N, r_S); V*_CST = ∫ Σ_j w_j r_j(t)/C_ref,j dt.",
+      "Vector efficiency η_Q/CST = (Q/V_C, Q/V_M, Q/V_N, Q/V_S); Pareto dominance A ≻_P B."
+    ],
+    "eml_predictions": [
+      "Controlling FLOPs will leave large independent variation in T, E, B_M, B_N and V_M across memory patterns and topologies (Falsifiable Claim 2)."
+    ],
+    "eml_falsification_conditions": [
+      "If, FLOPs held fixed, time, energy, memory traffic and residency do not vary substantially across workloads, a single FLOPs cost model suffices."
+    ],
+    "eml_known_limitations": [
+      "The pilot recorded wall time, device energy, peak VRAM, memory residency and utilization integrals for one GPU (CST-B); interconnect and memory traffic were not measured."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

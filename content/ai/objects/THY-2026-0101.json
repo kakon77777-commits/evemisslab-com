@@ -1,0 +1,64 @@
+{
+  "id": "THY-2026-0101",
+  "kind": "theory",
+  "label": "Turn decomposition and externally loopless intelligence",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/theory/THY-2026-0101/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "A 'turn' is decomposed into the vector T = (U user turns, G generation trajectories, I model invocations, L external feedback loops, R retries, S selection/verification, P physical execution trace). The cleanest single pass is U=1, G=1, R=1, L=0, S=0, and it excludes only action→new-evidence→replanning, not autoregressive sequential computation. Loops come in five kinds (tool, environment, verifier, retry, candidate/selection), capability lives in four layers (intrinsic, elicited, system, product), and every 'one-turn' claim projects onto the event vector (Q, U, G, I, L, R, S, T, E, V_CST).",
+    "eml_summary_zh": "把「一輪」分解成向量 T =（U 使用者回合、G 生成軌跡、I 模型呼叫、L 外部回饋迴圈、R 重試、S 選擇／驗證、P 物理執行軌跡）。最乾淨的 single pass 是 U=1、G=1、R=1、L=0、S=0，排除的只有「行動→新證據→重規劃」，不排除自回歸的序列計算。LOOP 分五類（工具、環境、驗證器、重試、候選／選擇），能力分四層（intrinsic、elicited、system、product），任何「一輪完成」的宣稱都要投影到事件向量 (Q, U, G, I, L, R, S, T, E, V_CST)。",
+    "eml_label_zh": "回合分解與外部無迴圈智能",
+    "eml_primary_domain": "Computation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_definitions": [
+      "Turn Decomposition Framework T = (U, G, I, L, R, S, P).",
+      "Externally Loopless Intelligence (ELI): during a task the system cannot re-aim on external world, tool output, an independent verifier, another candidate or a retry.",
+      "Interaction compression C_U = internal interactions / U.",
+      "Loop taxonomy L = (L_T, L_E, L_V, L_R, L_C)."
+    ],
+    "eml_assumptions": [
+      "Autoregressive generation is internal sequential computation, not an external loop.",
+      "Selection over candidates is itself a capability source."
+    ],
+    "eml_claims": [
+      "UserTurn ≠ PhysicalTurn; UserTurn ≠ ModelInvocation; ModelInvocation ≠ GenerationTrajectory.",
+      "NoExternalLoop ≠ NoSequentialComputation.",
+      "Pass@k ≠ Pass@1; BestOfN ≠ MedianExperience.",
+      "InteractionCompression ≠ ComputationCompression; SameFinalQuality ≠ SameIntelligenceEfficiency."
+    ],
+    "eml_formalization": [
+      "Single-pass condition: U=1, G=1, R=1, L=0, S=0 → Q_SP.",
+      "P(at least one success in k rollouts) = 1 − (1 − p)^k.",
+      "Unified event vector 𝔈 = (Q, U, G, I, L, R, S, T, E, V_CST)."
+    ],
+    "eml_predictions": [
+      "Systems reported as 'one turn' will separate by orders of magnitude on (L, R, S, V_CST, E) once the event vector is recorded."
+    ],
+    "eml_falsification_conditions": [
+      "If operational accounting of U, G, I, L, R, S adds nothing to predicting cost or quality beyond the visible answer, the decomposition is idle."
+    ],
+    "eml_known_limitations": [
+      "Twelve invariants and a vocabulary; no measurement of its own — the vector is filled by Papers 02–09."
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

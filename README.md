@@ -142,21 +142,46 @@ message says which record and why. Chinese titles and summaries are optional
 (`eml_label_zh`, `eml_summary_zh`); until they exist, `/zh/ai/` pages show the
 English record marked `lang="en"` rather than silently mixing languages.
 
-The first batch of records is the **Adaptive Epistemic Systems** line: one
-program, four research lines, seven theories, thirteen papers (the eleven-paper
-series, the PACC conjecture, the runtime whitepaper), the AER-0 runtime and the
-PACC labs as systems, three benchmarks, two datasets, the five architectures
-under test as models, twenty-two experiments (AER-0 MVP + comparison rounds
-R1–R6, PACC-Lab v0.1–v0.13, PACC-Hybrid v0.1–v0.2), thirteen key results, and
-one artifact per canonical file with its SHA-256. Status, evidence level and
-result type follow each artifact's own stated claim boundary — `MIXED` and
-`NEGATIVE` results are listed like any other, and the one experiment that has
-never been executed with a real model says so. The records were extracted from
-the canonical UTF-8 sources and each lab's own result reports; the generator
-that wrote them (`tools/extract_aes/extract.py <source folder>`) checks every
-series paper's digest against the series manifest and reads the whitepaper
-manifest and the mock-run file from inside their zips, so the records can be
-regenerated and re-verified against the private source folder at any time.
+The records come from Neo's private research collection (真本體論13), one
+research line per extractor package under `tools/`, all written together by
+
+```bash
+python tools/extract_all.py "<path to 真本體論13>"
+```
+
+Each line owns an ID block (`tools/extract_lib/ledger.py`): the **Adaptive
+Epistemic Systems** line uses `…-0001` to `…-0099`, the **Intelligence Physical
+Metrology** line `…-0101` to `…-0199`, so adding a record to one line never
+renumbers another line's published IDs. Relations are edges, numbered globally
+in line order. A third line is a new `tools/extract_<line>/` package plus one
+entry in `extract_all.py`.
+
+- **Adaptive Epistemic Systems** (`tools/extract_aes/`): one program, four
+  research lines, seven theories, thirteen papers (the eleven-paper series, the
+  PACC conjecture, the runtime whitepaper), the AER-0 runtime and the PACC labs
+  as systems, three benchmarks, two datasets, the architectures under test as
+  models, the AER-0 rounds, PACC-Lab v0.1–v0.13 and PACC-Hybrid v0.1–v0.2 as
+  experiments — including three real-model runs of the v0.2 protocol on a local
+  9B model — their key results, and one artifact per canonical file with its
+  SHA-256. Every series paper's digest is asserted against the series manifest;
+  the real-run numbers are read from inside the sealed result bundles.
+- **Intelligence Physical Metrology** (`tools/extract_ipm/`): one program, three
+  research lines (execution/physical, quality, capability), ten theories (one
+  per paper), the five falsifiable propositions F1–F5 as claim records, the ten
+  papers plus the canonical index, the XA-02 task pack as a benchmark, the
+  XA-03/04/06/06L instrument packages as systems, the Experiment A protocol,
+  the XA-05 synthetic smoke gate, the first real-model pilot (36 trials on a
+  local 9B model, sealed `REAL_MODEL_PILOT_INCOMPLETE`) with its two results,
+  and experiments B–E as declared-not-run. The extractor asserts the whole
+  chain of custody the packages declare — paper digests against the canonical
+  manifest, XA-04 → XA-02/03, XA-05 → XA-02/03/04, XA-06 → XA-02/03/04/05, the
+  diagnostic against the result bundle, the bundle manifest against its members.
+
+Status, evidence level, result type and data basis follow each artifact's own
+stated claim boundary — `MIXED` and `NEGATIVE` results are listed like any
+other, synthetic runs carry the `SYNTHETIC` badge, and experiments that were
+never executed say `NOT RUN`. The records can be regenerated and re-verified
+against the private source folders at any time.
 
 ## Adding a sub-site to the index
 

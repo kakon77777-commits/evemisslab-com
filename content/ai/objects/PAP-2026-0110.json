@@ -1,0 +1,47 @@
+{
+  "id": "PAP-2026-0110",
+  "kind": "paper",
+  "label": "Paper 10 — How much physical world does an answer cost? A unified metrology framework for intelligence yield",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "STABLE",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/papers/PAP-2026-0110/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "Packs the four measurement objects into the canonical intelligence event, defines the intelligence yield vector and two-stage efficiency, sets Pareto comparison and the no-premature-scalarization principle, names four capability archetypes, fixes the IPM Minimum Reporting Standard v0.1 and restates the five falsifiable claims; IPM is a metrology candidate, not a discovered constant.",
+    "eml_summary_zh": "把四個測量物件封裝成 canonical intelligence event，定義智能產率向量與兩段效率，訂下 Pareto 比較與不過早純量化原則，命名四種能力原型，固定 IPM 最低報告標準 v0.1 並重述五個可證偽命題；IPM 是計量學候選框架，不是被發現的常數。",
+    "eml_label_zh": "一個答案值多少物理世界？：智能產率的統一計量框架",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_publication_type": "series paper (Intelligence Physical Metrology series, 10 papers); 公開純理論論文, 無 MVP",
+    "eml_data_basis": "THEORY",
+    "eml_date": "2026-09-02",
+    "eml_doi_or_external_id": "EML-IPM-10",
+    "eml_source_artifact": "IPM_10_一個答案值多少物理世界_v0.1.zip!/IPM_10_一個答案值多少物理世界_智能產率的統一計量框架_v0.1.md",
+    "eml_checksums": {
+      "paper .md sha256": "01564dac568d5783400897a41c70a520ffb6d615aa0d80d1b3a6ffffbeec2f2d"
+    },
+    "eml_tags": [
+      "zh-TW",
+      "canonical UTF-8 Markdown",
+      "paper 10/10",
+      "role: 統一封裝、Pareto 與 reporting standard"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}

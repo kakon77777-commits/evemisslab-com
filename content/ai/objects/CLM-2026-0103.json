@@ -1,0 +1,42 @@
+{
+  "id": "CLM-2026-0103",
+  "kind": "claim",
+  "label": "F3 — Binary burden hypothesis",
+  "created_at": "2026-09-02",
+  "updated_at": "2026-09-02",
+  "values": {
+    "eml_status": "PRELIMINARY",
+    "eml_evidence_level": "E0",
+    "eml_object_version": "0.1",
+    "eml_canonical_url": "https://evemisslab.com/ai/claims/CLM-2026-0103/",
+    "eml_provenance": {
+      "source": "EveMissLab research collection: Intelligence Physical Metrology (真本體論13)",
+      "extracted_by": "Splice (Claude Code), reading the canonical UTF-8 sources and each package's own reports",
+      "extracted_at": "2026-09-11",
+      "generator": "tools/extract_all.py",
+      "claim_boundary": "status, evidence level and result type follow the source artifact's own stated claim boundary; nothing is upgraded beyond what the report supports"
+    },
+    "eml_visibility": "PUBLIC",
+    "eml_publication_policy": "REVIEW_REQUIRED",
+    "eml_summary": "If direct numeric human rating were already the minimum-burden, high-quality measurement interface, then well-designed binary / pairwise adaptive protocols should have no advantage in response time, consistency, dropout, predictive validity or fatigue. BRQM predicts an advantage in at least some settings; it can be tested by randomizing participants across direct 0–10, structured yes/no and adaptive pairwise formats.",
+    "eml_summary_zh": "若直接數值評分已是最低負擔、高品質的測量介面，則設計良好的二元／成對自適應協定在反應時間、一致性、流失率、預測效度或疲勞上應不具優勢。BRQM 預測至少在部分場景有優勢；可把受試者隨機分配到直接 0–10、結構化是／否與自適應成對三種格式來檢驗。",
+    "eml_label_zh": "F3——二元負擔假說",
+    "eml_primary_domain": "Evaluation",
+    "eml_program_id": "PRG-2026-0101",
+    "eml_data_basis": "THEORY",
+    "eml_falsification_conditions": [
+      "Falsified if binary/pairwise protocols are worse than direct rating on all of response time, consistency, dropout and predictive validity; supported if they win on some."
+    ],
+    "eml_tags": [
+      "falsifiable proposition",
+      "IPM v0.1 canonical index §23",
+      "Paper 10"
+    ],
+    "eml_authors": [
+      "Neo.K (EveMissLab)"
+    ],
+    "eml_ai_collaborators": [
+      "Aletheia (GPT-5.6 Sol, OpenAI ChatGPT)"
+    ]
+  }
+}
